@@ -1,0 +1,30 @@
+Classwork 3: Problem 4
+----------------------
+For this problem, you will be writing a function which,
+given an integer n, computes the prime factorization of n.
+The prime factorization of a number is the list of all of the
+prime numbers which multiply together to make that number.
+For example, given an input of 12, this function should print out
+2 * 2 * 3
+since 12 is equal to 2 * 2 * 3, and both 2 and 3 are prime numbers.
+
+For 1, your program should print an empty line, since it is the product
+of zero primes. 
+For numbers less than 1, your program should behave sanely, but exactly
+how it behaves is up to you.
+
+ 1. Edit the file pfact.c, which already provides a main to test with.
+    Fill in the function 
+      void printFactors(int n) 
+    to compute the prime factorization as described above.
+    Note that the function should print " * " between factors,
+    but should not have an extra "*" at the start or end of the line.
+    
+ 2. Compile with the provided Makefile, and test by comparing
+    your program's output to pfactans.txt
+
+ 3. Commit your modified pfact.c with git.
+
+
+
+

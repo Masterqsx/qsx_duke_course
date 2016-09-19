@@ -1,0 +1,35 @@
+Classwork 17, Problem 2
+=======================
+
+We can perform binary search in other cases than just searching through an array.
+For example, if we know that a function is monotonically increasing over a certain
+range, and we want to find the x-value for which the y value is closest to 0 (or any
+other number we want) we can perform binary search to make that task efficient.
+
+For this problem you will write the function
+
+  int binarySearchForZero(Function<int, int> * f, int low, int high) 
+
+which peforms binary search to find the x such that f(x) is closest to
+0 in the range [low, high) in lg (high-low) time. Note that if f(x) is all
+positive or all negative in this range, you will return either low or (hi - 1).
+
+
+You should write your code for this function in a file called search.cpp.
+You should test this function yourself, and place your test cases in some other file.
+You may assume that f is strictly increasing on the range [low, high), though it
+may not be increasing at a uniform rate. 
+You may assume low <= high.
+
+For example,  if you had the following function class:
+
+class SinFunction : public Function<int, int> {
+public:
+  virtual int invoke(int arg) {
+    return 10000000 * (sin(arg/100000.0) - 0.5);
+  }
+};
+
+and were searching for its 0 in the range [0,150000), your function should return
+52360 in fewer than 20 invocations of f. 
+

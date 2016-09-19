@@ -1,0 +1,6 @@
+define (g x y) = (*(+ x y) (sqrt (pow 1.5 2)))
+define (h x)=(x)
+eval (g 2 0)
+eval (h 1)
+numint h 0.001 -0.5 1
+numint g 0.001 0 1 4 6 

@@ -1,0 +1,86 @@
+This classwork is to get you started with the basics.
+Generally, there will be 4 problems (p1, p2, p3, and p4).
+
+For this particular classwork, however, you are going to 
+be making sure you have the basic mechanics of getting
+and submitting classworks, as well as working
+with a partner on an algorithms activity.
+
+Here is what you need to do:
+
+ (1) Find a partner.  
+ (2) One of you should do problem 1.7 from AoP [page 20]
+     The other should do problem 1.8 from AoP  [page 21]
+ (3) Notice that step [3] of each problem asks
+     you to give your algorithm to your partner.  When
+     you both finish writing your algorithm and
+     executing it for N=6, swap with your partner. 
+     Execute your partner's algorithm and compare
+     answers.
+     Did you get the same answers?  Was
+     something ambiguous in the algorithm?
+     Did you find the patterns correctly?
+
+ (4) After you finish, create a file in this
+     director called "done.txt" and write
+
+Yes, we did this!
+
+     in that file.  Save it, add it to git:
+
+git add done.txt
+ 
+    Commit it:
+
+git commit 
+   
+    [Write and save your commit message].
+    Push to turn your classwork in
+
+git push
+
+   You should get a message which looks like this:
+
+Counting objects: 10, done.
+Delta compression using up to 2 threads.
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 791 bytes, done.
+Total 6 (delta 3), reused 0 (delta 0)
+Unpacking objects: 100% (6/6), done.
+To /home/assignments/adh39/ece551/
+   2830ea5..49716b9  master -> master
+
+The specific details may vary, but   master -> master means
+you pushed yoru changes to the master branch, which is
+what we grade.
+
+If you run
+    git status
+
+You will get a message describing what is and is not
+up to date.  If it looks like this, everything is
+submitted:
+
+   # On branch master
+   nothing to commit (working directory clean)
+
+If it looks like this:
+
+  # On branch master
+  # Untracked files:
+  #   (use "git add <file>..." to include in what will be committed)  
+  # 
+  #	something.txt
+  nothing added to commit but untracked files present (use "git add" to track)
+
+you have files git does nto know about.  This may be fine (if you don't
+want to turn them in), or you may want to add them.
+
+If it looks like this:
+
+  # On branch master
+  # Your branch is ahead of 'origin/master' by 1 commit.
+  #
+  nothing to commit (working directory clean)
+
+You have commited your changes, but not pushed them (they aren't turned in).

@@ -1,0 +1,2 @@
+define (g x y)=(+ (sqrt x) y)
+numint g 0.01 0 1 

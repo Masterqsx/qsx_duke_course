@@ -1,0 +1,125 @@
+Mini-Project Option: Cache Simulation
+=====================================
+
+
+Step 1: Basic Simulation
+  You should write a program called "cacheSim" which takes 4 command line arguments:
+     (1) The number of sets
+     (2) The number of ways
+     (3) The block size
+     (4) A file name, which specifies the address trace to read.
+  The format of the address trace is one access per line, with either L (for load)
+  or S for store) followed by a space, followed by the address in hex.
+For example
+L 0x1234
+S 0x54AC
+  Your program should print the following information (numerical values
+are just examples, replace with actual numbers):
+Loads: 100
+ Hits: 85
+ Clean Misses: 10
+ Dirty Misses: 5
+Stores: 50
+ Hits:  40
+ Clean Misses: 8
+ Dirty Misses: 2
+Overall hit rate: 83.33% 
+
+Step 2: Hieararchy
+   Alter your program so that it takes two command line arguments:
+  (1) The name of a configuration file
+  (2) The name of an address trace
+Each line in the configuration file will specify 5 fields, separated by whitespace:
+Name WritePolicy Sets Ways BlockSize
+
+Name can be any string which does not contain whitespace
+WritePolicy must be either WT (Write Thru) or WB (Write Back)
+Sets must be a power of 2
+Ways can be any number
+BlockSize must be a power of 2
+
+For example, the configuration file might read:
+
+L1 WT 512 2 64
+L2 WB 2048 4 64
+L3 WB 4096 16 64
+
+Your program should now print the stats for *each* cache in the order
+they appear in the configuration file.   For each stat, the cache's name
+should be prefixed to the stat name with a dot. For example:
+
+L1.Loads: 100
+ L1.Hits: 85
+etc.
+
+Step 3: Time
+ You will now modify your cache simulator to model time.  You will change
+ the address trace format so that each line starts with an identifier,
+ which may be any string not containing white space.  There is then
+ an arbitrary amount of white space before the L or S, and then
+ more whitespace and the address.   After that is an *optional* set
+ of three fields.  If these fields are present, the first names
+ a previous request (by its identifier).  The second is either I or C,
+ and specifies whether the third field is relative to the initiatation (I)
+ or completion (C) of the named request.  The third field says how many
+ cycles after initiation/completion this request is initiated.  If
+ these optional fields are missing, then the request starts 1 cycle after
+ the completion of the previous request.  The first request will always
+ have these fields omitted and starts on the first cycle of simulation.
+ For example, the address trace might contain:
+
+first  L 0x1234
+second S 0x54AC first I 5
+x2345  L 0x1250 first C 3
+y!-?9 L 0x7834 second C 2
+
+The "first" transaction (Load 0x1234) starts on the first cycle.  5
+cycles after that is initiated, the "second" transaction (Store 0x54AC)
+starts.   The "x2345" transaction starts 3 cycles after "first" completes---which
+MAY be before "second" starts.  You must keep track of time ordering properly.
+However, the cache may only accept one request each cycle.  If there is a tie,
+the tie is broken by the order in which the transactions appear in the file.
+Finally, the "y!-?9" transaction starts 2 cycles after "second" completes.
+(Note: names here weird, just to demonstrate the possible space of identifiers.
+You might more reasonbly call them "Ld1" "Ld2" etc).
+
+A request may only reference a request which appears before it in the
+address trace, and all relative times must be strictly positive.
+
+
+You must also change each cache to have a latency (a positive number),
+which appears at the end of the cache configuration line.   You may ignore
+the bandwidth and latencies of the busses between caches.  Do not include
+a store buffer, writeback buffer, nor victim buffer.
+
+Your program should report all stats that it previously reported, as well as the
+total latency to execute the program. 
+
+Step 4: Optimizations
+  Each cache may now have zero or more of the following performance
+  enhancing features specified on the end of its configration line:
+
+P num
+   Next line prefetcher which obtains (num) next blocks on a miss.
+   When the cache experiences a miss for address A, the prefetcher
+   will request A+bs, A+2*bs, ...A+num*bs [where bs is the blocksize]
+   on the next cycles where no other request is being made.
+
+VB lat size
+   A victim buffer with latency (lat) and size (size).  On a miss,
+   the victim buffer is consulted, and if a hit is found, the data
+   is obtained in latency (lat) from it instead of from the next level.
+   On a victim buffer hit, the data is moved back into the cache (evicting
+   some other line to the victim buffer).   Dirty lines in the victim
+   buffer are cleaned to the next level whenever no other activity is present.
+
+SB size
+  A FIFO store buffer of (size) entries.
+  This optimization may only be specified for the first level of cache.
+  When this is present, a store is placed into the tail of the FIFO
+  queue.  Whenever the cache is otherwise idle, the store buffer
+  attempts to write its head entry into the cache (possibly initiating
+  a miss).   Loads requests that hit in the store buffer may complete
+  in the L1 cache's hit latency, even if the request is a miss in the L1.
+  However, they should initiate a miss even if this optimization is used.
+  

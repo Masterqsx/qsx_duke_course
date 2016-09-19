@@ -1,0 +1,12 @@
+Factorization of 1:
+
+Factorization of 60:
+2 * 2 * 3 * 5
+Factorization of 132:
+2 * 2 * 3 * 11
+Factorization of 11726:
+2 * 11 * 13 * 41
+Factorization of 2169720:
+2 * 2 * 2 * 3 * 3 * 3 * 5 * 7 * 7 * 41
+Factorization of 1789220887:
+499 * 1783 * 2011

@@ -1,0 +1,4 @@
+define (f x y z) = (pow (+ sqrt(+ x y) z) (pow (+ x z) z))
+numint f 0.1 0 1 0 1 0 1
+mcint f 1000 0 1 0 1 0 1
+gradient f 0.1 0.001 5 9 0

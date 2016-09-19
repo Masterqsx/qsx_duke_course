@@ -1,0 +1,9 @@
+define (g x y) = (- 0 (+ (pow (- x 1) 2) (pow (- y 2) 2)) )
+define (h x)=(x)
+eval (g 2 1)
+eval (h 1)
+numint h 0.001 -0.5 1
+mcint h 10000 -0.5 1
+numint g 0.001 0 1 4 6
+mcint g 10000 0 1 4 6
+gradient g 0.1 0.0001 5 5

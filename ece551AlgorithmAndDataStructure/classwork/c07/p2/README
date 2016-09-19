@@ -1,0 +1,18 @@
+Classwork 7: Problem 2
+----------------------
+
+Execute the code from encrypt.c by hand, assuming the program is run as
+
+  ./encrypt 5 input.txt
+
+Write your answer in answer.txt.
+
+As always, you should compile (we have provided a Makefile) and run the program,
+and diff the answer against your own to ensure you have the correct output.
+
+When your answer is correct, git add and commit answer.txt
+
+
+As a side note, what this program does is perform a "Ceaser Cipher"---a very
+simplistic form of encryption, which (as we will see in the next problem) is 
+very easy to break.

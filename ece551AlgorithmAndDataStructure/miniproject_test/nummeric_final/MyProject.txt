@@ -1,0 +1,111 @@
+Miniproject_numerics
+====================================================================
+1. Create executive file
+   first enter "make rm", than enter "make"
+
+2. I have already finished all steps of numerics project. 
+   Most of invalid inputs would be recognized and print out the reason why they were recognized as invalid commands.
+   This program using polish notation and build equation tree to handle input equation.
+   
+3. Test case explanation (When meet invalid input would abort, avoid seg fault) 
+   "main_bug0.txt": test invalid function name. When meet invalid function name(apart from 
+define,evaluate,numint,mcint,max,min) would abort.
+   
+   "define_bug0.txt": test unfinished input. 
+
+   "define_bug1.txt": test using number as an variable
+
+   "define_bug2.txt": test using '+' as function name
+
+   "define_bug3.txt": test when lack of operand
+
+   "define_bug4.txt": test when meet undefined function name
+
+   "evaluate_bug0.txt": test unfinished evaluate command
+
+   "evaluate_bug1.txt": test lack of parameters
+ 
+   "evaluate_bug2.txt": test when evaluate has more parameters
+
+   "numint_bug0.txt": test unfinished numint command
+
+   "numint_bug1.txt": test use character as parameter
+
+   "numint_bug2.txt": test lack of high boundary
+
+   "numint_bug3.txt": test high boundary smaller than low boundary
+
+   "numint_bug4.txt": test lack of boundary for the last variable
+
+   Because the mcint and gradient has similar bug type, I did not create specific test file. But most of bugs would be handled (As Drew told me, I can not say all of bugs are considered).
+
+   "valid_input": test most of the valid inputs. 
+    1). " define (f0 x)=(* 2 x)" 
+        " numint f0 0.0001 0 1"
+           test the resolution of numint function, the result of this equation should be precise.
+    
+    2). " define (f1 x y z)=(pow(+ sqrt(+ x y) z) (pow (+ x z) x))"
+        " evaluate (f1 1 3 3)"
+           test complicated equation
+    
+    3). " define (f2 x y)=(+ (* x 2) (* x y))"
+          evaluate (f2 1 2)
+          numint f2 0.1 -3 5.5 0 2
+          mcint f2 10000 -3 5.5 0 2 
+           test the resolution of integration, compared with mcint. The result of numint should be precise
+
+    4). " define (f3 x)=(f2 x x)
+          evaluate (f3 1)
+           test use other function to define function, repeat using same variable
+
+    5). define (f4 x y)=(- 0 (+ (pow (- x 1) 2) (pow (- y 2) 2)))
+        evaluate (f4 2 1)
+        numint f4 0.01 0 1 4 6
+        mcint f4 10000 0 1 4 6
+           normal test
+
+    6). define (f5 x)=(pow x 2)
+        evaluate (f5 1)
+        numint f5 0.01 0.5 1
+        mcint f5 10000 0.5 1
+        max f5 0.1 0.001 10
+        min f5 0.1 0.001 10
+					test gradient command. The max command for function with no max number will cause overflow and stop. But this should not regard as a bug.
+
+    7). define (f6 x y z)=(+ (* x y) (- z 3))
+        evaluate (f6 3 4.2 5)
+        evaluate (f6 -1 9.2 6)
+           test case in Drew's readme
+
+    8). define (x-y +-@#$ x-y!!)=(+ +-@#$ x-y!!)
+        evaluate (x-y 1 2)
+           test complicated id
+
+    9). define (f7 x y z)=(f6 (f0 x) (f3 y) (f5 z))
+        evaluate (f7 (f0 1) (f3 2) (f5 3))
+        evaluate (f7 (+ 1 2) (sqrt 4) (pow 2 2))
+           test using defined function or anonymous function to evaluate.
+
+    10). define (f8 x y)=(+ (* 2 x) y)
+         numint f8 0.01 -1 1 4 5
+           normal test
+
+    11). define (f9 x y)=(+ (+ (pow x 2) (pow y 2)) 2)
+         max f9 0.1 0.001 10 10
+         min f9 0.1 0.001 10 10
+           test gradient command
+
+ 
+ 
+
+ 
+ 
+
+ 
+
+
+
+
+
+
+  

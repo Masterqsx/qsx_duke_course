@@ -1,0 +1,5 @@
+#!/bin/bash
+#Removing /home/sq16/ece551/classwork/c18/p1/test/test2/file2 (duplicate of /home/sq16/ece551/classwork/c18/p1/test/test2/test3/file2_0).
+rm /home/sq16/ece551/classwork/c18/p1/test/test2/file2
+#Removing /home/sq16/ece551/classwork/c18/p1/test/file0_1 (duplicate of /home/sq16/ece551/classwork/c18/p1/test/file0).
+rm /home/sq16/ece551/classwork/c18/p1/test/file0_1

@@ -1,0 +1,88 @@
+Classwork 9.
+============
+
+For this classwork, you will be doing one slightly larger program, which
+we will cut up into 4 discretely testable pieces. 
+
+The big picture it that your program will read two types of input files.
+The first type of input file (which your program will read one of) will have the format:
+
+key1=value1
+key2=value2
+....
+keyN=valueN
+
+That is, it might say
+
+Jean Luc Picard=Captain
+Will Riker=Commander
+Beverly Crusher=Commander
+Data=Lt. Commander
+Geordi LaForge=Lt. Commander
+Worf=Lt. Commander
+Deanna Troi=Commander
+
+Not that the division between the key and the value is the first equals sign (the
+values could have = in them, but the keys cannot.  So a=b=c, would have a key of a, and
+a value of b=c).
+
+The second type of input file will contain a list of lines (which will typically match
+the keys from the first input file).  Your program will read one or more of this
+type of file.  For example, it might contain:
+
+Jean Luc Picard
+Will Riker
+Worf
+Deanna Troi
+Q
+
+For each such input file that your program reads, it will print out the counts
+of the values for the corresponding keys (or <unknown> for anything that did not
+match any known key from the first input file).   E.g. given the above to input files,
+it would print to the corresponding output file (which will be named the same
+as the input file, but with ".count" appended to the name).
+
+Captain: 1
+Commander: 2
+Lt. Commander: 1
+<unknown> : 1
+
+
+
+
+In thinking about our program, we might come up with the following 
+generalized high-level algorithm:
+
+ //read the key/value pairs from the file named by argv[1] (call the result kv)
+ //count from 2 to argc (call the number you count i)
+    //count the values that appear in the file named by argv[i], using kv as the key/value pair
+    //   (call this result c)
+    //compute the output file name from argv[i] (call this outName)
+    //open the file named by outName (call that f)
+    //print the counts from c into the FILE f
+    //close f
+    //free the memory for outName and c
+ //free the memory for kv
+
+This high-level algorithm suggests many functions which we can split our task into.
+We will cut them up into 4 groups to make the 4 problems of this assignment:
+
+P1:
+  - read the key/value pairs from a file
+  - free the memory for the key/value pairs
+
+P2:
+ - compute the output file name
+
+P3:
+ - print the counts to a file
+ - free the memory for the counts
+
+P4:
+ - compute the counts of  values that appear in a particular input file
+
+Each problem will have some more details in the README in its own directory.
+
+
+
+

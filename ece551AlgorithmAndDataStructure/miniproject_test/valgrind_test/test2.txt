@@ -1,0 +1,2 @@
+define h x = x
+numint h 0.0001 0 1

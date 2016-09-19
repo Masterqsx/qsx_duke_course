@@ -1,0 +1,11 @@
+Classwork 4, Problem 2
+-----------------------
+
+Do problem 7.6 in AoP:
+
+Write a recursive function unsigned power(unsigned x, unsigned y) which computes xy. Write a main function which tests it with several values and convince yourself it is correct.
+
+Save it into a file called power.c
+
+You MUST use recursion (no iteration).
+

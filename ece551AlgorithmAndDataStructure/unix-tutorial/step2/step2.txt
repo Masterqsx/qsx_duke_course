@@ -1,0 +1,50 @@
+I pushed files to your repository while you were working
+on step 1.  By pulling you got them.
+
+Now let's edit this file in emacs.
+
+First, open the file in emacs:
+
+  emacs -nw step2.txt
+
+Now, move the "point" (your cursor) down 
+to the line below:
+
+ Hello My Name Is:  <put your name here>
+
+and edit it with your name.
+
+Now, save (C-x C-s): that means control-x control-s
+and quit C-x C-c.
+
+Once you have quit, do 
+
+ git status
+
+see how this has modifications?
+
+Now do 
+
+ git add step2.txt
+
+When you do 
+ 
+ git status
+
+again, you can see it is staged for commit.
+Now do
+
+ git commit
+
+to commit it.  You will need to edit the
+commit message, save, and quit (remember
+all those from above?)
+
+Now, do 
+
+ git push
+
+to turn it in.
+
+
+

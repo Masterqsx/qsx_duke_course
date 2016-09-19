@@ -1,0 +1,10 @@
+This is a file.  Let's copy it to anotherfile.txt
+ cp afile.txt anotherfile.txt
+After you do this, try
+ ls
+and also 
+ cat anotherfile.txt
+Next, let us remove the copy
+ rm anotherfile.txt
+and move (rename) the original to be called bfile.txt
+ mv afile.txt bfile.txt

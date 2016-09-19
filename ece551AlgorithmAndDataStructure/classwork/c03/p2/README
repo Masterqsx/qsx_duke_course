@@ -1,0 +1,23 @@
+Classwork 3. Problem 2
+----------------------
+
+Run the included "guess" program to play my "guessing game" against the comptuer.
+You will quickly discover that its pretty difficult to win against this game,
+since the computer provides no information to help you refine you guess.
+
+Fortunately for you, you can use gdb to win---which is of course the real point
+of this game.  Load the program in gdb, and use the gdb commands you have learned
+to step through the program and inspect its variables.  This should allow you
+to "win" the game.  
+
+Write down the secret number (one line) and magic words (the next line) in a 
+file called "answer.txt".  Note that if your answer.txt is correct, you should
+be able to run the program, redirecting input from answer.txt and "win", like so:
+
+
+ece551@linux:~/classwork/c05/p2$ ./guess < answer.txt
+Hello, we are going to play a guessing game!
+What number do you guess? Correct!  Now we play another game!
+Guess the magic words!
+What words do you guess?  Very good (do you know the movie that references?)
+

@@ -1,0 +1,44 @@
+
+This assignment was graded on 2015-11-27.07.02.15 UTC
+
+=============================================
+Grading p1 (worth 50 points)
+-------------------------------------------------
+***********************
+* Starting test 1     *
+***********************
+This test appears correct
+Percent this problem: 100 (= 50.0 / 50 points)
+------------------------------------------
+
+
+Grading p2 (worth 50 points)
+-------------------------------------------------
+***********************
+* Starting test 1     *
+***********************
+This test appears correct
+Percent this problem: 100 (= 50.0 / 50 points)
+------------------------------------------
+
+
+Grading p3 (worth 0 points)
+-------------------------------------------------
+***********************
+* Starting test 1     *
+***********************
+I could not find regrade.txt
+The files you have here are:
+==
+README
+==
+Nothing will currently be regraded
+Percent this problem: 0 (= 0 / 0 points)
+------------------------------------------
+
+
+=============================================
+Overal score: 100.0
+
+This assignment was graded on 2015-11-27.07.02.15 UTC
+

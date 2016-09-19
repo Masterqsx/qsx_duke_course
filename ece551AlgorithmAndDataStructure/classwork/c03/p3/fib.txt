@@ -1,0 +1,15 @@
+if the input n <= 0;
+	fib(n)=0;
+
+if the input n==1 or n==2
+	fib(n)==1;
+
+from n==3 to n==infinite
+	fib(n)=fib(n-2)+fib(n-1)
+
+fib(1)=1;
+fib(2)=1;
+fib(3)=2=fib(1)+fib(2);
+fib(4)=3=fib(2)+fib(3);
+fib(5)=5=fib(3)+fib(4);
+fib(6)=8=fib(4)+fib(5);

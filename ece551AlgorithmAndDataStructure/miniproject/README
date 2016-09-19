@@ -1,0 +1,35 @@
+Your final programming assignment is the "mini project."
+For this assignment, you have may choose from a few different
+options.  You only need to choose ONE of these options (do
+NOT  do all of them).  Each mini-project option has
+115% possible on it, divided among 4 steps as follows:
+
+Step 1: 50%
+Step 2: 30%
+Step 3: 20%
+Step 4: 15%
+
+This mini-project is due at 11:59:59 PM on Nov 30, giving you almost the entire
+month of November to work on it.
+
+For any of these options, you may need to consult other materials
+for relevant domain knowledge.  However, you should have obtained the
+programming skills to complete the project in this course.  
+
+Your mini-project options are:
+
+
+ (1) A cache simulator
+     You need knowledge from taking 550 to do this.
+     This option is excellent preparation for 552 + 590-Performance-Optimization
+ (2) A command shell
+     You will need to consult man pages about system calls to do this.
+     This option is great preparation if you plan to take: 650
+ (3) Numerical methods
+     You will need some mathematical knowledge to do this.
+     You will also need to perform simple parsing, however, you
+     can use the code I gave you in c14 to show you how to do so.
+     This option is great preparation if you plan to take 681.
+
+
+I expect these to be polished, well tested pieces of code.

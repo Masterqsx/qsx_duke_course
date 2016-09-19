@@ -1,0 +1,3 @@
+define (g x y)=(+ (sqrt x) y)
+define (h x)=(x)
+evaluate (g 1 (h 1 1)) 

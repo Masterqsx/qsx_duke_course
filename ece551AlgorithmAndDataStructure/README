@@ -1,0 +1,31 @@
+This is your git respository.  You are
+initially on branch "master".  
+This branch is where you will turn in your assignments.
+
+There is nothing here right now because
+we distribute your assignments on branch "dist".
+
+First, make sure you are up to date, and merge
+in changes from dist
+
+ git pull origin dist
+
+
+Now, do work.  When you want to add a file
+to git, do 
+
+ git add filename
+
+when you want to commit
+
+ git commit
+
+when you want to push (submit work)
+
+ git push
+
+You can tell what is and is not committed with
+
+ git status
+
+

@@ -1,0 +1,29 @@
+Classwork 5: Problem 4
+----------------------
+
+ 1. Open the provided maxSeq.c file and write
+    the function:
+      int  maxSeq(int * array, int n);
+    which returns the length of the maximum increasing contiguous subsequence
+    in the array.  The parameter n specifies the length fo the array  For example,
+    if the array passed in were
+   
+     { 1, 2, 1, 3, 5, 7, 2, 4, 6, 9}
+  
+    this function would return 4 because the longest sequence
+    of (strictly) increasing numbers in that array is 1, 3, 5, 7
+    which has length 4.  Note that 1,3,5,7,9 is an increasing
+    subsequence, but is not contiguous (finding discontiguous 
+    ones efficiently takes techniques we haven't learned yet).
+
+
+ 2. Compile and test your code. 
+    We have provided a main function which will print test cases
+    and your function's answer for them. You should get
+    6, 7, 6, 1, 0, 0.
+
+ 3. Commit to git
+     
+
+Hint:
+  Can you abstract a complex step out into a simple function?

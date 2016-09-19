@@ -1,0 +1,107 @@
+
+This assignment was graded on 2015-11-29.07.06.35 UTC
+
+=============================================
+Grading p1 (worth 40 points)
+-------------------------------------------------
+***********************
+* Starting test 1     *
+***********************
+This test appears correct
+Percent this problem: 100 (= 40.0 / 40 points)
+------------------------------------------
+
+
+Grading p2 (worth 25 points)
+-------------------------------------------------
+***********************
+* Starting test 1     *
+***********************
+This test appears correct
+Percent this problem: 100 (= 25.0 / 25 points)
+------------------------------------------
+
+
+Grading p3 (worth 20 points)
+-------------------------------------------------
+***********************
+* Starting test 1     *
+***********************
+The output matches the expected output.
+This test counts as 20% of the score for this problem
+This test was scored as correct (20)
+***********************
+* Starting test 2     *
+***********************
+The output matches the expected output.
+This test counts as 20% of the score for this problem
+This test was scored as correct (20)
+***********************
+* Starting test 3     *
+***********************
+Your program correctly indicated this was a failure case.
+This test counts as 20% of the score for this problem
+This test was scored as correct (20)
+***********************
+* Starting test 4     *
+***********************
+The output matches the expected output.
+This test counts as 20% of the score for this problem
+This test was scored as correct (20)
+***********************
+* Starting test 5     *
+***********************
+Your program correctly indicated this was a failure case.
+This test counts as 20% of the score for this problem
+This test was scored as correct (20)
+Percent this problem: 100 (= 20.0 / 20 points)
+------------------------------------------
+
+
+Grading p4 (worth 15 points)
+-------------------------------------------------
+***********************
+* Starting test 1     *
+***********************
+Your program correctly indicated this was a failure case.
+This test counts as 10% of the score for this problem
+This test was scored as correct (10)
+***********************
+* Starting test 2     *
+***********************
+The output matches the expected output.
+This test counts as 20% of the score for this problem
+This test was scored as correct (20)
+***********************
+* Starting test 3     *
+***********************
+Your program correctly indicated this was a failure case.
+This test counts as 10% of the score for this problem
+This test was scored as correct (10)
+***********************
+* Starting test 4     *
+***********************
+The output matches the expected output.
+This test counts as 20% of the score for this problem
+This test was scored as correct (20)
+***********************
+* Starting test 5     *
+***********************
+The output matches the expected output.
+This test counts as 20% of the score for this problem
+This test was scored as correct (20)
+***********************
+* Starting test 6     *
+***********************
+The output matches the expected output.
+This test counts as 20% of the score for this problem
+This test was scored as correct (20)
+Percent this problem: 100 (= 15.0 / 15 points)
+------------------------------------------
+
+
+=============================================
+Overal score: 100.0
+
+This assignment was graded on 2015-11-29.07.06.35 UTC
+

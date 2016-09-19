@@ -1,0 +1,181 @@
+
+This assignment was graded on 2015-12-01.08.21.42 UTC
+
+=============================================
+Grading p1 (worth 40 points)
+-------------------------------------------------
+***********************
+* Starting test 1     *
+***********************
+This test appears correct
+Percent this problem: 100 (= 40.0 / 40 points)
+------------------------------------------
+
+
+Grading p2 (worth 25 points)
+-------------------------------------------------
+***********************
+* Starting test 1     *
+***********************
+The output matches the expected output.
+==12587== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 2 from 2)
+==12587== All heap blocks were freed -- no leaks are possible
+Valgrind reported no problems
+This test counts as 25% of the score for this problem
+This test was scored as correct (25)
+***********************
+* Starting test 2     *
+***********************
+The output matches the expected output.
+==12610== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 2 from 2)
+==12610== All heap blocks were freed -- no leaks are possible
+Valgrind reported no problems
+This test counts as 25% of the score for this problem
+This test was scored as correct (25)
+***********************
+* Starting test 3     *
+***********************
+The output matches the expected output.
+==12633== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 2 from 2)
+==12633== All heap blocks were freed -- no leaks are possible
+Valgrind reported no problems
+This test counts as 25% of the score for this problem
+This test was scored as correct (25)
+***********************
+* Starting test 4     *
+***********************
+The output matches the expected output.
+==12656== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 2 from 2)
+==12656== All heap blocks were freed -- no leaks are possible
+Valgrind reported no problems
+This test counts as 25% of the score for this problem
+This test was scored as correct (25)
+Percent this problem: 100 (= 25.0 / 25 points)
+------------------------------------------
+
+
+Grading p3 (worth 20 points)
+-------------------------------------------------
+***********************
+* Starting test 1     *
+***********************
+The output matches the expected output.
+==12687== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 2 from 2)
+==12687== All heap blocks were freed -- no leaks are possible
+Valgrind reported no problems
+This test counts as 25% of the score for this problem
+This test was scored as correct (25)
+***********************
+* Starting test 2     *
+***********************
+The output matches the expected output.
+==12710== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 2 from 2)
+==12710== All heap blocks were freed -- no leaks are possible
+Valgrind reported no problems
+This test counts as 25% of the score for this problem
+This test was scored as correct (25)
+***********************
+* Starting test 3     *
+***********************
+The output matches the expected output.
+==12733== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 2 from 2)
+==12733== All heap blocks were freed -- no leaks are possible
+Valgrind reported no problems
+This test counts as 25% of the score for this problem
+This test was scored as correct (25)
+***********************
+* Starting test 4     *
+***********************
+The output matches the expected output.
+==12759== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 2 from 2)
+==12759== All heap blocks were freed -- no leaks are possible
+Valgrind reported no problems
+This test counts as 25% of the score for this problem
+This test was scored as correct (25)
+Percent this problem: 100 (= 20.0 / 20 points)
+------------------------------------------
+
+
+Grading p4 (worth 15 points)
+-------------------------------------------------
+***********************
+* Starting test 1     *
+***********************
+The output matches the expected output.
+==12790== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 2 from 2)
+==12790== All heap blocks were freed -- no leaks are possible
+Valgrind reported no problems
+This test counts as 12% of the score for this problem
+This test was scored as correct (12)
+***********************
+* Starting test 2     *
+***********************
+The output matches the expected output.
+==12813== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 2 from 2)
+==12813== All heap blocks were freed -- no leaks are possible
+Valgrind reported no problems
+This test counts as 12% of the score for this problem
+This test was scored as correct (12)
+***********************
+* Starting test 3     *
+***********************
+The output matches the expected output.
+==12836== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 2 from 2)
+==12836== All heap blocks were freed -- no leaks are possible
+Valgrind reported no problems
+This test counts as 12% of the score for this problem
+This test was scored as correct (12)
+***********************
+* Starting test 4     *
+***********************
+The output matches the expected output.
+==12859== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 2 from 2)
+==12859== All heap blocks were freed -- no leaks are possible
+Valgrind reported no problems
+This test counts as 12% of the score for this problem
+This test was scored as correct (12)
+***********************
+* Starting test 5     *
+***********************
+The output matches the expected output.
+==12882== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 2 from 2)
+==12882== All heap blocks were freed -- no leaks are possible
+Valgrind reported no problems
+This test counts as 13% of the score for this problem
+This test was scored as correct (13)
+***********************
+* Starting test 6     *
+***********************
+The output matches the expected output.
+==12905== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 2 from 2)
+==12905== All heap blocks were freed -- no leaks are possible
+Valgrind reported no problems
+This test counts as 13% of the score for this problem
+This test was scored as correct (13)
+***********************
+* Starting test 7     *
+***********************
+The output matches the expected output.
+==12928== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 2 from 2)
+==12928== All heap blocks were freed -- no leaks are possible
+Valgrind reported no problems
+This test counts as 13% of the score for this problem
+This test was scored as correct (13)
+***********************
+* Starting test 8     *
+***********************
+The output matches the expected output.
+==12951== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 2 from 2)
+==12951== All heap blocks were freed -- no leaks are possible
+Valgrind reported no problems
+This test counts as 13% of the score for this problem
+This test was scored as correct (13)
+Percent this problem: 100 (= 15.0 / 15 points)
+------------------------------------------
+
+
+=============================================
+Overal score: 100.0
+
+This assignment was graded on 2015-12-01.08.21.42 UTC
+

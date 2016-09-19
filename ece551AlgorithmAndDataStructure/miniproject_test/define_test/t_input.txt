@@ -1,0 +1,4 @@
+define (g x y) = (*(+ x y) (sqrt (pow 1.5 2)))
+define (h x y z)=(pow(g x y) (sqrt z))
+eval (g 2 0)
+eval (h 1 -2 (sqrt (pow 9 2)))

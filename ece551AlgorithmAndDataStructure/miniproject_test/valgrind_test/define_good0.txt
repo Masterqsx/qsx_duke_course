@@ -1,0 +1,2 @@
+define (g (x+y) y) = (+ (x+y) y)
+evaluate g 1 2

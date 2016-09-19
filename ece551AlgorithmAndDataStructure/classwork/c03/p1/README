@@ -1,0 +1,37 @@
+Classwork 3: Problem 1
+======================
+
+For this problem, you will be black box testing the provided
+palindrome program, which I have intentionally placed errors in.
+You are only provided with the compiled binary, so your test
+case development will truly be black box.
+
+The correct behavior for the palindrome program is as follows:
+
+ - The program takes one command line argument: a file name,
+   which it will open, and read each line from the file.
+
+ - For each line in the file, the program will determine if that
+   line is a palindrome (the text is the same backwards and forwards).
+   If the line is a palindrome, the program will print "Yes".
+   If the line is not a palindrome, the program will print "No".
+
+For this assingment, you will come up with two test cases which
+break this program.  For each test case, you will write a 
+shell script to demonstrate that test case.
+
+The first,
+   wrong_output.sh
+should run the palindrome program in such a way that it does not
+crash, but produces the wrong output.  That is, it either prints
+"Yes" for a line which is not a palindrome, or it prints "No" for
+a line which is a palindrome.
+
+The second,
+   crash.sh
+should run the palindrome program in such a way that it crashes
+with a segmentation fault.
+
+When you are finished, add and commit both shell scripts, 
+as well as any input files that you need to your git repository.
+

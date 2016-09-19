@@ -1,0 +1,112 @@
+
+This assignment was graded on 2015-12-01.07.45.03 UTC
+
+=============================================
+Grading p1 (worth 40 points)
+-------------------------------------------------
+***********************
+* Starting test 1     *
+***********************
+The output matches the expected output.
+==16257== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 2 from 2)
+==16257== All heap blocks were freed -- no leaks are possible
+Valgrind reported no problems
+This test counts as 50% of the score for this problem
+This test was scored as correct (50)
+***********************
+* Starting test 2     *
+***********************
+Your program correctly indicated this was a failure case.
+This test counts as 5% of the score for this problem
+This test was scored as correct (5)
+***********************
+* Starting test 3     *
+***********************
+The output matches the expected output.
+==16304== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 2 from 2)
+==16304== All heap blocks were freed -- no leaks are possible
+Valgrind reported no problems
+This test counts as 45% of the score for this problem
+This test was scored as correct (45)
+Percent this problem: 100 (= 40.0 / 40 points)
+------------------------------------------
+
+
+Grading p2 (worth 25 points)
+-------------------------------------------------
+***********************
+* Starting test 1     *
+***********************
+The output matches the expected output.
+==16337== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 2 from 2)
+==16337== All heap blocks were freed -- no leaks are possible
+Valgrind reported no problems
+This test counts as 50% of the score for this problem
+This test was scored as correct (50)
+***********************
+* Starting test 2     *
+***********************
+The output matches the expected output.
+==16364== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 2 from 2)
+==16364== All heap blocks were freed -- no leaks are possible
+Valgrind reported no problems
+This test counts as 50% of the score for this problem
+This test was scored as correct (50)
+Percent this problem: 100 (= 25.0 / 25 points)
+------------------------------------------
+
+
+Grading p3 (worth 20 points)
+-------------------------------------------------
+***********************
+* Starting test 1     *
+***********************
+The output matches the expected output.
+==16406== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 2 from 2)
+==16406== All heap blocks were freed -- no leaks are possible
+Valgrind reported no problems
+This test counts as 50% of the score for this problem
+This test was scored as correct (50)
+***********************
+* Starting test 2     *
+***********************
+The output matches the expected output.
+==16448== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 2 from 2)
+==16448== All heap blocks were freed -- no leaks are possible
+Valgrind reported no problems
+This test counts as 50% of the score for this problem
+This test was scored as correct (50)
+Percent this problem: 100 (= 20.0 / 20 points)
+------------------------------------------
+
+
+Grading p4 (worth 15 points)
+-------------------------------------------------
+**Deleting executable file /home/ece551/students/sq16/ece551/classwork/c19/p4/decompress
+***********************
+* Starting test 1     *
+***********************
+==16492== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 2 from 2)
+==16492== All heap blocks were freed -- no leaks are possible
+Valgrind reported no problems
+Comparing file /home/ece551/grading/c19/p4-tests//graderOutput.txt with answer
+This test counts as 50% of the score for this problem
+This test was scored as correct (50)
+***********************
+* Starting test 2     *
+***********************
+==16529== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 2 from 2)
+==16529== All heap blocks were freed -- no leaks are possible
+Valgrind reported no problems
+Comparing file /home/ece551/grading/c19/p4-tests//graderOutput.txt with answer
+This test counts as 50% of the score for this problem
+This test was scored as correct (50)
+Percent this problem: 100 (= 15.0 / 15 points)
+------------------------------------------
+
+
+=============================================
+Overal score: 100.0
+
+This assignment was graded on 2015-12-01.07.45.03 UTC
+

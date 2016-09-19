@@ -1,0 +1,61 @@
+
+This assignment was graded on 2015-11-28.07.02.41 UTC
+
+=============================================
+Grading p1 (worth 100 points)
+-------------------------------------------------
+***********************
+* Starting test 1     *
+***********************
+The output matches the expected output.
+==23724== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 2 from 2)
+==23724== All heap blocks were freed -- no leaks are possible
+Valgrind reported no problems
+This test counts as 20% of the score for this problem
+This test was scored as correct (20)
+***********************
+* Starting test 2     *
+***********************
+The output matches the expected output.
+==23731== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 2 from 2)
+==23731== All heap blocks were freed -- no leaks are possible
+Valgrind reported no problems
+This test counts as 20% of the score for this problem
+This test was scored as correct (20)
+***********************
+* Starting test 3     *
+***********************
+The output matches the expected output.
+==23738== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 2 from 2)
+==23738== All heap blocks were freed -- no leaks are possible
+Valgrind reported no problems
+This test counts as 20% of the score for this problem
+This test was scored as correct (20)
+***********************
+* Starting test 4     *
+***********************
+The output matches the expected output.
+==23745== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 2 from 2)
+==23745== All heap blocks were freed -- no leaks are possible
+Valgrind reported no problems
+This test counts as 20% of the score for this problem
+This test was scored as correct (20)
+**Deleting executable file /home/ece551/students/sq16/ece551/classwork/c16/p1/count
+***********************
+* Starting test 5     *
+***********************
+The output matches the expected output.
+==23769== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 2 from 2)
+==23769== All heap blocks were freed -- no leaks are possible
+Valgrind reported no problems
+This test counts as 20% of the score for this problem
+This test was scored as correct (20)
+Percent this problem: 100 (= 100.0 / 100 points)
+------------------------------------------
+
+
+=============================================
+Overal score: 100.0
+
+This assignment was graded on 2015-11-28.07.02.41 UTC
+

@@ -1,0 +1,33 @@
+define (f0 x)=(* 2 x)
+numint f0 0.0001 0 1
+define (f1 x y z)=(pow(+ sqrt(+ x y) z) (pow (+ x z) x))
+evaluate (f1 1 3 3)
+define (f2 x y)=(+ (* x 2) (* x y))
+evaluate (f2 1 2)
+numint f2 0.1 -3 5.5 0 2
+mcint f2 10000 -3 5.5 0 2 
+define (f3 x)=(f2 x x)
+evaluate (f3 1)
+define (f4 x y)=(- 0 (+ (pow (- x 1) 2) (pow (- y 2) 2)))
+evaluate (f4 2 1)
+numint f4 0.01 0 1 4 6
+mcint f4 10000 0 1 4 6
+define (f5 x)=(pow x 2)
+evaluate (f5 1)
+numint f5 0.01 0.5 1
+mcint f5 10000 0.5 1
+max f5 0.1 0.001 10
+min f5 0.1 0.001 10
+define (f6 x y z)=(+ (* x y) (- z 3))
+evaluate (f6 3 4.2 5)
+evaluate (f6 -1 9.2 6)
+define (x-y +-@#$ x-y!!)=(+ +-@#$ x-y!!)
+evaluate (x-y 1 2)
+define (f7 x y z)=(f6 (f0 x) (f3 y) (f5 z))
+evaluate (f7 (f0 1) (f3 2) (f5 3))
+evaluate (f7 (+ 1 2) (sqrt 4) (pow 2 2))
+define (f8 x y)=(+ (* 2 x) y)
+numint f8 0.01 -1 1 4 5
+define (f9 x y)=(+ (+ (pow x 2) (pow y 2)) 2)
+max f9 0.1 0.001 10 10
+min f9 0.1 0.001 10 10

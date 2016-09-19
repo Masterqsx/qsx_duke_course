@@ -1,0 +1,33 @@
+Classwork 3: Problem 3
+----------------------
+For this problem, you will be writing a program to compute the Nth
+Fibonacci number.  The 0th Fibonacci number is 0, the 1st is 1,
+the 2nd is also 1, and in general the Nth is the sum of the previous
+two.
+
+ 1. Create a file "fib.txt".
+ 2. In your "fib.txt" file, do steps 1 through 4 of this problem.
+    For step 1, try it with N = 5.  (Of course, feel free to do more
+    if needed)
+    For step 4, try it with N = 6.  
+    Note any corner cases you think of.
+
+ 3. Create a file "fib.c"
+ 4. Write the function
+     int fib (int n)
+    in your fib.c file, so that it implements the algorithm
+    you came up with.
+ 5. Write a main function in fib.c which tests your fib function
+    on all values from -2 to 30 (inclusive on both ends).
+    For each value, it should print a string with the format:
+      "fib(%d) = %d\n"
+    where the first %d is the number being tested, and the
+    second %d is the answer returned by fib.
+ 6. Compile your program with the provided Makefile,
+    and test it by comparing its output to the provided
+    fibans.txt output.
+ 7. Submit fib.txt, and fib.c by adding and commiting
+    to git.
+ 
+
+

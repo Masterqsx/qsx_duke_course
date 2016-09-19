@@ -1,0 +1,8 @@
+define (f x y z) = (pow (+ sqrt(+ x y) z) (pow (+ x z) x))
+define (g x y)=(+ * x 2 (* x y))
+define (h x) = (g x x)
+evaluate f 1 3 3
+evaluate g 1 2
+evaluate h 1
+numint g 0.01 -3 5.5 0 2
+mcint g 100000 -3 5.5 0 2
