@@ -1,0 +1,221 @@
+#macro (star $rating)
+	#if ( $!rating < 0.5 )
+	<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+	#elseif ( $!rating < 1.5 )
+	<i class="price-text-color fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+	#elseif ( $!rating < 2.5 )
+	<i class="price-text-color fa fa-star"></i><i class="price-text-color fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+	#elseif ( $!rating < 3.5 )
+	<i class="price-text-color fa fa-star"></i><i class="price-text-color fa fa-star"></i><i class="price-text-color fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+	#elseif ( $!rating < 4.5 )
+	<i class="price-text-color fa fa-star"></i><i class="price-text-color fa fa-star"></i><i class="price-text-color fa fa-star"></i><i class="price-text-color fa fa-star"></i><i class="fa fa-star"></i>
+	#else
+	<i class="price-text-color fa fa-star"></i><i class="price-text-color fa fa-star"></i><i class="price-text-color fa fa-star"></i><i class="price-text-color fa fa-star"></i><i class="price-text-color fa fa-star"></i>
+	#end
+#end
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="ECE 651 Final Project">
+    <meta name="author" content="Tananun - The Hackers">
+
+    <title>Smart Buy - Shopping Rediscovered</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/stylish-product-list.css" rel="stylesheet">
+    
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    
+    <!-- Price Table>   
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	--->
+</head>
+
+<body>
+
+	<!-- Navigation -->
+	#parse( "templates/elements/navigation-bar.vtl" )
+
+
+
+	<div class="container">
+	<div class="row">
+  	<div class="col-md-6">
+  		
+  		<div class="row">
+  		<div class="col-md-1"></div>
+  			<div class="col-md-10">
+				<!-- Product Carousel -->
+				<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+				
+				  <!-- Wrapper for slides -->
+				  <div class="carousel-inner" role="listbox">
+				  	
+				  	#foreach( $img in $imgList )
+			            	
+		        		#if( $velocityCount == 1 )
+				    		<div class="item active">
+				    			<img class="img-responsive center-block img-thumbnail" src="$img" alt="...">
+				    		</div>
+		        		#else
+		        			<div class="item">
+				    			<img class="img-responsive center-block img-thumbnail" src="$img" alt="...">
+				    		</div>       		
+		        		#end
+		        	#end
+		
+				  </div>
+				
+				  <!-- Controls -->
+				  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+				  <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+				  <span class="sr-only">Previous</span>
+				  </a>
+				  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+				  <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+		   		  <span class="sr-only">Next</span>
+				  </a>
+				</div>
+			</div>
+		<div class="col-md-1"></div>
+		</div>
+
+	</div>
+	
+			<div class="col-md-6 product-info">
+					<ul id="myTab" class="nav nav-tabs nav_tabs">
+						
+						<li class="active"><a href="#service-one" data-toggle="tab">Product Info</a></li>
+						<li><a href="#service-two" data-toggle="tab">Price History</a></li>
+						<li><a href="#service-three" data-toggle="tab">Reviews</a></li>
+						
+					</ul>
+				<div id="myTabContent" class="tab-content">
+						<div class="tab-pane fade in active" id="service-one">
+						 
+							<section class="col-md-12">
+							  	<h1><small> $!sbItem.title </small></h1>
+							  	<h4><small> Price: $!sbItem.lowestNewPrice </small></h4>
+
+						  		<h5> #star($!sbItem.avgRating) <small>from top reviews</small></h5>
+						  		<h5> #star($!mostUsefulRating) <small>from most current reviews</small></h5>
+								<h5> #star($!mostCurrentRating) <small>overall</small><h5>
+								<a href="$!productURL"><button type="button" class="btn-group-xs">Buy at Amazon <span class="glyphicon glyphicon-play" aria-hidden="true"></span>
+									</button></a>
+								<div class="row">
+									<div class="col-md-12">
+										<hr>
+										#if ($!description != "")
+										<h3><small> Product Description </small></h3>
+										#end
+										<p> $!description </p>
+									</div>
+								</div>
+							</section>
+										  
+						</div>
+					<div class="tab-pane fade" id="service-two">
+						
+						<section class="col-md-12">
+							<table class="table" style="width:85%;">
+  							
+  							<thead>
+      						<tr>
+        						<th>#</th>
+        						<th>PRICE</th>
+        						<th>PERCENTAGE</th>
+        						<th>TIME</th>
+      						</tr>
+    						</thead>
+    						
+    						<tbody>
+    						<tr>
+    							<td>Current Price</td>
+    							<td>$!CurrentPrice</td>
+    							<td>0</td>		
+    							<td>NOW</td>
+  							</tr>
+  							<tr>
+    							<td>Average Price</td>
+    							<td>$!AveragePrice</td>		
+    							<td>$!compareAveragePrice</td>
+    							<td>--</td>
+  							</tr>
+  							<tr>
+    							<td>Highest Price</td>
+    							<td>$!HighestPrice</td>
+    							<td>$!compareHighestPrice</td>		
+    							<td>$!HighestTime</td>
+  							</tr>
+  							<tr>
+    							<td>Lowest Price</td>
+    							<td>$!LowestPrice</td>
+    							<td>$!compareLowestPrice</td>		
+   			 					<td>$!LowestTime</td>
+  							</tr>
+  							</tbody>
+							</table>
+						
+							<div class="col-md-12" >
+								<img src="$!priceChart" style="width:100%">
+							</div>
+						</section>
+						
+					</div>
+					<div class="tab-pane fade" id="service-three">
+								
+						<section class="col-md-12">
+							#foreach ($review in $azCrawler.reviews)
+								<h1><small> $review.title </small></h3>
+								<h4> #star( $review.rating ) </h4>
+								<blockquote>
+									<p><small> $review.review </small></p>
+								</blockquote>
+							#end
+						</section>
+												
+					</div>
+				</div>
+				<hr>
+			</div>
+	
+		</div>
+	
+    </div>
+    
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+    
+   	<!-- Custom Theme JavaScript -->
+    <script>  
+    // Search panel with dropdown menu
+	
+	$(document).ready(function(e){
+	    $('.dropdown .dropdown-menu').find('a').click(function(e) {
+			e.preventDefault();
+			var param = $(this).attr("href").replace("#","");
+			var concept = $(this).text();
+			$('#search_concept').text(concept);
+			$('#search_param').val(param);
+		});
+	});
+    </script>
+    
+</body>
+
+</html>

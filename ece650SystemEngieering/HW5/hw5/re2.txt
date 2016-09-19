@@ -1,0 +1,86 @@
+PLAYER_ID TEAM_ID UNIFORM_NUM FIRST_NAME LAST_NAME MPG PPG RPG APG SPG BPG 
+4 1 11 AJ Turner 28 6 4 2 0.9 0.4 
+13 3 5 Luke Kennard 27 12 4 2 0.9 0.2 
+17 4 5 Malik Beasley 30 16 5 2 0.9 0.2 
+33 7 5 Davon Reed 29 11 4 1 0.8 0.4 
+47 10 1 Jamel Artis 30 14 5 3 0.6 0.2 
+59 12 44 Justin Jackson 28 12 4 3 0.6 0.4 
+60 12 3 Kennedy Meeks 21 9 6 1 0.8 1 
+62 13 13 Anthony Gill 28 14 6 1 0.6 0.6 
+65 13 21 Isaiah Wilkins 21 5 4 2 0.8 0.8 
+69 14 15 Chris Clarke 22 8 6 2 1 0 
+74 15 44 Konstantinos Mitoglou 24 9 5 1 0.5 0.8 
+
+NAME 
+
+FIRST_NAME LAST_NAME 
+Jaron Blossomgame 
+Donte Grantham 
+Avry Holmes 
+Jordan Roper 
+Landry Nnoko 
+
+FIRST_NAME LAST_NAME UNIFORM_NUM 
+
+FIRST_NAME LAST_NAME NAME WINS 
+Jaron Blossomgame Clemson 10 
+Donte Grantham Clemson 10 
+Avry Holmes Clemson 10 
+Jordan Roper Clemson 10 
+Landry Nnoko Clemson 10 
+Grayson Allen Duke 11 
+Brandon Ingram Duke 11 
+Luke Kennard Duke 11 
+Amile Jefferson Duke 11 
+Matt Jones Duke 11 
+Dwayne Bacon FloridaState 8 
+Malik Beasley FloridaState 8 
+Xavier Rathan-Mayes FloridaState 8 
+Devon Bookert FloridaState 8 
+Boris Bojanovsky FloridaState 8 
+Marcus Georges-Hunt GeorgiaTech 8 
+Adam Smith GeorgiaTech 8 
+Nick Jacobs GeorgiaTech 8 
+Charles Mitchell GeorgiaTech 8 
+Quinton Stephens GeorgiaTech 8 
+Damion Lee Louisville 12 
+Trey Lewis Louisville 12 
+Chinanu Onuaku Louisville 12 
+Quentin Snider Louisville 12 
+Donovan Mitchell Louisville 12 
+Sheldon Mitchell Miami 13 
+Angel Rodriguez Miami 13 
+Davon Reed Miami 13 
+JaQuan Newton Miami 13 
+Tony Jekiri Miami 13 
+Demetrius Jackson NotreDame 11 
+Zach Auguste NotreDame 11 
+VJ Beachem NotreDame 11 
+Steve Vasturia NotreDame 11 
+Bonzie Colson NotreDame 11 
+Michael Young Pittsburgh 9 
+Jamel Artis Pittsburgh 9 
+James Robinson Pittsburgh 9 
+Sheldon Jeter Pittsburgh 9 
+Chris Jones Pittsburgh 9 
+Michael Gbinije Syracuse 9 
+Malachi Richardson Syracuse 9 
+Trevor Cooney Syracuse 9 
+Tyler Lydon Syracuse 9 
+Tyler Roberson Syracuse 9 
+Brice Johnson UNC 14 
+Joel Berry UNC 14 
+Marcus Paige UNC 14 
+Justin Jackson UNC 14 
+Kennedy Meeks UNC 14 
+Malcolm Brogdon Virginia 13 
+Anthony Gill Virginia 13 
+London Perrantes Virginia 13 
+Mike Tobey Virginia 13 
+Isaiah Wilkins Virginia 13 
+Zach LeDay VirginiaTech 10 
+Seth Allen VirginiaTech 10 
+Justin Bibbs VirginiaTech 10 
+Chris Clarke VirginiaTech 10 
+Jalen Hudson VirginiaTech 10 
+

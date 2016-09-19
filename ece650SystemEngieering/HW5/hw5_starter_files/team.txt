@@ -1,0 +1,16 @@
+1 BostonCollege 10 7 0 18
+2 Clemson 6 2 10 8
+3 Duke 1 5 11 7
+4 FloridaState 3 7 8 10
+5 GeorgiaTech 9 6 8 10
+6 Louisville 4 4 12 6
+7 Miami 3 3 13 5
+8 NCSU 1 4 5 13
+9 NotreDame 5 6 11 7
+10 Pittsburgh 7 8 9 9
+11 Syracuse 8 2 9 9
+12 UNC 1 1 14 4
+13 Virginia 2 2 13 5
+14 VirginiaTech 2 7 10 8
+15 WakeForest 1 6 2 16
+

@@ -1,0 +1,33 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+use IEEE.std_logic_unsigned.all;
+use IEEE.std_logic_arith.all;
+
+entity rgb_transfer is
+port(
+		color_input : in std_logic_vector (8 downto 0);
+		front_porchx : in std_logic;
+		sync_pulsex  : in std_logic;
+		back_porchx  : in std_logic;
+		front_porchy : in std_logic;
+		sync_pulsey  : in std_logic;
+		back_porchy  : in std_logic;
+		red     : out std_logic_vector (7 downto 0);
+		green   : out std_logic_vector (7 downto 0);
+		blue    : out std_logic_vector (7 downto 0)
+		);
+end entity;
+
+architecture behavior of rgb_transfer is
+
+begin
+	red <= color_input(8 downto 6)&"00000" when (front_porchx or front_porchy or sync_pulsex or sync_pulsey or front_porchx or front_porchy)/= '1' else
+			 "00000000";
+			 
+	green <= color_input(5 downto 3)&"00000" when (front_porchx or front_porchy or sync_pulsex or sync_pulsey or front_porchx or front_porchy)/='1' else
+			 "00000000";
+		
+	blue <= color_input(2 downto 0)&"00000" when (front_porchx or front_porchy or sync_pulsex or sync_pulsey or front_porchx or front_porchy)/='1' else
+			 "00000000";
+
+end architecture;

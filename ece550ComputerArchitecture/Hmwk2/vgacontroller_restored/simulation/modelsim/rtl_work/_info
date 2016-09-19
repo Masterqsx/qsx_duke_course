@@ -1,0 +1,210 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\altera\13.0\Project\hm2\vgacontroller_restored\simulation\modelsim
+Ecounter800
+w1443317367
+Z1 DPx4 ieee 15 std_logic_arith 0 22 4`Y?g_lkdn;7UL9IiJck01
+Z2 DPx4 ieee 18 std_logic_unsigned 0 22 RYmj;=TK`k=k>D@Cz`zoB3
+Z3 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z4 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z5 dC:\altera\13.0\Project\hm2\vgacontroller_restored\simulation\modelsim
+8C:/altera/13.0/Project/hm2/vgacontroller_restored/counter800.vhd
+FC:/altera/13.0/Project/hm2/vgacontroller_restored/counter800.vhd
+l0
+L5
+VmLIN6k?>chB@649JYM=o83
+Z6 OV;C;10.1d;51
+31
+Z7 o-93 -work work -O0
+Z8 tExplicit 1
+!s100 ViTUPd?W97GM8O82:gh242
+!i10b 1
+!s108 1443675389.349000
+!s90 -reportprogress|300|-93|-work|work|C:/altera/13.0/Project/hm2/vgacontroller_restored/counter800.vhd|
+!s107 C:/altera/13.0/Project/hm2/vgacontroller_restored/counter800.vhd|
+Edecider_horizontal
+Z9 w1443317347
+R1
+R2
+R3
+R4
+R5
+Z10 8C:/altera/13.0/Project/hm2/vgacontroller_restored/decider_horizontal.vhd
+Z11 FC:/altera/13.0/Project/hm2/vgacontroller_restored/decider_horizontal.vhd
+l0
+L5
+Vd_aP>=2RAbXdVL3l1W5::3
+R6
+31
+Z12 !s108 1443675389.271000
+Z13 !s90 -reportprogress|300|-93|-work|work|C:/altera/13.0/Project/hm2/vgacontroller_restored/decider_horizontal.vhd|
+Z14 !s107 C:/altera/13.0/Project/hm2/vgacontroller_restored/decider_horizontal.vhd|
+R7
+R8
+!s100 X84^JZClAeI_GoFba3QGI3
+!i10b 1
+Abehavior
+R1
+R2
+R3
+R4
+DEx4 work 18 decider_horizontal 0 22 d_aP>=2RAbXdVL3l1W5::3
+l15
+L13
+V>cen^l^LCd3O7DGhmOc9X3
+R6
+31
+R12
+R13
+R14
+R7
+R8
+!s100 6`c68U`:59ImWXk6c5Ug[1
+!i10b 1
+Edecider_vertical
+Z15 w1443317360
+R1
+R2
+R3
+R4
+R5
+Z16 8C:/altera/13.0/Project/hm2/vgacontroller_restored/decider_vertical.vhd
+Z17 FC:/altera/13.0/Project/hm2/vgacontroller_restored/decider_vertical.vhd
+l0
+L5
+V6ggnFzc9i7fa^8HZjReO=1
+R6
+31
+Z18 !s108 1443675389.193000
+Z19 !s90 -reportprogress|300|-93|-work|work|C:/altera/13.0/Project/hm2/vgacontroller_restored/decider_vertical.vhd|
+Z20 !s107 C:/altera/13.0/Project/hm2/vgacontroller_restored/decider_vertical.vhd|
+R7
+R8
+!s100 `<zWDjPkI6]=8eVPhc]fC1
+!i10b 1
+Abehavior
+R1
+R2
+R3
+R4
+DEx4 work 16 decider_vertical 0 22 6ggnFzc9i7fa^8HZjReO=1
+l15
+L13
+VnYdLghlogFGUoM0@n6<;R0
+R6
+31
+R18
+R19
+R20
+R7
+R8
+!s100 ZgT7eb8PXA;J<`EMeO9^>0
+!i10b 1
+vpll_altpll
+IQ2@1FjGBBg;IB[abmH4:O1
+V<Ibm>]d3WNOG:[8GRoTm93
+R5
+w1442972149
+8C:/altera/13.0/Project/hm2/vgacontroller_restored/db/pll_altpll.v
+FC:/altera/13.0/Project/hm2/vgacontroller_restored/db/pll_altpll.v
+L0 29
+Z21 OV;L;10.1d;51
+r1
+31
+o-vlog01compat -work work -O0
+!i10b 1
+!s100 MSLk]N26<RJ<:Uk6ISBf_0
+!s85 0
+!s108 1443675389.037000
+!s107 C:/altera/13.0/Project/hm2/vgacontroller_restored/db/pll_altpll.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/13.0/Project/hm2/vgacontroller_restored/db|C:/altera/13.0/Project/hm2/vgacontroller_restored/db/pll_altpll.v|
+!s101 -O0
+!s92 -vlog01compat -work work +incdir+C:/altera/13.0/Project/hm2/vgacontroller_restored/db -O0
+Ergb_transfer
+Z22 w1443313630
+R1
+R2
+R3
+R4
+R5
+Z23 8C:/altera/13.0/Project/hm2/vgacontroller_restored/rgb_transfer.vhd
+Z24 FC:/altera/13.0/Project/hm2/vgacontroller_restored/rgb_transfer.vhd
+l0
+L6
+V^J]C@Sg1XMC?ZQLdn5AK<1
+R6
+31
+Z25 !s108 1443675389.131000
+Z26 !s90 -reportprogress|300|-93|-work|work|C:/altera/13.0/Project/hm2/vgacontroller_restored/rgb_transfer.vhd|
+Z27 !s107 C:/altera/13.0/Project/hm2/vgacontroller_restored/rgb_transfer.vhd|
+R7
+R8
+!s100 75bd4V_=<J:=>Ob<GVjSI2
+!i10b 1
+Abehavior
+R1
+R2
+R3
+R4
+DEx4 work 12 rgb_transfer 0 22 ^J]C@Sg1XMC?ZQLdn5AK<1
+l23
+L21
+V>;_F=XfHAWmc>Wgc1MCeE0
+R6
+31
+R25
+R26
+R27
+R7
+R8
+!s100 P55dWI]LjOlKU>2YZ9BhU1
+!i10b 1
+Evgacontroller
+Z28 w1443672599
+Z29 DPx10 cycloneive 20 cycloneive_atom_pack 0 22 cd[Seo6Ho1SGM]T7J5PZf1
+Z30 DPx10 cycloneive 21 cycloneive_components 0 22 nEgJbijGI2K;f9eTCY=a53
+Z31 DPx4 ieee 16 vital_primitives 0 22 9W@YP9_VCb?_GCJ8e:;YQ0
+Z32 DPx6 altera 11 dffeas_pack 0 22 V<:VM@_ZRfA@BFU^UjV7P1
+Z33 DPx4 ieee 12 vital_timing 0 22 7h8zz2S4HVg:a;2TBMI[j1
+R3
+R4
+Z34 DPx6 altera 28 altera_primitives_components 0 22 NkeTOLzIAn1B7JGKi`Mk?0
+R5
+Z35 8C:/altera/13.0/Project/hm2/vgacontroller_restored/simulation/modelsim/vgacontroller.vho
+Z36 FC:/altera/13.0/Project/hm2/vgacontroller_restored/simulation/modelsim/vgacontroller.vho
+l0
+L36
+V4iQB^[3<O;igQz26^l4GG0
+!s100 `^9@eie41n9ENeK<6193k1
+R6
+32
+!i10b 1
+Z37 !s108 1443675393.031000
+Z38 !s90 -reportprogress|300|-work|work|C:/altera/13.0/Project/hm2/vgacontroller_restored/simulation/modelsim/vgacontroller.vho|
+Z39 !s107 C:/altera/13.0/Project/hm2/vgacontroller_restored/simulation/modelsim/vgacontroller.vho|
+Z40 o-work work -O0
+R8
+Astructure
+R29
+R30
+R31
+R32
+R33
+R3
+R4
+R34
+DEx4 work 13 vgacontroller 0 22 4iQB^[3<O;igQz26^l4GG0
+l428
+L88
+VG6W:bfFY_ka_bKgUKeW192
+!s100 dXCSQ[4;V@7McaiF<Y>ad0
+R6
+32
+!i10b 1
+R37
+R38
+R39
+R40
+R8

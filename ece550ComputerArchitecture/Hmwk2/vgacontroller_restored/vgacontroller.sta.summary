@@ -1,0 +1,89 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'pll0|altpll_component|auto_generated|pll1|clk[0]'
+Slack : -8.917
+TNS   : -426.758
+
+Type  : Slow 1200mV 85C Model Setup 'myvga:myvga0|stage1:s1|counter524:u1|\G1:5:dffx'
+Slack : -1.000
+TNS   : -2.862
+
+Type  : Slow 1200mV 85C Model Hold 'myvga:myvga0|stage1:s1|counter524:u1|\G1:5:dffx'
+Slack : -3.754
+TNS   : -45.697
+
+Type  : Slow 1200mV 85C Model Hold 'pll0|altpll_component|auto_generated|pll1|clk[0]'
+Slack : -0.127
+TNS   : -0.127
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'myvga:myvga0|stage1:s1|counter524:u1|\G1:5:dffx'
+Slack : 0.331
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLOCK_50'
+Slack : 9.819
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'pll0|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 19.570
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'pll0|altpll_component|auto_generated|pll1|clk[0]'
+Slack : -8.073
+TNS   : -384.615
+
+Type  : Slow 1200mV 0C Model Setup 'myvga:myvga0|stage1:s1|counter524:u1|\G1:5:dffx'
+Slack : -1.013
+TNS   : -2.870
+
+Type  : Slow 1200mV 0C Model Hold 'myvga:myvga0|stage1:s1|counter524:u1|\G1:5:dffx'
+Slack : -3.362
+TNS   : -40.656
+
+Type  : Slow 1200mV 0C Model Hold 'pll0|altpll_component|auto_generated|pll1|clk[0]'
+Slack : -0.237
+TNS   : -0.237
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'myvga:myvga0|stage1:s1|counter524:u1|\G1:5:dffx'
+Slack : 0.416
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : 9.799
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'pll0|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 19.556
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'pll0|altpll_component|auto_generated|pll1|clk[0]'
+Slack : -4.701
+TNS   : -223.919
+
+Type  : Fast 1200mV 0C Model Setup 'myvga:myvga0|stage1:s1|counter524:u1|\G1:5:dffx'
+Slack : -0.379
+TNS   : -1.002
+
+Type  : Fast 1200mV 0C Model Hold 'myvga:myvga0|stage1:s1|counter524:u1|\G1:5:dffx'
+Slack : -2.156
+TNS   : -27.202
+
+Type  : Fast 1200mV 0C Model Hold 'pll0|altpll_component|auto_generated|pll1|clk[0]'
+Slack : -0.011
+TNS   : -0.011
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'myvga:myvga0|stage1:s1|counter524:u1|\G1:5:dffx'
+Slack : 0.217
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : 9.400
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'pll0|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 19.617
+TNS   : 0.000
+
+------------------------------------------------------------

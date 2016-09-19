@@ -1,0 +1,8 @@
+To try one of these tests, you can rename the source file you 
+want to try to main.c, then run build.sh to compile, and 
+run the ./test executable that is created.
+
+For example:
+mv main.1.c main.c
+./build.sh
+./test

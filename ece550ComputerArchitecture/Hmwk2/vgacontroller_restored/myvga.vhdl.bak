@@ -1,0 +1,40 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+use IEEE.std_logic_misc.all;
+library altera;
+use altera.altera_primitives_components.all;
+
+entity myvga is
+port (
+    clk     : in std_logic;
+    rst     : in std_logic;
+    red     : out std_logic_vector (7 downto 0);
+    green   : out std_logic_vector (7 downto 0);
+    blue    : out std_logic_vector (7 downto 0);
+    blank   : out std_logic;
+    hsync   : out std_logic;
+    vsync   : out std_logic);
+end myvga;
+
+
+architecture basic of myvga is
+
+component vmem is
+	port (
+		address		: in std_logic_vector  (15 downto 0);
+		clock		: in std_logic;
+		q		    : out std_logic_vector (8 downto 0));
+end component;
+
+begin
+
+--- Replace this with your code ---
+red   <= (others => '0');
+green <= (others => '0');
+blue  <= (others => '0');
+
+blank <= '1';
+hsync <= '1';
+vsync <= '1';
+
+end basic;

@@ -1,0 +1,16 @@
+Fitter Status : Successful - Fri Oct 02 22:40:01 2015
+Quartus II 32-bit Version : 13.0.0 Build 156 04/24/2013 SJ Full Version
+Revision Name : vgacontroller
+Top-level Entity Name : vgacontroller
+Family : Cyclone IV E
+Device : EP4CE115F29C7
+Timing Models : Final
+Total logic elements : 124 / 114,480 ( < 1 % )
+    Total combinational functions : 123 / 114,480 ( < 1 % )
+    Dedicated logic registers : 26 / 114,480 ( < 1 % )
+Total registers : 26
+Total pins : 34 / 529 ( 6 % )
+Total virtual pins : 0
+Total memory bits : 345,600 / 3,981,312 ( 9 % )
+Embedded Multiplier 9-bit elements : 0 / 532 ( 0 % )
+Total PLLs : 1 / 4 ( 25 % )

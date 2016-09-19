@@ -1,0 +1,187 @@
+#macro ( itemblock $sbitem )
+	<div class="col-sm-3">
+	    <div class="col-item">
+	        <div class="photo">
+	            <img src=$!sbitem.primImageURL class="img-responsive" alt="a" />
+	        </div>
+	        <div class="info">
+	            <div class="row">
+	                <div class="price col-md-6">
+	                    <h5>
+	                        $!sbitem.title</h5>
+	                    <h5 class="price-text-color">
+	                        $!sbitem.lowestNewPrice</h5>
+	                </div>
+	                <div class="rating hidden-sm col-md-6">
+	                    #if ( $!sbitem.avgRating < 0.5 )
+						<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+						#elseif ( $!sbitem.avgRating < 1.5 )
+						<i class="price-text-color fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+						#elseif ( $!sbitem.avgRating < 2.5 )
+						<i class="price-text-color fa fa-star"></i><i class="price-text-color fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+						#elseif ( $!sbitem.avgRating < 3.5 )
+						<i class="price-text-color fa fa-star"></i><i class="price-text-color fa fa-star"></i><i class="price-text-color fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+						#elseif ( $!sbitem.avgRating < 4.5 )
+						<i class="price-text-color fa fa-star"></i><i class="price-text-color fa fa-star"></i><i class="price-text-color fa fa-star"></i><i class="price-text-color fa fa-star"></i><i class="fa fa-star"></i>
+						#else
+						<i class="price-text-color fa fa-star"></i><i class="price-text-color fa fa-star"></i><i class="price-text-color fa fa-star"></i><i class="price-text-color fa fa-star"></i><i class="price-text-color fa fa-star"></i>
+						#end
+	                </div>
+	            </div>
+	            <div class="separator clear-left">
+	                <p class="btn-add">
+	                    &nbsp;</a></p>
+	                <form action="/detail">
+	                	<input type="hidden" name="id" value="$!sbitem.asin"> 
+	                	<input type="hidden" name="avgsr" value="$!sbitem.avgRating">
+	                	<p class="btn-details">
+	                    	<button type="submit" class="btn btn-default"><i class="fa fa-list"></i>More details</button></p>
+	                </form>
+	            </div>
+	            <div class="clearfix">
+	            </div>
+	        </div>
+	    </div>
+	</div>
+#end
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="ECE 651 Final Project">
+    <meta name="author" content="Tananun - The Hackers">
+
+    <title>Smart Buy - Shopping Rediscovered</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/stylish-product-list.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+
+	<!-- Navigation -->
+	#parse( "templates/elements/navigation-bar.vtl" )
+
+	<!-- Sorting Options -->
+	<div class="container">
+		<div class="btn-group btn-group-xs pull-right" role="group" aria-label="sort by" id="sort_buttons">
+		  <form action="/list" id="sort_form"></form>
+	  	  <input type="hidden" name="sort" value="related" id="sort_param" form="sort_form">
+	  	  <input type="hidden" name="keyword" value="$keyword" id="sort_param" form="sort_form">
+	  	  <input type="hidden" name="category" value="$category" id="sort_param" form="sort_form">
+	  	  #if ( $sortoption == "related" )
+	  	  	#set ( $related = "active" )
+	  	  #elseif ( $sortoption == "highlow" )
+	  	  	#set ( $highlow = "active" )
+	  	  #elseif ( $sortoption == "lowhigh" )
+	  	  	#set ( $lowhigh = "active" )
+	  	  #elseif ( $sortoption == "rating" )
+	  	  	#set ( $rating = "active" )
+	  	  #end
+		  <button type="submit" class="btn btn-default $!related" form="sort_form" id="related">Related</button>
+		  <button type="submit" class="btn btn-default $!highlow" form="sort_form" id="highlow">Price: high - low</button>
+		  <button type="submit" class="btn btn-default $!lowhigh" form="sort_form" id="lowhigh">Price: low - high</button>
+		  <button type="submit" class="btn btn-default $!rating" form="sort_form" id="rating">Rating</button>
+		</div>
+	</div>
+
+    <!-- Product Grid View -->
+	<div class="container">
+		<div class="row">
+	        <div class="row">
+	            <div class="col-md-9">
+	                	<h3> results for "$keyword" </h3>	                
+	            </div>
+	            <div class="col-md-3">
+	                <!-- Controls -->
+	                <div class="controls pull-right hidden-xs">
+	                    <a class="left fa fa-chevron-left btn btn-success" href="#carousel-example"
+	                        data-slide="prev"></a><a class="right fa fa-chevron-right btn btn-success" href="#carousel-example"
+	                            data-slide="next"></a>
+                	</div>
+	            </div>
+	        </div>
+	        <div id="carousel-example" class="carousel slide hidden-xs" data-ride="carousel">
+	            <!-- Wrapper for slides -->
+	            <div class="carousel-inner">
+	            
+	            	#foreach( $item in $sbList )
+	            	
+	            		#if( $velocityCount == 1 )
+	            			<div class="item active"><div class="row">
+	            		#end
+	            		
+	            		#itemblock($item)
+	            		
+	            		#if ( $velocityCount == 20 )
+	            			</div></div>
+	            		#elseif ( $velocityCount % 4 == 0 )
+	            			</div></div>
+	            			<div class="item"><div class="row">
+	            		#end
+	            	#end
+	            
+	            </div>
+	        </div>
+	    </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 col-lg-offset-1 text-center">
+                    <br>
+                    <hr class="small">
+                    <p class="text-muted">Copyright &copy; Smart Buy 2016</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+    
+    <!-- Custom Theme JavaScript -->
+    <script>  
+    // Search panel with dropdown menu
+	
+	$(document).ready(function(e){
+	    $('.dropdown .dropdown-menu').find('a').click(function(e) {
+			e.preventDefault();
+			var param = $(this).attr("href").replace("#","");
+			var concept = $(this).text();
+			$('#search_concept').text(concept);
+			$('#search_param').val(param);
+		});
+	});
+	
+	// Sorting options
+	
+	$(document).ready(function(e){
+	    $('#sort_buttons').find('button').click(function(e) {
+			var param = $(this).attr("id");
+			$('#sort_param').val(param);
+		});
+	});
+	
+	</script>
+    
+</body>
+
+</html>

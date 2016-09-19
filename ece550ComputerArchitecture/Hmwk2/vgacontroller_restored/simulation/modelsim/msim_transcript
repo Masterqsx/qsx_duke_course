@@ -1,0 +1,175 @@
+# Reading C:/altera/13.0/modelsim_ase/tcl/vsim/pref.tcl 
+# do vgacontroller_run_msim_rtl_vhdl.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying C:\altera\13.0\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\13.0\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0/Project/hm2/vgacontroller_restored/db {C:/altera/13.0/Project/hm2/vgacontroller_restored/db/pll_altpll.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module pll_altpll
+# 
+# Top level modules:
+# 	pll_altpll
+# vcom -93 -work work {C:/altera/13.0/Project/hm2/vgacontroller_restored/rgb_transfer.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity rgb_transfer
+# -- Compiling architecture behavior of rgb_transfer
+# vcom -93 -work work {C:/altera/13.0/Project/hm2/vgacontroller_restored/decider_vertical.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity decider_vertical
+# -- Compiling architecture behavior of decider_vertical
+# vcom -93 -work work {C:/altera/13.0/Project/hm2/vgacontroller_restored/decider_horizontal.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity decider_horizontal
+# -- Compiling architecture behavior of decider_horizontal
+# vcom -93 -work work {C:/altera/13.0/Project/hm2/vgacontroller_restored/counter800.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity counter800
+# -- Compiling architecture behavior of counter800
+# ** Error: C:/altera/13.0/Project/hm2/vgacontroller_restored/counter800.vhd(30): (vcom-1436) Actual expression (prefix expression) of formal "clrn" is not globally static.
+# 
+# ** Error: C:/altera/13.0/Project/hm2/vgacontroller_restored/counter800.vhd(38): VHDL Compiler exiting
+# ** Error: C:/altera/13.0/modelsim_ase/win32aloem/vcom failed.
+# Error in macro ./vgacontroller_run_msim_rtl_vhdl.do line 12
+# C:/altera/13.0/modelsim_ase/win32aloem/vcom failed.
+#     while executing
+# "vcom -93 -work work {C:/altera/13.0/Project/hm2/vgacontroller_restored/counter800.vhd}"
+vcom -reportprogress 300 -work work C:/altera/13.0/Project/hm2/vgacontroller_restored/simulation/modelsim/vgacontroller.vho
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package VITAL_Timing
+# -- Loading package VITAL_Primitives
+# -- Loading package dffeas_pack
+# -- Loading package altera_primitives_components
+# -- Loading package cycloneive_atom_pack
+# -- Loading package cycloneive_components
+# -- Compiling entity vgacontroller
+# -- Compiling architecture structure of vgacontroller
+vsim work.vgacontroller
+# vsim work.vgacontroller 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.vital_timing(body)
+# Loading ieee.vital_primitives(body)
+# Loading altera.dffeas_pack
+# Loading altera.altera_primitives_components
+# Loading cycloneive.cycloneive_atom_pack(body)
+# Loading cycloneive.cycloneive_components
+# Loading work.vgacontroller(structure)
+# Loading cycloneive.cycloneive_ram_block(block_arch)
+# Loading cycloneive.cycloneive_ram_register(reg_arch)
+# Loading cycloneive.cycloneive_ram_pulse_generator(pgen_arch)
+# Loading cycloneive.cycloneive_lcell_comb(vital_lcell_comb)
+# Loading altera.dffeas(vital_dffeas)
+# Loading ieee.std_logic_arith(body)
+# Loading cycloneive.cycloneive_io_obuf(arch)
+# Loading cycloneive.cycloneive_io_ibuf(arch)
+# Loading cycloneive.cycloneive_pllpack(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading cycloneive.cycloneive_pll(vital_pll)
+# Loading cycloneive.cycloneive_mn_cntr(behave)
+# Loading cycloneive.cycloneive_scale_cntr(behave)
+# Loading cycloneive.cycloneive_clkctrl(vital_clkctrl)
+# Loading cycloneive.cycloneive_ena_reg(behave)
+# ** Warning: Design size of 2 instances exceeds ModelSim ALTERA recommended capacity.
+# This may because you are loading cell libraries which are not recommended with
+# the ModelSim Altera version. Expect performance to be adversely affected.
+add wave -position insertpoint  \
+sim:/vgacontroller/CLOCK_50
+add wave -position insertpoint  \
+sim:/vgacontroller/VGA_R
+add wave -position insertpoint  \
+sim:/vgacontroller/VGA_G
+add wave -position insertpoint  \
+sim:/vgacontroller/VGA_B
+force -freeze sim:/vgacontroller/CLOCK_50 1 0, 0 {50 ps} -r 100
+run
+run
+run
+run
+# ** Warning: Input clock freq. is under VCO range. Cycloneive PLL may lose lock
+#    Time: 700 ps  Iteration: 9  Instance: /vgacontroller/\pll0|altpll_component|auto_generated|pll1\
+# ** Warning:  Input clock freq. is not within VCO range : Cycloneive PLL may not lock. Please use the correct frequency.
+#    Time: 700 ps  Iteration: 9  Instance: /vgacontroller/\pll0|altpll_component|auto_generated|pll1\
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+add wave -position insertpoint  \
+sim:/vgacontroller/VGA_CLK
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# WARNING: No extended dataflow license exists
