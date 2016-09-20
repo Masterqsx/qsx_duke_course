@@ -87,7 +87,7 @@ mean_fpr=np.sort(mean_fpr)
 mean_tpr=np.sort(mean_tpr)
 mean_auc = auc(mean_fpr, mean_tpr)
 plt.plot(mean_fpr, mean_tpr,label='Mean ROC of Multinomial Naive Bayes with presence data \n(AUC = %0.2f) (accuracy = %0.2f) 3 folder' % (mean_auc,accuracy_bay_pre_m))
-'''
+
 mean_tpr = np.array(0.0)
 mean_fpr = np.array(0.0)
 for (train,test) in cv:
@@ -113,15 +113,15 @@ mean_fpr=np.sort(mean_fpr)
 mean_tpr=np.sort(mean_tpr)
 mean_auc = auc(mean_fpr, mean_tpr)
 plt.plot(mean_fpr, mean_tpr,label='Mean ROC of Bernoulli Naive Bayes with frequency data \n(AUC = %0.2f) (accuracy = %0.2f) 3 folder' % (mean_auc,accuracy_bay_b))
-'''
+
 
 x = np.array([0,0.6,1])
 y = np.array([0,0.65,1])
 x_b = np.arange(0,1.01,0.01)
 y_b = np.arange(0,1.01,0.01)
-'''
+
 plt.plot(x,y,label='ROC of using statistics of the data \n(AUC = %0.2f) (accuracy = %0.2f) (tie = %0.2f)' %(auc(x,y),0.63,0.14))
-'''
+
 plt.plot(x_b,y_b,'k--')
 
 
