@@ -1,0 +1,5 @@
+ Car,automobile
+ gem,jewel
+apple,tree
+chord,smile
+midday,noon
