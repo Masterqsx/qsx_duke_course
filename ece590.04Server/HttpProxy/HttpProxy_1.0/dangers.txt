@@ -1,0 +1,2 @@
+1. Sometimes need refresh the webpage
+2. It is better to use on Edge than Chrome. It seems like proxy works faster wil Edge
