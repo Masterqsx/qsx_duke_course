@@ -29,3 +29,6 @@ This is the repository for all my duke course projects.
   1). binary number 7-segment LED display
   2). vga controller
   3). direct mapped, 127 sets, 64 byte block mini cache 
+7. Robust Server(ECE590.02):
+  1). HttpProxy with multithread and cache.
+  2). Django RSVP Website
