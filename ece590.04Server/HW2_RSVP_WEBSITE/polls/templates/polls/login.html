@@ -1,0 +1,15 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'polls/login.css' %}" />
+
+<div id="login_frame">
+<h1>User Login</h1>
+<form action="{% url 'polls:loginhandle' %}", method="post">
+  {% csrf_token %}
+  <label for="box1">User Name</label><br>
+  <input type="text" name="username" id="box1"><br>
+  <label for="box1">User Email</label><br>
+  <input type="text" name="useremail" id="box"><br>
+  <input type="submit" name="buttonlogin" value="Login" />
+  <input type="submit" name="buttonsign" value="Sign Up" />
+</form>
+</div>

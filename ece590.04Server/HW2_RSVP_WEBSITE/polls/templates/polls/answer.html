@@ -1,0 +1,58 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'polls/back.css' %}" />
+<h1>Answer List of User "{{ user.u_name }}" for Question "{{ question.q_text }}" </h1>
+<div id="event_frame">
+
+<form action="{% url 'polls:answermodify' event_id question.id user.id %}" method="post">
+  {% csrf_token %} 
+  {% for a in answer_list %}
+  <fieldset>
+    <legend>Answer {{ forloop.counter }}</legend>
+    <li>{{ a.a_text }} -- {{ a.a_vote }} vote{{ a.a_vote|pluralize }} --
+        {% if a.a_type == 1 %}
+        Already Finilized
+        {% endif %}
+        </li>
+    {% if pe_type < 2 %}
+        <input type="text" name="answer_text{{ a.id }}" id="box{{ forloop.counter }}">
+        <input type="checkbox" name="answer{{ a.id }}">+ 1<br>
+    {% endif %}
+    {% if pe_type == 0 %}
+        <input type="checkbox" name="permission{{ a.id }}">Vendor Permission
+    {% endif %}
+    {% if pe_type == 0 or pe_type == 2 %}
+        <input type="checkbox" name="finalize{{ a.id }}">Finalize<br>
+    {% endif %}
+  </fieldset>
+  {% endfor %}
+  <input type="submit" value="Modify it" />
+</form>
+
+{% if question.q_type == 0 and pe_type < 2 or pe_type == 0 %}
+<form action="{% url 'polls:answercreate' event_id question.id user.id %}" method="post">
+  {% csrf_token %}
+  <fieldset>
+    <legend>Create New Answer</legend>
+    <input type="text" name="answer_text"
+      id="box">
+  </fieldset>
+
+  <input type="submit" value="Submit" />
+</form>
+{% endif %}
+
+{% if pe_type == 0 %}
+<form action="{% url 'polls:clearanswer' event_id question.id user.id %}" method="post">
+    {% csrf_token %}
+    <input type="submit" value="Clear" />
+</form>
+{% endif %}
+<form action="{% url 'polls:login' %}" method="get">
+    {% csrf_token %}
+    <input type="submit" value="Logout" />
+</form>
+<form action="{% url 'polls:question' event_id user.id %}" method="get">
+    {% csrf_token %}
+    <input type="submit" value="Back" />
+</form>
+</div>

@@ -1,0 +1,50 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'polls/back.css' %}" />
+<div id="event_frame">
+<h1>Question List of User "{{ user_name }}" for Event "{{ event_name }}"</h1>
+
+<form action="{% url 'polls:questionmodify' event_id user_id%}" method="post">
+    {% csrf_token %}
+    {% for q in question_list %}
+    <fieldset>
+        <legend>Question {{ forloop.counter }}</legend>
+        <li><a href="{% url 'polls:answer' event_id q.id user_id%}">{{ q.q_text }} --
+            {% if q.q_type == 0 %}
+            Free Text
+            {% else %}
+            Multiple Choices
+            {% endif %}
+        </a></li>
+        <input type="text" name="questiontext{{ q.id }}" id="box{{ forloop.counter }}">
+        <input type="radio" name="questiontype{{ q.id }}" id="c0{{ forloop.counter }}" value="0">
+        <label for="c0{{ forloop.counter }}">Free Text</label>
+        <input type="radio" name="questiontype{{ q.id }}" id="c1{{ forloop.counter }}" value="1">
+        <label for="c1{{ forloop.counter }}">Multiple Choices</label>
+    </fieldset>
+    {% endfor %}
+    {% if question_list %}
+    <input type="submit" value="Modify it" />
+    {% endif %}
+</form>
+
+<form action="{% url 'polls:questioncreate' event_id user_id%}" method="post">
+    {% csrf_token %}
+    <fieldset>
+        <legend>Create New Question</legend>
+        <input type="text" name="questiontext_new" id="box">
+        <input type="radio" name="questiontype_new" id="c0" value="0">
+        <label for="c0">Free Text</label>
+        <input type="radio" name="questiontype_new" id="c1" value="1">
+        <label for="c1">Multiple Choices</label>
+    </fieldset>
+    <input type="submit" value="Create it" />
+</form>
+<form action="{% url 'polls:login' %}" method="get">
+    {% csrf_token %}
+    <input type="submit" value="Logout" />
+</form>
+<form action="{% url 'polls:event' user_id %}" method="get">
+    {% csrf_token %}
+    <input type="submit" value="Back" />
+</form>
+</div>

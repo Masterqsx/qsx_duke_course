@@ -1,0 +1,9 @@
+body {  
+    background-image: url("back.png");
+    background-size: 100%;  
+    background-repeat: no-repeat;  
+}  
+
+#event_frame {
+    text-align: center; 
+}

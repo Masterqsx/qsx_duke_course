@@ -1,0 +1,58 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'polls/back.css' %}" />
+
+<div id="event_frame">
+<h1>User List</h1>
+
+<form action="{% url 'polls:eventusermodify' event_id user_id %}" method="post">
+  {% csrf_token %}
+  {% for u in user_list %}
+  <fieldset>
+    <legend>User {{ forloop.counter }}</legend>
+    <li>{{ u.u_name }} --
+        {% for pe in pe_list %}
+            {% if pe.pe_type == 0 and pe.u_id == u.id %}
+                Owner
+            {% elif pe.pe_type == 1 and pe.u_id == u.id %}
+                Guest
+            {% elif pe.u_id == u.id %}
+                Vendor
+            {% endif %}
+        {% endfor %}
+    </li>
+    <input type="radio" name="usertype{{ u.id }}" id="c0{{ forloop.counter }}" value="0">
+    <label for="c0{{ forloop.counter }}">Owner</label>
+    <input type="radio" name="usertype{{ u.id }}" id="c1{{ forloop.counter }}" value="1">
+    <label for="c1{{ forloop.counter }}">Guest</label>
+    <input type="radio" name="usertype{{ u.id }}" id="c2{{ forloop.counter }}" value="2">
+    <label for="c2{{ forloop.counter }}">Vendor</label>
+  </fieldset>
+  {% endfor %}
+  {% if user_list %}
+    <input type="submit" value="Modify it" />
+  {% endif %}
+</form>
+
+<form action="{% url 'polls:eventusercreate' event_id user_id %}" method="post">
+    {% csrf_token %}
+  <fieldset>
+    <legend>Create New User</legend>
+    <input type="text" name="username_new" id="box">
+    <input type="radio" name="usertype_new" id="c0" value="0">
+    <label for="c0">Owner</label>
+    <input type="radio" name="usertype_new" id="c1" value="1">
+    <label for="c1">Guest</label>
+    <input type="radio" name="usertype_new" id="c2" value="2">
+    <label for="c2">Vendor</label>
+  </fieldset>
+  <input type="submit" value="Create it" />
+</form>
+<form action="{% url 'polls:login' %}" method="get">
+    {% csrf_token %}
+    <input type="submit" value="Logout" />
+</form>
+<form action="{% url 'polls:event' user_id %}" method="get">
+    {% csrf_token %}
+    <input type="submit" value="Back" />
+</form>
+</div>

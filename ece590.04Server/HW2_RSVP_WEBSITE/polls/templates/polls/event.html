@@ -1,0 +1,51 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'polls/back.css' %}" />
+
+<div id="event_frame">
+<h1>Event list of User "{{ user_name }}" </h1>
+
+<form action="{% url 'polls:eventmodify' user_id %}" method="post">
+    {% csrf_token %}
+    {% for e in event_list %}
+    <fieldset>
+        <legend>Event {{ forloop.counter }}</legend>
+        <li><a href="{% url 'polls:question' e.id user_id%}">{{ e.e_name }} -- {{ e.e_date }} --
+            {% for pe in pe_list %}
+                {% if pe.pe_type == 0 and pe.e_id == e.id %}
+                    Owner
+                {% elif pe.pe_type == 1 and pe.e_id == e.id %}
+                    Guest
+                {% elif pe.e_id == e.id %}
+                    Vendor
+                {% endif %}
+            {% endfor %}
+        </a></li>
+        <label for="box1{{ forloop.counter }}">Event Name</label><br>
+        <input type="text" name="eventname{{ e.id }}" id="box1{{ forloop.counter }}"><br>
+        <label for="box2{{ forloop.counter }}">Event Time</label><br>
+        <input type="text" name="eventdate{{ e.id }}" id="box2{{ forloop.counter }}"><br>
+        <a href="{% url 'polls:eventuser' e.id user_id%}">Manage Users of Event {{ forloop.counter }}</a>
+    </fieldset>
+    {% endfor %}
+    {% if event_list %}
+    <input type="submit" value="Modify it" />
+    {% endif %}
+</form>
+
+<form action="{% url 'polls:eventcreate' user_id %}" method="post">
+    {% csrf_token %}
+    <fieldset>
+        <legend>Create New Event</legend>
+        <label for="box1">Name</label><br>
+        <input type="text" name="eventname_new" id="box1"><br>
+        <label for="box2">Time</label><br>
+        <input type="text" name="eventdate_new" id="box2">
+    </fieldset>
+    <input type="submit" value="Create it" />
+</form>
+<form action="{% url 'polls:login' %}" method="get">
+    {% csrf_token %}
+    <input type="submit" value="Logout" />
+</form>
+</div>
+
