@@ -1,2 +1,4 @@
 1. Sometimes need refresh the webpage
 2. It is better to use on Edge than Chrome. It seems like proxy works faster wil Edge
+3. There is no authentication process to verify the user is 
+4. If there are too many request time, proxy may not be able to respond in time. There is no limit of # of threads, DDOS many be able to disable the service.
