@@ -1,0 +1,48 @@
+message UConnect {
+  optional int64 reconnectid = 1;
+  optional int32 numtrucksinit = 2;
+}
+
+message UConnected {
+  required int64 worldid = 1;
+  optional string error = 2;
+}
+message UGoPickup {
+  required int32 truckid = 1;
+  required int32 whid = 2;
+}
+
+message UFinished {
+  required int32 truckid = 1;
+  required int32 x = 2;
+  required int32 y = 3;
+}
+message UDeliveryMade {
+  required int32 truckid = 1;
+  required int64 packageid = 2;
+}
+
+message UDeliveryLocation {
+  required int64 packageid = 1;
+  required int32 x = 2;
+  required int32 y = 3;
+}
+
+message UGoDeliver {
+  required int32 truckid = 1;
+  repeated UDeliveryLocation packages = 2;
+}
+
+message UCommands {
+  repeated UGoDeliver deliveries = 1;
+  repeated UGoPickup pickups = 2;
+  optional uint32 simspeed = 3; //units/minute
+  optional bool disconnect = 4; //after processing/sending replies, close  
+}
+
+message UResponses {
+  repeated UFinished completions = 1;
+  repeated UDeliveryMade delivered = 2;
+  optional string error = 3;
+  optional bool finished = 4;
+}

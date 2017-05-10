@@ -1,0 +1,53 @@
+message AProduct {
+  required int64 id = 1;
+  required string description = 2;
+  required int32 count = 3;
+}
+
+message AInitWarehouse {
+   required int32 x = 1;
+   required int32 y = 2;
+}
+
+
+message AConnect {
+  required int64 worldid = 1;
+  repeated AInitWarehouse initwh = 2;
+}
+message AConnected {
+  optional string error = 1;
+}
+
+message APack {
+  required int32 whnum  = 1;
+  repeated AProduct things = 2;
+  required int64 shipid = 3;
+}
+
+message APutOnTruck {
+   required int32 whnum = 1;
+   required int32 truckid = 2;
+   required int64 shipid = 3;
+}
+
+message APurchaseMore {
+   required int32 whnum = 1;
+   repeated AProduct things = 2;
+}
+
+
+message ACommands {
+   repeated APurchaseMore buy = 1;
+   repeated APutOnTruck load = 2;
+   repeated APack topack = 3;
+   optional uint32 simspeed = 4; //units/minute
+   optional bool disconnect = 5; //after processing/sending replies, close  
+}
+
+message AResponses {
+   repeated APurchaseMore arrived = 1;
+   repeated int64 ready = 2; //ship ids
+   repeated int64 loaded = 3; //ship ids
+   optional string error = 4;
+   optional bool finished = 5;
+}

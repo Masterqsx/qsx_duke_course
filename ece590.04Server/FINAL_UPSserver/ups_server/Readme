@@ -1,0 +1,15 @@
+1. You shold run sim before you start the ups server
+2. After you run sim, you need to modify the host to the world
+3. You need to know the number of the truck and change the setting parameter inside the db_iniitial.py
+4. If you run it first, run db_initial.py at first to clean up the database.
+5. The default setting is:
+  worldid: 1000
+  world host: colab-sbx-pvt-08.oit.duke.edu
+  world port: 12345
+  port left for amazon: 34567
+  # of truck: 3
+  database: name: ups
+            password: passw0rd
+            host: '127.0.0.1'
+6. Once you finish all, run "./main.py"
+7. This is the backend part of ups

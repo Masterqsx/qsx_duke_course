@@ -1,0 +1,39 @@
+<h1>Track Package or Login</h1>
+<form action="{% url 'package_info:track'%}" method="post">
+{% csrf_token %}
+  <fieldset>
+  <legend>Tracking Your Package</legend>
+  <label for="tn">Tracking Number</label><br/>
+  <input type="text" name="tracking_number" id="tn"/><br/>
+  {% for p in package_list %}
+    <ol>
+    <li>Tracking Number: "{{p.package_id}}"</li>
+    <li>Detail of Package: "{{p.info}}"</li>
+    <li>Truck ID: "{{p.truck_id}}"</li>
+    <li>Status: 
+      {% if p.status == 0 %}
+        Packed, Waiting for pickup
+      {% elif p.status == 1 %}
+        Arrived the warehouse, Waiting for load
+      {% elif p.status == 2 %}
+        Loaded, Delivering
+      {% elif p.status == 3 %}
+        Delivered
+      {% else %}
+        Unknown
+      {% endif %}
+    </li>
+    </ol>
+  {% endfor %}
+  <input type="submit" value="search"/>
+  </fieldset>
+</form>
+<form action="{% url 'package_info:login' %}" method="post">
+{% csrf_token %}
+  <input type="submit" value="Login"/>
+</form>
+<form action="{% url 'package_info:register' %}" method="post">
+{% csrf_token %}
+  <input type="submit" value="Register"/>
+</form>
+<a href="/map">Check Admin View</a>

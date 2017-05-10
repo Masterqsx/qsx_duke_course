@@ -1,0 +1,16 @@
+message AU {
+  required int32 flag = 1;     // 0 → ready for pickup  ; 1 → ready for deliver
+  required int32 shipid = 2;
+  required int32 whid = 3;
+  optional int64 packageid = 4;
+  required int32 x = 5;
+  required int32 y = 6;
+  optional string ups_id = 7;    // a requirement for Amazon to specify a UPS account
+  optional string detailofpackage = 8;
+}
+
+message UA {
+  required int64 packageid = 1;
+  required int32 truckid = 2;
+  required int32 shipid = 3;
+}

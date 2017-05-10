@@ -1,0 +1,42 @@
+<h1>Welcome User "{{user_name}}"</h1>
+<form action="{% url 'package_info:userView'%}" method="post">
+{% csrf_token %}
+  {% for p in package_list %}
+  <fieldset>
+  <legend>Order "{{p.package_id}}"</legend>
+  <ol>
+  <li>Priority of Pakcage: "{{p.pri}}"</li>
+  <li>Detail of Package: "{{p.info}}"</li>
+  <li>Status:
+    {% if p.status == 0 %}
+      Packed, Waiting for pickup
+    {% elif p.status == 1 %}
+      Arrived the warehouse, Waiting for load
+    {% elif p.status == 2 %}
+      Loaded, Delivering
+    {% elif p.status == 3 %}
+      Delivered
+    {% else %}
+      Unknown
+    {% endif %}
+  </li>
+  {% for d in delivery_list %}
+    {% if d.package_id == p.package_id %}
+      <li>Address: x: "{{d.x}}" y: "{{d.y}}"</li>
+      <li>Truck ID: "{{d.truck_id}}"</li>
+    {% endif %}
+  {% endfor %}
+  <li>The modification result: "{{err}}"</li>
+  </ol>
+  New Address<br/>
+  new_x: <input type="text" name="new_x{{p.package_id}}" id="nx"/><br/>
+  new_y: <input type="text" name="new_y{{p.package_id}}" id="ny"/><br/>
+  buy priority delivery: <input type='checkbox' name="pri{{p.package_id}}"/><br/>
+  <button type="submit" name="modify" value="{{p.package_id}}"/>modify</button>
+  </fieldset>
+  {% endfor %}
+</form>
+<form action="{% url 'package_info:logout' %}" method="post">
+  {% csrf_token %}
+  <input type="submit" value="Log Out"/>
+</form>
