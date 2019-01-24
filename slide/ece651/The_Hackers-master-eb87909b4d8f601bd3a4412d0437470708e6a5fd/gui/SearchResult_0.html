@@ -1,0 +1,2425 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml">
+<head>
+  <meta name="viewport" content="width=1003">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"12b967eaec","applicationID":"2836043","transactionName":"e11fTERXWVtdQRtXAlZTS1dYF0VFV1dBUBc=","queueTime":0,"applicationTime":186,"agent":""}</script>
+<script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"UwIEV0VRAAAGVFVR"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(t,e,n){function r(t){try{s.console&&console.log(t)}catch(e){}}var o,i=t("ee"),a=t(14),s={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(s.console=!0,-1!==o.indexOf("dev")&&(s.dev=!0),-1!==o.indexOf("nr_dev")&&(s.nrDev=!0))}catch(c){}s.nrDev&&i.on("internal-error",function(t){r(t.stack)}),s.dev&&i.on("fn-err",function(t,e,n){r(n.stack)}),s.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(s,function(t,e){return t}).join(", ")))},{}],2:[function(t,e,n){function r(t,e,n,r,o){try{d?d-=1:i("err",[o||new UncaughtException(t,e,n)])}catch(s){try{i("ierr",[s,(new Date).getTime(),!0])}catch(c){}}return"function"==typeof f?f.apply(this,a(arguments)):!1}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function o(t){i("err",[t,(new Date).getTime()])}var i=t("handle"),a=t(15),s=t("ee"),c=t("loader"),f=window.onerror,u=!1,d=0;c.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(l){"stack"in l&&(t(8),t(7),"addEventListener"in window&&t(5),c.xhrWrappable&&t(9),u=!0)}s.on("fn-start",function(t,e,n){u&&(d+=1)}),s.on("fn-err",function(t,e,n){u&&(this.thrown=!0,o(n))}),s.on("fn-end",function(){u&&!this.thrown&&d>0&&(d-=1)}),s.on("internal-error",function(t){i("ierr",[t,(new Date).getTime(),!0])})},{}],3:[function(t,e,n){t("loader").features.ins=!0},{}],4:[function(t,e,n){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(8),s=t(7);t("loader").features.stn=!0,t(6);var c=NREUM.o.EV;o.on("fn-start",function(t,e){var n=t[0];n instanceof c&&(this.bstStart=Date.now())}),o.on("fn-end",function(t,e){var n=t[0];n instanceof c&&i("bst",[n,e,this.bstStart,Date.now()])}),a.on("fn-start",function(t,e,n){this.bstStart=Date.now(),this.bstType=n}),a.on("fn-end",function(t,e){i("bstTimer",[e,this.bstStart,Date.now(),this.bstType])}),s.on("fn-start",function(){this.bstStart=Date.now()}),s.on("fn-end",function(t,e){i("bstTimer",[e,this.bstStart,Date.now(),"requestAnimationFrame"])}),o.on("pushState-start",function(t){this.time=Date.now(),this.startPath=location.pathname+location.hash}),o.on("pushState-end",function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),"addEventListener"in window.performance&&(window.performance.clearResourceTimings?window.performance.addEventListener("resourcetimingbufferfull",function(t){i("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.clearResourceTimings()},!1):window.performance.addEventListener("webkitresourcetimingbufferfull",function(t){i("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.webkitClearResourceTimings()},!1)),document.addEventListener("scroll",r,!1),document.addEventListener("keypress",r,!1),document.addEventListener("click",r,!1)}},{}],5:[function(t,e,n){function r(t){for(var e=t;e&&!e.hasOwnProperty(u);)e=Object.getPrototypeOf(e);e&&o(e)}function o(t){s.inPlace(t,[u,d],"-",i)}function i(t,e){return t[1]}var a=t("ee").get("events"),s=t(16)(a),c=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";e.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,e){if(t[1]){var n=t[1];if("function"==typeof n){var r=c(n,"nr@wrapped",function(){return s(n,"fn-",null,n.name||"anonymous")});this.wrapped=t[1]=r}else"function"==typeof n.handleEvent&&s.inPlace(n,["handleEvent"],"fn-")}}),a.on(d+"-start",function(t){var e=this.wrapped;e&&(t[1]=e)})},{}],6:[function(t,e,n){var r=t("ee").get("history"),o=t(16)(r);e.exports=r,o.inPlace(window.history,["pushState","replaceState"],"-")},{}],7:[function(t,e,n){var r=t("ee").get("raf"),o=t(16)(r);e.exports=r,o.inPlace(window,["requestAnimationFrame","mozRequestAnimationFrame","webkitRequestAnimationFrame","msRequestAnimationFrame"],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],8:[function(t,e,n){function r(t,e,n){t[0]=a(t[0],"fn-",null,n)}function o(t,e,n){this.method=n,this.timerDuration="number"==typeof t[1]?t[1]:0,t[0]=a(t[0],"fn-",this,n)}var i=t("ee").get("timer"),a=t(16)(i);e.exports=i,a.inPlace(window,["setTimeout","setImmediate"],"setTimer-"),a.inPlace(window,["setInterval"],"setInterval-"),a.inPlace(window,["clearTimeout","clearImmediate"],"clearTimeout-"),i.on("setInterval-start",r),i.on("setTimer-start",o)},{}],9:[function(t,e,n){function r(t,e){d.inPlace(e,["onreadystatechange"],"fn-",s)}function o(){var t=this,e=u.context(t);t.readyState>3&&!e.resolved&&(e.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,v,"fn-",s)}function i(t){w.push(t),h&&(g=-g,b.data=g)}function a(){for(var t=0;t<w.length;t++)r([],w[t]);w.length&&(w=[])}function s(t,e){return e}function c(t,e){for(var n in t)e[n]=t[n];return e}t(5);var f=t("ee"),u=f.get("xhr"),d=t(16)(u),l=NREUM.o,p=l.XHR,h=l.MO,m="readystatechange",v=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],w=[];e.exports=u;var y=window.XMLHttpRequest=function(t){var e=new p(t);try{u.emit("new-xhr",[e],e),e.addEventListener(m,o,!1)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}return e};if(c(p,y),y.prototype=p.prototype,d.inPlace(y.prototype,["open","send"],"-xhr-",s),u.on("send-xhr-start",function(t,e){r(t,e),i(e)}),u.on("open-xhr-start",r),h){var g=1,b=document.createTextNode(g);new h(a).observe(b,{characterData:!0})}else f.on("fn-end",function(t){t[0]&&t[0].type===m||a()})},{}],10:[function(t,e,n){function r(t){var e=this.params,n=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;l>r;r++)t.removeEventListener(d[r],this.listener,!1);if(!e.aborted){if(n.duration=(new Date).getTime()-this.startTime,4===t.readyState){e.status=t.status;var i=o(t,this.lastSize);if(i&&(n.rxSize=i),this.sameOrigin){var a=t.getResponseHeader("X-NewRelic-App-Data");a&&(e.cat=a.split(", ").pop())}}else e.status=0;n.cbTime=this.cbTime,u.emit("xhr-done",[t],t),c("xhr",[e,n,this.startTime])}}}function o(t,e){var n=t.responseType;if("json"===n&&null!==e)return e;var r="arraybuffer"===n||"blob"===n||"json"===n?t.response:t.responseText;return i(r)}function i(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(e){return}}}function a(t,e){var n=f(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}var s=t("loader");if(s.xhrWrappable){var c=t("handle"),f=t(11),u=t("ee"),d=["load","error","abort","timeout"],l=d.length,p=t("id"),h=t(13),m=window.XMLHttpRequest;s.features.xhr=!0,t(9),u.on("new-xhr",function(t){var e=this;e.totalCbs=0,e.called=0,e.cbTime=0,e.end=r,e.ended=!1,e.xhrGuids={},e.lastSize=null,h&&(h>34||10>h)||window.opera||t.addEventListener("progress",function(t){e.lastSize=t.loaded},!1)}),u.on("open-xhr-start",function(t){this.params={method:t[0]},a(this,t[1]),this.metrics={}}),u.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),u.on("send-xhr-start",function(t,e){var n=this.metrics,r=t[0],o=this;if(n&&r){var a=i(r);a&&(n.txSize=a)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof e.onload))&&o.end(e)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}};for(var s=0;l>s;s++)e.addEventListener(d[s],this.listener,!1)}),u.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),u.on("xhr-load-added",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),u.on("xhr-load-removed",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),u.on("addEventListener-end",function(t,e){e instanceof m&&"load"===t[0]&&u.emit("xhr-load-added",[t[1],t[2]],e)}),u.on("removeEventListener-end",function(t,e){e instanceof m&&"load"===t[0]&&u.emit("xhr-load-removed",[t[1],t[2]],e)}),u.on("fn-start",function(t,e,n){e instanceof m&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),u.on("fn-end",function(t,e){this.xhrCbStart&&u.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{}],11:[function(t,e,n){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!e.protocol||":"===e.protocol||e.protocol===n.protocol,a=e.hostname===document.domain&&e.port===n.port;return r.sameOrigin=i&&(!e.hostname||a),r}},{}],12:[function(t,e,n){function r(t,e){return function(){o(t,[(new Date).getTime()].concat(a(arguments)),null,e)}}var o=t("handle"),i=t(14),a=t(15);"undefined"==typeof window.newrelic&&(newrelic=NREUM);var s=["setPageViewName","addPageAction","setCustomAttribute","finished","addToTrace","inlineHit"],c=["addPageAction"],f="api-";i(s,function(t,e){newrelic[e]=r(f+e,"api")}),i(c,function(t,e){newrelic[e]=r(f+e)}),e.exports=newrelic,newrelic.noticeError=function(t){"string"==typeof t&&(t=new Error(t)),o("err",[t,(new Date).getTime()])}},{}],13:[function(t,e,n){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),e.exports=r},{}],14:[function(t,e,n){function r(t,e){var n=[],r="",i=0;for(r in t)o.call(t,r)&&(n[i]=e(r,t[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],15:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(0>o?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=r},{}],16:[function(t,e,n){function r(t){return!(t&&"function"==typeof t&&t.apply&&!t[a])}var o=t("ee"),i=t(15),a="nr@original",s=Object.prototype.hasOwnProperty,c=!1;e.exports=function(t){function e(t,e,n,o){function nrWrapper(){var r,a,s,c;try{a=this,r=i(arguments),s="function"==typeof n?n(r,a):n||{}}catch(u){d([u,"",[r,a,o],s])}f(e+"start",[r,a,o],s);try{return c=t.apply(a,r)}catch(l){throw f(e+"err",[r,a,l],s),l}finally{f(e+"end",[r,a,c],s)}}return r(t)?t:(e||(e=""),nrWrapper[a]=t,u(t,nrWrapper),nrWrapper)}function n(t,n,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<n.length;c++)s=n[c],a=t[s],r(a)||(t[s]=e(a,f?s+o:o,i,s))}function f(e,n,r){if(!c){c=!0;try{t.emit(e,n,r)}catch(o){d([o,e,n,r])}c=!1}}function u(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){d([r])}for(var o in t)s.call(t,o)&&(e[o]=t[o]);return e}function d(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=o),e.inPlace=n,e.flag=a,e}},{}],ee:[function(t,e,n){function r(){}function o(t){function e(t){return t&&t instanceof r?t:t?s(t,a,i):i()}function n(n,r,o){t&&t(n,r,o);for(var i=e(o),a=l(n),s=a.length,c=0;s>c;c++)a[c].apply(i,r);var u=f[v[n]];return u&&u.push([w,n,r,i]),i}function d(t,e){m[t]=l(t).concat(e)}function l(t){return m[t]||[]}function p(t){return u[t]=u[t]||o(n)}function h(t,e){c(t,function(t,n){e=e||"feature",v[n]=e,e in f||(f[e]=[])})}var m={},v={},w={on:d,emit:n,get:p,listeners:l,context:e,buffer:h};return w}function i(){return new r}var a="nr@context",s=t("gos"),c=t(14),f={},u={},d=e.exports=o();d.backlog=f},{}],gos:[function(t,e,n){function r(t,e,n){if(o.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[e]=r,r}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){o.buffer([t],r),o.emit(t,e,n)}var o=t("ee").get("handle");e.exports=r,r.ee=o},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!m++){var t=h.info=NREUM.info,e=u.getElementsByTagName("script")[0];if(t&&t.licenseKey&&t.applicationID&&e){c(l,function(e,n){t[e]||(t[e]=n)});var n="https"===d.split(":")[0]||t.sslForHttp;h.proto=n?"https://":"http://",s("mark",["onload",a()],null,"api");var r=u.createElement("script");r.src=h.proto+t.agent,e.parentNode.insertBefore(r,e)}}}function o(){"complete"===u.readyState&&i()}function i(){s("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var s=t("handle"),c=t(14),f=window,u=f.document;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:f.XMLHttpRequest,REQ:f.Request,EV:f.Event,PR:f.Promise,MO:f.MutationObserver},t(12);var d=""+location,l={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-918.min.js"},p=window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent),h=e.exports={offset:a(),origin:d,features:{},xhrWrappable:p};u.addEventListener?(u.addEventListener("DOMContentLoaded",i,!1),f.addEventListener("load",r,!1)):(u.attachEvent("onreadystatechange",o),f.attachEvent("onload",r)),s("mark",["firstbyte",a()],null,"api");var m=0},{}]},{},["loader",2,10,4,3]);</script>
+  <meta name="description" content="Honeywell Turbo Force Oscillating Table Fan, HT-906 (B00B4BJR58), B00B4BJR58, 611105240859, 0885106153740, HT-906 at camelcamelcamel: Amazon price tracker, Amazon price history charts, price watches, and price drop alerts." />
+  <meta name="keywords" content="Title: Honeywell Turbo Force Oscillating Table Fan, HT-906 (B00B4BJR58), ASIN: B00B4BJR58, UPC: 611105240859, EAN: 0885106153740, Model: HT-906, Product group: Home, Category: Misc., Amazon,price watch,price tracking,price history charts,price drop alerts,product,tracking,price,changes,alerts,notifications,notify,tracker,products,prices,watch,watching,track,history" />
+  <meta name="title" content="Honeywell Turbo Force Oscillating Table Fan, HT-906 (B00B4BJR58) | Amazon price tracker / tracking, Amazon price history charts, Amazon price watches, Amazon price drop alerts | camelcamelcamel.com" />
+
+  <meta property="og:site_name" content="camelcamelcamel.com"/>
+
+
+    <link rel="canonical" href="http://camelcamelcamel.com/Honeywell-Turbo-Force-Oscillating-HT-906/product/B00B4BJR58" />
+    <meta property="og:url" content="http://camelcamelcamel.com/Honeywell-Turbo-Force-Oscillating-HT-906/product/B00B4BJR58"/>
+
+    <meta property="og:type" content="product"/>
+    <meta property="og:image" content="http://ecx.images-amazon.com/images/I/313mkPYQDYL.jpg"/>
+    <meta property="og:title" content="Honeywell Turbo Force Oscillating Table Fan, HT-906 (B00B4BJR58)"/>
+    <meta property="og:description" content="Amazon price tracking & price history for Honeywell Turbo Force Oscillating Table Fan, HT-906 (B00B4BJR58)" />
+
+  <title>Honeywell Turbo Force Oscillating Table Fan, HT-906 (B00B4BJR58) | Amazon price tracker / tracking, Amazon price history charts, Amazon price watches, Amazon price drop alerts | camelcamelcamel.com</title>
+
+  <meta http-equiv="last-modified" content="2016-04-27 19:36:42 UTC" />
+  <meta name="google-site-verification" content="bqUwKhoYeT_MzX9y98lARmF4Q1ZfE8Wl_V9h6sSLleo" />
+
+    <link rel="stylesheet" type="text/css" href="http://d1i0o2gnhzh6dj.cloudfront.net/stylesheets/fresh-merged.v53.css" />
+    <!--[if IE]>
+    <style>
+      #inner_frame form.block input:hover[type="submit"].blue {
+        background-color: #006699 !important;
+      }
+
+      #inner_frame form.block input[type="submit"].blue {
+        background-color: #006699 !important;
+      }
+
+      #inner_frame form.block input:hover[type="submit"].green {
+        border-color: #00994c !important;
+      }
+
+      #inner_frame form.block input[type="submit"].green
+      {
+        background-color: #00994c !important;
+      }
+    </style>
+    <link rel="stylesheet" type="text/css" href="http://d1i0o2gnhzh6dj.cloudfront.net/stylesheets/fresh-ie-merged.css?1" />
+    <![endif]-->
+
+  <link rel="apple-touch-icon-precomposed" href="http://d1i0o2gnhzh6dj.cloudfront.net/images/apple-touch-icon.png" />
+
+  <!--[if lte IE 7]>
+  <style>
+    #sq { width: 429px; }
+    #slogan { font-size: 85%!important; }
+  </style>
+  <![endif]-->
+
+  <!--[if IE 7]>
+  <style>
+    #sq { width: 444px; }
+    #sq + input { padding-left: 0!important; padding-right: 0!important; font-size: 1em!important; }
+  </style>
+  <![endif]-->
+
+  <link rel="shortcut icon" href="http://d1i0o2gnhzh6dj.cloudfront.net/favicon.ico" />
+  <link title="Amazon Product Search" rel="search" type="application/opensearchdescription+xml" href="http://d1i0o2gnhzh6dj.cloudfront.net/camelcamelcamel-open_search.xml">
+
+  <style>
+  div.ad { margin-bottom: 2em; }
+  .big_buttons .retailer_link a,
+  .icon_buttons .retailer_link a
+  {
+    background-image: url(http://d1i0o2gnhzh6dj.cloudfront.net/images/button-amazon.png);
+  }
+
+  .flagsprite { background: url(http://d1i0o2gnhzh6dj.cloudfront.net/images/flagsprites.png) no-repeat top left; color: transparent !important; display: inline-block; }
+  .flagsprites li span, .listflagsprites li, .listflagsprites a, .retailer_tabs a span { background: url(http://d1i0o2gnhzh6dj.cloudfront.net/images/flagsprites.png) no-repeat top left; color: transparent !important;  }
+  .retailer_tabs a:hover { text-decoration: none; }
+  .retailer_tabs a span { height: 32px; width: 32px; display: inline-block; overflow: hidden; text-indent: -9999px;}
+
+
+  </style>
+
+  <script type="text/javascript">
+  var CONTENT_HOST = "http://d1i0o2gnhzh6dj.cloudfront.net";
+  var g_camel_loaded = false;
+  var g_clear_def = "Enter Amazon URL or keywords to find products";
+  var g_user_msg_updater = null;
+  var g_delayed_images = new Array();
+  var g_onload = new Array();
+  var g_is_login = false;
+
+  function push_delayed_image(url, obj_id)
+  {
+    g_delayed_images.push(new Array(url, obj_id));
+  }
+
+  function for_onload(f)
+  {
+    g_onload.push(f);
+  }
+
+  if (document.addEventListener) {
+    document.addEventListener('DOMContentLoaded', onStart, false);
+  }
+  (function() {
+    /*@cc_on
+    try {
+      document.body.doScroll('up');
+      return onStart();
+    } catch(e) {}
+    /*@if (false) @*/
+    if (/loaded|complete/.test(document.readyState)) return onStart();
+    /*@end @*/
+    if (!onStart.done) setTimeout(arguments.callee, 30);
+  })();
+
+  function addEvent(el, evt, fn, bubble) {
+    if (el.addEventListener) {
+      el.addEventListener(evt, fn, bubble);
+    } else if(el.attachEvent) {
+      el.attachEvent("on"+evt, fn);
+    } else {
+      el["on"+evt] = fn;
+    }
+  }
+
+  function triggerEvent(el, eventName) {
+    var ev;
+    if (document.createEvent) {
+      ev = document.createEvent("HTMLEvents");
+      ev.initEvent(eventName, true, true);
+    } else {
+      ev = document.createEventObject();
+      ev.eventType = eventName;
+    }
+    ev.eventName = eventName;
+    ev.memo = { };
+    if (document.createEvent) {
+      el.dispatchEvent(ev);
+    } else {
+      el.fireEvent("on" + ev.eventType, ev);
+    }
+  }
+
+  addEvent(window, "load", onStart, false);
+
+  var _timeoutid = null;
+
+
+  // scripts here to ensure any globals are declared and available to onStart()
+  var mainTabs, subTabs = null;
+function change_sub_tab(to) {
+  if (subTabs) {
+    subTabs.tabs[to].on();
+  }
+  mainTabs.tabs["summary"].on();
+  camel_event("Product Page - Price Field Click", to);
+}
+
+
+  function onStart()
+  {
+    // quit if this function has already been called
+    if (arguments.callee.done) return;
+
+    if (!g_camel_loaded || !Prototype)
+    {
+      if (_timeoutid)
+        clearTimeout(_timeoutid);
+
+      _timeoutid = setTimeout("onStart()", 30);
+      return;
+    }
+
+    if (_timeoutid)
+        clearTimeout(_timeoutid);
+
+
+    // flag this function so we don't do the same thing twice
+    arguments.callee.done = true;
+
+                $('show_variations').observe('click', function(event) {
+              $('variations_carousel').show();
+              $('show_variations').hide();
+              $('hide_variations').show();
+            });
+            $('hide_variations').observe('click', function(event) {
+              $('variations_carousel').hide();
+              $('show_variations').show();
+              $('hide_variations').hide();
+            });
+    new Tip("buy_box_tip",
+      "This is the featured offer price on the Amazon product page",
+      {
+        width: 'auto',
+        stem: 'bottomLeft',
+        hideAfter: 0.1,
+        hideOn: false,
+        hook: {tip: 'bottomLeft', target: 'topMiddle'}
+      }
+    );
+new Tip(
+  $('dp_amazon'),
+  $('example_prices_dp_amazon').innerHTML,
+  {
+    width: 'auto',
+    stem: 'bottomMiddle',
+    hideAfter: 0.5,
+    hideOn: false,
+    hook: {tip: 'bottomMiddle', target: 'topMiddle'},
+    showOn: 'click',
+  }
+);
+new Tip(
+  $('dp_new'),
+  $('example_prices_dp_new').innerHTML,
+  {
+    width: 'auto',
+    stem: 'bottomMiddle',
+    hideAfter: 0.5,
+    hideOn: false,
+    hook: {tip: 'bottomMiddle', target: 'topMiddle'},
+    showOn: 'click',
+  }
+);
+new Tip(
+  $('dp_used'),
+  $('example_prices_dp_used').innerHTML,
+  {
+    width: 'auto',
+    stem: 'bottomMiddle',
+    hideAfter: 0.5,
+    hideOn: false,
+    hook: {tip: 'bottomMiddle', target: 'topMiddle'},
+    showOn: 'click',
+  }
+);
+  if ($("features_twitter")) {
+    new Tip($("features_twitter"), $("features_twitter_tip"), {
+      hook: {target: "topMiddle", tip: "bottomMiddle"},
+      stem: "bottomMiddle"
+    });
+  }
+  
+  
+    mainTabs = new TabSet("maintab", "active", "Product Page - Main Tabs");
+    
+      subTabs = new TabSet("pricetabs", "active", "Product Page - Price Type Tabs");
+  
+new ChartControls(4, "summary", {geName: "Overview Chart"});
+    push_delayed_image("http://charts.camelcamelcamel.com/us/B00B4BJR58/new.png?force=1&zero=0&w=725&h=440&desired=false&legend=1&ilt=1&tp=all&fo=0&lang=en", "summary_chart");
+        $("toggle_tp_summary_all").removeClassName("on");
+
+
+    try {
+      $("h1al_2014").title = "Visit our homepage";
+      $("h1a_2014").title = "Visit our homepage";
+    } catch (e) { }
+
+    check_blur($("sq"));
+    load_on_load();
+    load_delayed_images();
+
+  }
+
+    (function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,"script","//www.google-analytics.com/analytics.js","ga");
+
+    ga("create", "UA-10042935-2", ".camelcamelcamel.com");
+    ga("require", "linkid", "linkid.js");
+    ga("send", "pageview");
+  </script>
+
+  
+  
+    <script type='text/javascript'>
+      var googletag = googletag || {};
+      googletag.cmd = googletag.cmd || [];
+      (function() {
+        var gads = document.createElement('script');
+        gads.async = true;
+        gads.type = 'text/javascript';
+        var useSSL = 'https:' == document.location.protocol;
+        gads.src = (useSSL ? 'https:' : 'http:') +
+          '//www.googletagservices.com/tag/js/gpt.js';
+        var node = document.getElementsByTagName('script')[0];
+        node.parentNode.insertBefore(gads, node);
+      })();
+    </script>
+    
+    <script type='text/javascript'>
+      googletag.cmd.push(function() {
+          googletag.defineSlot('/33151237/3c_header_leaderboard', [728, 90], 'div-gpt-ad-1455319101535-0').addService(googletag.pubads());
+          googletag.defineSlot('/33151237/3c_footer_leaderboard', [728, 90], 'div-gpt-ad-1455319174745-0').addService(googletag.pubads());
+          googletag.defineSlot('/33151237/3c_skyscraper_left', [160, 600], 'div-gpt-ad-1455687493205-0').addService(googletag.pubads());
+          googletag.defineSlot('/33151237/3c_skyscraper_right', [160, 600], 'div-gpt-ad-1455687493205-1').addService(googletag.pubads());
+        googletag.pubads().enableSingleRequest();
+        googletag.pubads().collapseEmptyDivs();
+        googletag.enableServices();
+      });
+    </script>
+</head>
+<body>
+  <div id="page">
+    <a name="top"><!-- // --></a>
+    
+    
+      <!-- no recent news, sorry camelteers -->
+
+
+    
+
+    
+<div id="header_2014" class="amazon">
+  <div id="user_dash_row">
+
+  </div>
+  <div id="logo_search_row">
+    <div class="yui3-g">
+      <div class="yui3-u-1-8">
+        <h1 id="h1al_2014">
+          <a id="h1a_2014" href="/" title="Honeywell Turbo Force Oscillating Table Fan, HT-906 (B00B4BJR58) | Amazon price tracker / tracking, Amazon price history charts, Amazon price watches, Amazon price drop alerts | camelcamelcamel.com" onclick="return(camel_out(this, 'Logo', 'US', 'Home', 0));">Honeywell Turbo Force Oscillating Table Fan, HT-906 (B00B4BJR58) | Amazon price tracker / tracking, Amazon price history charts, Amazon price watches, Amazon price drop alerts | camelcamelcamel.com</a>
+        </h1>
+      </div>
+      <div class="yui3-u-5-8">
+        <div id="search">
+          <form action="/search" style="display: inline;" id="search_form_2014" data-locale="US">
+
+            <input type="text" name="sq" id="sq" value="" title="Search for"><input id="searchbutton" type="submit" value="&nbsp;" />
+            <script>
+              for_onload(function() {
+                var sq = $("sq");
+                
+                sq.onfocus = function(e) { check_clear(this); return(false); };
+                sq.onblur = function(e) { check_blur(this); return(false); };
+                sq.oncontextmenu = function(e) { check_clear(this); return(true); };
+                
+                $("search_form_2014").onsubmit = function(e) { return(check_sq(this, $('sq'))); };
+              });
+            </script>
+          </form>
+        </div>
+      </div>
+
+      <div class="yui3-u-1-4">
+        <div id="top_right_menu_parent_2014">
+          <ul id="top_right_menu_2014">
+                <div class="modal_content" id="locales_modal_content"><div id="outer_frame">
+  <div id="inner_frame">
+    <p style="margin-bottom: 1em;">You are currently viewing our site for Amazon in United States.  Click a locale to go to that part of our site.</p>
+    <div class="yui3-g listflagsprites flagsprites">
+        <div class="yui3-u-1-4">
+          <div class="pad">
+            <p>
+              <a href="http://ca.camelcamelcamel.com/" title="Track products from Amazon Canada" class="flagsprite-CA"><!-- // --></a>
+              Canada
+            </p>
+          </div>
+        </div>
+        <div class="yui3-u-1-4">
+          <div class="pad">
+            <p>
+              <a href="http://cn.camelcamelcamel.com/" title="Track products from Amazon China" class="flagsprite-CN"><!-- // --></a>
+              China
+            </p>
+          </div>
+        </div>
+        <div class="yui3-u-1-4">
+          <div class="pad">
+            <p>
+              <a href="http://fr.camelcamelcamel.com/" title="Track products from Amazon France" class="flagsprite-FR"><!-- // --></a>
+              France
+            </p>
+          </div>
+        </div>
+        <div class="yui3-u-1-4">
+          <div class="pad">
+            <p>
+              <a href="http://de.camelcamelcamel.com/" title="Track products from Amazon Germany" class="flagsprite-DE"><!-- // --></a>
+              Germany
+            </p>
+          </div>
+        </div>
+        <div class="yui3-u-1-4">
+          <div class="pad">
+            <p>
+              <a href="http://it.camelcamelcamel.com/" title="Track products from Amazon Italy" class="flagsprite-IT"><!-- // --></a>
+              Italy
+            </p>
+          </div>
+        </div>
+        <div class="yui3-u-1-4">
+          <div class="pad">
+            <p>
+              <a href="http://jp.camelcamelcamel.com/" title="Track products from Amazon Japan" class="flagsprite-JP"><!-- // --></a>
+              Japan
+            </p>
+          </div>
+        </div>
+        <div class="yui3-u-1-4">
+          <div class="pad">
+            <p>
+              <a href="http://es.camelcamelcamel.com/" title="Track products from Amazon Spain" class="flagsprite-ES"><!-- // --></a>
+              Spain
+            </p>
+          </div>
+        </div>
+        <div class="yui3-u-1-4">
+          <div class="pad">
+            <p>
+              <a href="http://uk.camelcamelcamel.com/" title="Track products from Amazon United Kingdom" class="flagsprite-UK"><!-- // --></a>
+              United Kingdom
+            </p>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
+
+<style>div.pad { margin-bottom: 1em; }</style>
+</div>
+                <li class="first"><a id="topmenu_locales_link" href="/locales" title="Choose your preferred Amazon locale / country" onclick="camel_event('Top Menu', 'US', 'Locales', 0); ga('send', {'hitType': 'pageview','page': this.href,'title': 'Locales'});; Modalbox.show($('locales_modal_content').innerHTML, {title: this.title, width: 500}); return false;"><img src="http://d1i0o2gnhzh6dj.cloudfront.net/images/US.png" align="middle" id="locale_flag"></a></li>
+
+              <li><a href="https://secure.camelcamelcamel.com/signup?return_to=http%3A%2F%2Fcamelcamelcamel%2Ecom%2FHoneywell-Turbo-Force-Oscillating-HT-906%2Fproduct%2FB00B4BJR58&utm_campaign=registration&amp;utm_source=menutopright&amp;utm_medium=www" onclick="camel_event('Top Menu', 'US', 'Sign Up', 0); ga('send', {'hitType': 'pageview','page': this.href,'title': 'Sign Up'});; Modalbox.show(this.href, {title: this.title, width: 800}); return false;" title="Create a free camelcamelcamel account" id="topmenu_signup_link">Sign up</a></li>
+              
+                <li><a href="https://secure.camelcamelcamel.com/login?return_to=http%3A%2F%2Fcamelcamelcamel%2Ecom%2FHoneywell-Turbo-Force-Oscillating-HT-906%2Fproduct%2FB00B4BJR58" class="login_link" onclick="camel_event('Top Menu', 'US', 'Sign In', 0); ga('send', {'hitType': 'pageview','page': this.href,'title': 'Sign In'});; Modalbox.show(this.href, {title: this.title, width: 400}); return false;" title="Log in">Log in</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+    <div id="main_menu_row">
+      <div id="main_menu_parent">
+        <ul id="main_menu_2014">
+          <li class="first" id="mainmenu0"><a href="/login?return_to=/tracker?filtering=false&amp;rf=*" title="View the products you're tracking" onclick="camel_event('Main Menu', 'US', 'Login Required - Price Watches', 0); ga('send', {'hitType': 'pageview','page': this.href,'title': 'Login Required - Price Watches'});; Modalbox.show($('login_modal_content').innerHTML, {title: this.title, width: 400}); return false;">Your Price Watches</a></li><li class="" id="mainmenu1"><a href="/products" title="Browse Amazon products by category" onclick="return(camel_out(this, 'Main Menu', 'US', 'Browse Products', 0));">Browse Products</a></li><li class="" id="mainmenu2"><a href="/popular" title="Browse products that are popular with Camel users" onclick="return(camel_out(this, 'Main Menu', 'US', 'Popular', 0));">Popular Products</a></li><li class="" id="mainmenu3"><a href="/top_drops" title="View products listed by recent price drop" onclick="return(camel_out(this, 'Main Menu', 'US', 'Top Drops', 0));">Top Price Drops</a></li><li class="" id="mainmenu4"><a href="/tools" title="Learn about our tools like The Camelizer, our browser extension for Chrome, Firefox, and Safari" onclick="return(camel_out(this, 'Main Menu', 'US', 'Tools', 0));">Tools</a></li><li class="" id="mainmenu5"><a href="/blog" title="Read Camel news on our blog" onclick="return(camel_out(this, 'Main Menu', 'US', 'Blog', 0));">Blog</a></li>
+        </ul>
+      </div>
+    </div>
+</div>
+
+<script>
+for_onload(function() {
+
+
+  new Tip(
+    $("topmenu_locales_link"),
+    $("topmenu_locales_link").title,
+    {
+      width: "auto",
+      stem: "rightMiddle",
+      hideOthers: true,
+      hook: {tip: "rightMiddle", target: "leftMiddle"}
+    }
+  );
+
+  $("topmenu_locales_link").title = "";
+});
+</script>
+
+
+      <div id="ad_center_top" class="ad" style="display: none;">
+          <!-- /33151237/3c_header_leaderboard -->
+          <div id='div-gpt-ad-1455319101535-0' style='/*height:90px;*/ width:728px; margin: 0 auto;'>
+          </div>
+      </div>
+
+    <div id="content_container">
+
+
+
+      <div id="content" class="content clearfix inner">
+          
+
+        <div class="colparent clearfix" style="margin-bottom: 20px;">
+  <div class="col clearfix" style="width: 160px; height: 160px; overflow: hidden; background: #fff url(http://ecx.images-amazon.com/images/I/313mkPYQDYL._SL160_.jpg) top center no-repeat;">
+    <a title="Click here to view a larger product image" style="display: block; height: 100%; width: 100%; color: transparent;" href="http://ecx.images-amazon.com/images/I/313mkPYQDYL.jpg" target="_blank">&nbsp;</a>
+    <div class="clearfix"><!-- // --></div>
+  </div>
+  
+  <div class="col clearfix product_header_left_col">
+    <h1 class="notopmargin">
+      <span class="smalltext grey">
+          Amazon price history for
+      </span>
+      <br />
+      
+      Honeywell Turbo Force Oscillating Table Fan, HT-906 (B00B4BJR58)
+      <br />
+      <span class="smalltext grey">
+        in <a class="grey" href="/products?pg=Home">Home</a> &raquo; <a class="grey" href="/products?pc=Misc.">Misc.</a> &raquo; <a class="grey" href="/products?mf=Honeywell">Honeywell</a>
+      </span>
+    </h1>
+      <p class="leftAlign">
+          Sign up for price drop alerts and begin tracking this product by completing the form below.
+     </p>
+
+
+          <strong>This product has options</strong> (e.g. size or color). If this isn't the exact match you were looking for, check out the other versions of this product in our database. <br /><br /> <a class="button" id="show_variations" href="javascript:void(0)">show options</a> <a style="display: none;" class="button" id="hide_variations" href="javascript:void(0)">hide options</a>
+    
+    
+    <div class="clearfix"><!-- // --></div>
+  </div>
+  
+  <div class="col clearfix product_header_right_col">
+      <p class="rightAlign" style="margin-bottom: 5px;">
+        <span style="font-size: 2em; display: block;">
+            <span class="green">$27.84</span></span>
+            <span class="smalltext grey" style="display: block; padding-right: 3px;">3rd Party New Price</span>
+      </p>
+    
+    
+    <div class="big_buttons clearfix" style="margin: 12px 0 7px 0;">
+      <div class="button retailer_link">
+        <a title="View the product page at Amazon" href="http://camelcamelcamel.com/product/0VBP0R0GBF4YB6JPRU5A8/go?context=product&amp;ctx_pid=13835901&amp;ctx_cid=-1&amp;ctx_aid=-1&amp;ctx_act=buy&amp;ctx_src=buy-button&amp;utm_campaign=amazon_products&amp;utm_source=camel-buy-btn&amp;utm_medium=www" onclick="camel_event('Retailer Product', 'US - Product Page', 'B00B4BJR58 - New', 2784); return(true);" target="_blank">
+          Buy
+        </a>
+        <div class="clearfix"><!-- // --></div>
+      </div>
+
+
+    </div>
+
+      <div class="offers">
+        <a style="padding-right: 3px;" title="View all offers for this product at Amazon" href="http://camelcamelcamel.com/product/1B50F0OBX4LBPJKRO538C/go?context=product&amp;ctx_pid=13835901&amp;ctx_cid=-1&amp;ctx_aid=-1&amp;ctx_act=buy&amp;ctx_src=offers-link&amp;utm_campaign=amazon_products&amp;utm_source=camel-offers-link&amp;utm_medium=www&offer_listing=1" onclick="camel_event('Retailer Product', 'US - Product Page Offers', 'B00B4BJR58 - New', 2784); return(true);" target="_blank">See all offers</a>
+        <div class="clearfix"><!-- // --></div>
+      </div>
+    
+    <div class="clearfix"><!-- // --></div>
+  </div>
+  <div class="clearfix"><!-- // --></div>
+</div>
+
+
+
+   <div style="display: none;" id="variations_carousel">
+     
+<script type="text/javascript" language="javascript">
+
+    function push_carousel_image(arr, url) {
+      arr.push(url);
+    }
+
+    function load_carousel_window(arr, pre, window) {
+      var per_row = per_page[String(pre)];
+      var offset = window * per_row;
+      max_index = (offset+per_row > arr.size()) ? arr.size() : offset+per_row;
+      for (var i=offset; i < max_index; i++) {
+        var img = $('img_' + pre + '_' + i);
+        try {
+          img.setAttribute('src',arr[i])
+        }
+	catch(e) {
+	  //move along
+        }
+      }
+    }
+
+  if (typeof(carousel) == 'undefined') {
+    carousel = {};
+  }
+
+  carousel['582686'] = new Array();
+      push_carousel_image(carousel['582686'],'http://ecx.images-amazon.com/images/I/21Y4aojGOGL._SL160_.jpg');
+
+  if (typeof(per_page) == 'undefined') {
+    per_page = {};
+  }
+
+  per_page['582686'] = 5;
+
+
+  for_onload(function() {
+    load_carousel_window(carousel['582686'],'582686',0);
+
+
+      $$('.right_slide').invoke('observe', 'click', function(event) {
+  var windows = event.element().readAttribute('id').gsub(/-right.*/,'').split('-');
+  var pre = event.element().readAttribute('id').gsub(/.*-right-/,'');
+  var cur_window = windows[0];
+  var num_rows = parseInt(windows[1]);
+  var max_window = num_rows - 1;
+  var next_window = String(parseInt(cur_window) + 1);
+
+  var upper = $(cur_window + '-upper-' + pre);
+  if (upper != null) {
+    upper.hide();
+  }
+
+  var lower = $(cur_window + '-lower-' + pre);
+  if (lower != null) {
+    lower.hide();
+  }
+
+  $(cur_window + '-' + num_rows + '-right-' + pre).hide();
+  $(cur_window + '-' + num_rows + '-left-' + pre).hide();
+  $(next_window + '-upper-' + pre).show();
+  if (lower != null) {
+    $(next_window + '-lower-' + pre).show();
+  }
+  if (next_window < max_window) {
+    $(next_window + '-' + num_rows + '-right-' + pre).show();
+  }
+  $(next_window + '-' + num_rows + '-left-' + pre).show();
+  load_carousel_window(carousel[String(pre)],pre,next_window);
+});
+
+$$('.left_slide').invoke('observe', 'click', function(event) {
+  var windows = event.element().readAttribute('id').gsub(/-left.*/,'').split('-');
+  var pre = event.element().readAttribute('id').gsub(/.*-left-/,'');
+  var cur_window = windows[0];
+  var num_rows = parseInt(windows[1]);
+  var max_window = num_rows - 1;
+  var next_window = String(parseInt(cur_window) - 1);
+
+  var upper = $(cur_window + '-upper-' + pre);
+  if (upper != null) {
+    upper.hide();
+  }
+
+  var lower = $(cur_window + '-lower-' + pre);
+  if (lower != null) {
+    lower.hide();
+  }
+
+  var next_shown = $(cur_window + '-' + num_rows + '-right-' + pre);
+  if (next_shown != null) {
+    next_shown.hide();
+  }
+  $(cur_window + '-' + num_rows + '-left-' + pre).hide();
+  $(next_window + '-upper-' + pre).show();
+  if (lower != null) {
+    $(next_window + '-lower-' + pre).show();
+  }
+  $(next_window + '-' + num_rows + '-right-' + pre).show();
+  if (next_window > 0) {
+    $(next_window + '-' + num_rows + '-left-' + pre).show();
+  }
+});
+  });
+
+</script>
+
+
+<div style="position: relative;">
+    <a id='0-1-left-582686' onclick="camel_event('Left Carousel', 'US - Product Page Variations');
+ return(true);" class='left_slide ss-icon ss-navigateleft' style='display: none;' href='javascript:void(0)'></a>
+    <a id='0-1-right-582686' onclick="camel_event('Right Carousel', 'US - Product Page Variations'); return(true);" class='right_slide ss-icon ss-navigateright' style='display: none;' href='javascript:void(0)'></a>
+    <a id='1-1-left-582686' onclick="camel_event('Left Carousel', 'US - Product Page Variations');
+ return(true);" class='left_slide ss-icon ss-navigateleft' style='display: none;' href='javascript:void(0)'></a>
+    <a id='1-1-right-582686' onclick="camel_event('Right Carousel', 'US - Product Page Variations'); return(true);" class='right_slide ss-icon ss-navigateright' style='display: none;' href='javascript:void(0)'></a>
+</div>
+
+<div class="clearfix"><!-- // --></div>
+<table id="product_grid_582686" class="product_grid">
+
+      <tr  id="0-upper-582686">
+
+    <td class="deal_top_outer first_col">
+      <div class="deal_top_inner no_price">
+
+          <a onclick="return(camel_out(this, 'Camel Product', 'US - Product Page Variations', 'B011ASEJZW - Amazon', 0));" href="http://camelcamelcamel.com/Kaz-Inc-TurboForce-Table-Fan/product/B011ASEJZW?active=price_amazon"><div class="img_box"><img id="img_582686_0" alt="product image" src="http://d1i0o2gnhzh6dj.cloudfront.net/images/thumbna.png" /></div></a>
+        <h3><a onclick="return(camel_out(this, 'Camel Product', 'US - Product Page Variations', 'B011ASEJZW - Amazon', 0));" title="Price history for Kaz Inc TurboForce Table Fan" href="http://camelcamelcamel.com/Kaz-Inc-TurboForce-Table-Fan/product/B011ASEJZW?active=price_amazon">Kaz Inc TurboForce Table Fan</a>
+
+
+        </h3>
+
+
+      </div>
+    </td>
+
+      </tr>
+
+</table>
+
+   </div>
+
+  
+
+
+<script>
+function check_desired_price_reality(elm)
+{
+  entered_value = elm.value;
+  err_row = $(elm.id + "_err_row");
+  
+  if (!entered_value || entered_value == "")
+  {
+    elm.removeClassName("price_too_low");
+    err_row.hide();
+    return;
+  }
+  
+  cur_price = parseFloat(elm.getAttribute("x-camel-cur-price"));
+  low_price = parseFloat(elm.getAttribute("x-camel-low-price"));
+  desired_price = parseFloat(entered_value);
+  
+  
+  if (isNaN(desired_price) || isNaN(cur_price) || isNaN(low_price))
+  {
+    elm.addClassName("price_too_low");
+    err_row.childNodes[0].innerHTML = "Please enter a valid price, excluding currency symbol.";
+    err_row.show();
+    return;
+  }
+  
+  if (desired_price < low_price)
+  {
+    elm.addClassName("price_too_low");
+    err_row.childNodes[0].innerHTML = "Your desired price is lower than we've ever recorded.  You may want to change it to increase the likelihood of receiving a price drop alert.";
+    err_row.show();
+  }
+  else
+  {
+    elm.removeClassName("price_too_low");
+    err_row.hide();
+  }
+}
+</script>
+
+<style>
+.price_too_low
+{
+  border-color: red;
+}
+
+.price_just_right
+{
+  border-color: default;
+}
+
+.dp_err_row td
+{
+  color: red;
+}
+</style>
+
+
+<h2 id="tracks">
+      Create Amazon price watches for: <a href="http://camelcamelcamel.com/Honeywell-Turbo-Force-Oscillating-HT-906/product/B00B4BJR58">Honeywell Turbo Force Oscillating Table Fan, HT-906 (B00B4BJR58)</a>
+</h2>
+
+<div id="header_tracker">
+  <div id="watch_forms">
+    <table>
+      <thead>
+          <tr>
+            <th class="text_left">
+              Price Type
+            </th>
+            <th>
+              Alert
+            </th>
+            <th>
+              Desired Price
+            </th>
+            <th>
+              Current Price
+            </th>
+            <th>
+              Difference
+            </th>
+            <th class="email_column_header">
+              Email
+            </th>
+            <th>Twitter</th>
+            <th colspan="2">
+              Submit
+            </th>
+          </tr>
+      </thead>
+      <tbody>
+
+
+            <tr>
+            <form method="post" action="/camels/new/B00B4BJR58?locale=US" >
+              <input type="hidden" name="product_page_form" value="true" />
+              <input type="hidden" name="type[]" value="amazon" id="typeprice_amazon" />
+              <td class="text_left price_type_column" >
+                <div class="pricetype pricetype0 on square"><!-- // --></div> 
+                <div class="pricetype_label">
+                  Amazon                </div>
+              </td>
+              <td> &mdash; </td>
+              <td style="white-space:nowrap;">$ <input class="price " type="text" name="price" id="dp_amazon" onfocus="change_sub_tab('amazon');" value="" x-camel-cur-price="29.37" x-camel-low-price="23.70" onkeyup="check_desired_price_reality(this);" />
+              
+
+<div id="example_prices_dp_amazon" style="display: none;">
+  
+<table width="100%" style="margin: 0; padding: 0;">
+  <thead>
+    <tr class="odd">
+      <th class="rightAlign">Amazon  discount</th>
+        <th>
+          <a href="?price=29.36" onclick="$('dp_amazon').value = '29.36'; check_desired_price_reality($('dp_amazon')); camel_event('Popup Prices','US - price_amazon', '-0.01', -3); return(false);" class="grey">
+            -$0.01
+          </a>
+        </th>
+        <th>
+          <a href="?price=28.49" onclick="$('dp_amazon').value = '28.49'; check_desired_price_reality($('dp_amazon')); camel_event('Popup Prices','US - price_amazon', '-3%', -300); return(false);" class="grey">
+            -3%
+          </a>
+        </th>
+        <th>
+          <a href="?price=27.90" onclick="$('dp_amazon').value = '27.90'; check_desired_price_reality($('dp_amazon')); camel_event('Popup Prices','US - price_amazon', '-5%', -500); return(false);" class="grey">
+            -5%
+          </a>
+        </th>
+        <th>
+          <a href="?price=27.31" onclick="$('dp_amazon').value = '27.31'; check_desired_price_reality($('dp_amazon')); camel_event('Popup Prices','US - price_amazon', '-7%', -700); return(false);" class="grey">
+            -7%
+          </a>
+        </th>
+        <th>
+          <a href="?price=26.43" onclick="$('dp_amazon').value = '26.43'; check_desired_price_reality($('dp_amazon')); camel_event('Popup Prices','US - price_amazon', '-10%', -1000); return(false);" class="grey">
+            -10%
+          </a>
+        </th>
+        <th>
+          <a href="?price=24.89" onclick="$('dp_amazon').value = '24.89'; check_desired_price_reality($('dp_amazon')); camel_event('Popup Prices','US - price_amazon', 'Good Deal', -1527); return(false);" class="grey">
+            Good Deal
+          </a>
+	    - <a style="color: #D0720F; font-size: 12px;" href="/support/gdb" title="A Good Deal price is within 5% of the lowest price ever.">
+              ?
+	    </a>
+        </th>
+        <th>
+          <a href="?price=23.70" onclick="$('dp_amazon').value = '23.70'; check_desired_price_reality($('dp_amazon')); camel_event('Popup Prices','US - price_amazon', 'Best Price', -1931); return(false);" class="grey">
+            Best Price
+          </a>
+	    - <a style="color: #D0720F; font-size: 12px;" href="/support/gdb" title="The Best Price is the lowest price we've ever seen.">
+              ?
+	    </a>
+        </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="odd">
+      <td class="rightAlign">Set Desired Price</td>
+	  <td class="centerAlign">
+          <a href="?price=29.36" onclick="$('dp_amazon').value = '29.36'; check_desired_price_reality($('dp_amazon')); camel_event('Popup Prices','US - price_amazon', '-0.01', -3); return(false);">
+            $29.36
+          </a>
+        </td>
+	  <td class="centerAlign">
+          <a href="?price=28.49" onclick="$('dp_amazon').value = '28.49'; check_desired_price_reality($('dp_amazon')); camel_event('Popup Prices','US - price_amazon', '-3%', -300); return(false);">
+            $28.49
+          </a>
+        </td>
+	  <td class="centerAlign">
+          <a href="?price=27.90" onclick="$('dp_amazon').value = '27.90'; check_desired_price_reality($('dp_amazon')); camel_event('Popup Prices','US - price_amazon', '-5%', -500); return(false);">
+            $27.90
+          </a>
+        </td>
+	  <td class="centerAlign">
+          <a href="?price=27.31" onclick="$('dp_amazon').value = '27.31'; check_desired_price_reality($('dp_amazon')); camel_event('Popup Prices','US - price_amazon', '-7%', -700); return(false);">
+            $27.31
+          </a>
+        </td>
+	  <td class="centerAlign">
+          <a href="?price=26.43" onclick="$('dp_amazon').value = '26.43'; check_desired_price_reality($('dp_amazon')); camel_event('Popup Prices','US - price_amazon', '-10%', -1000); return(false);">
+            $26.43
+          </a>
+        </td>
+	  <td class="centerAlign">
+          <a href="?price=24.89" onclick="$('dp_amazon').value = '24.89'; check_desired_price_reality($('dp_amazon')); camel_event('Popup Prices','US - price_amazon', 'Good Deal', -1527); return(false);">
+            $24.89
+          </a>
+        </td>
+	  <td class="centerAlign">
+          <a href="?price=23.70" onclick="$('dp_amazon').value = '23.70'; check_desired_price_reality($('dp_amazon')); camel_event('Popup Prices','US - price_amazon', 'Best Price', -1931); return(false);">
+            $23.70
+          </a>
+        </td>
+    </tr>
+  </tbody>
+</table>
+
+
+</div>
+
+
+              </td>
+              <td style="white-space:nowrap;">
+                Not in Stock
+              </td>
+
+                <td>&mdash;</td> 
+                <td><input class="" type="text" name="email" id="email_price_amazon_0" value="" /></td>
+                <td  style="white-space: nowrap;">
+                  @ <input class="twitter_user " type="text" name="twitter_user" id="twitter_user_price_amazon_0" value="" />
+                    <input type="hidden" name="twitter_is_public" id="twitter_is_public_true_price_amazon_0" value="true" />
+                </td>
+              <td colspan="2">
+                <button class="full blue" type="submit" onclick="camel_event('Track Product', 'US - Product Page', 'B00B4BJR58', null);">Start Tracking</button>
+              </td>
+            </form>
+            </tr>
+            <tr id="dp_amazon_err_row" style="display: none;" class="dp_err_row"><td colspan="6"></td></tr>
+
+
+
+            <tr>
+            <form method="post" action="/camels/new/B00B4BJR58?locale=US" >
+              <input type="hidden" name="product_page_form" value="true" />
+              <input type="hidden" name="type[]" value="new" id="typeprice_new" />
+              <td class="text_left price_type_column" >
+                <div class="pricetype pricetype1 on square"><!-- // --></div> 
+                <div class="pricetype_label">
+                  3rd Party New                </div>
+              </td>
+              <td> &mdash; </td>
+              <td style="white-space:nowrap;">$ <input class="price " type="text" name="price" id="dp_new" onfocus="change_sub_tab('new');" value="" x-camel-cur-price="27.84" x-camel-low-price="1.00" onkeyup="check_desired_price_reality(this);" />
+              
+
+<div id="example_prices_dp_new" style="display: none;">
+  
+<table width="100%" style="margin: 0; padding: 0;">
+  <thead>
+    <tr class="odd">
+      <th class="rightAlign">3rd party new  discount</th>
+        <th>
+          <a href="?price=27.83" onclick="$('dp_new').value = '27.83'; check_desired_price_reality($('dp_new')); camel_event('Popup Prices','US - price_new', '-0.01', -4); return(false);" class="grey">
+            -$0.01
+          </a>
+        </th>
+        <th>
+          <a href="?price=27.00" onclick="$('dp_new').value = '27.00'; check_desired_price_reality($('dp_new')); camel_event('Popup Prices','US - price_new', '-3%', -300); return(false);" class="grey">
+            -3%
+          </a>
+        </th>
+        <th>
+          <a href="?price=26.45" onclick="$('dp_new').value = '26.45'; check_desired_price_reality($('dp_new')); camel_event('Popup Prices','US - price_new', '-5%', -500); return(false);" class="grey">
+            -5%
+          </a>
+        </th>
+        <th>
+          <a href="?price=25.89" onclick="$('dp_new').value = '25.89'; check_desired_price_reality($('dp_new')); camel_event('Popup Prices','US - price_new', '-7%', -700); return(false);" class="grey">
+            -7%
+          </a>
+        </th>
+        <th>
+          <a href="?price=25.06" onclick="$('dp_new').value = '25.06'; check_desired_price_reality($('dp_new')); camel_event('Popup Prices','US - price_new', '-10%', -1000); return(false);" class="grey">
+            -10%
+          </a>
+        </th>
+        <th>
+          <a href="?price=1.05" onclick="$('dp_new').value = '1.05'; check_desired_price_reality($('dp_new')); camel_event('Popup Prices','US - price_new', 'Good Deal', -9623); return(false);" class="grey">
+            Good Deal
+          </a>
+	    - <a style="color: #D0720F; font-size: 12px;" href="/support/gdb" title="A Good Deal price is within 5% of the lowest price ever.">
+              ?
+	    </a>
+        </th>
+        <th>
+          <a href="?price=1.00" onclick="$('dp_new').value = '1.00'; check_desired_price_reality($('dp_new')); camel_event('Popup Prices','US - price_new', 'Best Price', -9641); return(false);" class="grey">
+            Best Price
+          </a>
+	    - <a style="color: #D0720F; font-size: 12px;" href="/support/gdb" title="The Best Price is the lowest price we've ever seen.">
+              ?
+	    </a>
+        </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="odd">
+      <td class="rightAlign">Set Desired Price</td>
+	  <td class="centerAlign">
+          <a href="?price=27.83" onclick="$('dp_new').value = '27.83'; check_desired_price_reality($('dp_new')); camel_event('Popup Prices','US - price_new', '-0.01', -4); return(false);">
+            $27.83
+          </a>
+        </td>
+	  <td class="centerAlign">
+          <a href="?price=27.00" onclick="$('dp_new').value = '27.00'; check_desired_price_reality($('dp_new')); camel_event('Popup Prices','US - price_new', '-3%', -300); return(false);">
+            $27.00
+          </a>
+        </td>
+	  <td class="centerAlign">
+          <a href="?price=26.45" onclick="$('dp_new').value = '26.45'; check_desired_price_reality($('dp_new')); camel_event('Popup Prices','US - price_new', '-5%', -500); return(false);">
+            $26.45
+          </a>
+        </td>
+	  <td class="centerAlign">
+          <a href="?price=25.89" onclick="$('dp_new').value = '25.89'; check_desired_price_reality($('dp_new')); camel_event('Popup Prices','US - price_new', '-7%', -700); return(false);">
+            $25.89
+          </a>
+        </td>
+	  <td class="centerAlign">
+          <a href="?price=25.06" onclick="$('dp_new').value = '25.06'; check_desired_price_reality($('dp_new')); camel_event('Popup Prices','US - price_new', '-10%', -1000); return(false);">
+            $25.06
+          </a>
+        </td>
+	  <td class="centerAlign">
+          <a href="?price=1.05" onclick="$('dp_new').value = '1.05'; check_desired_price_reality($('dp_new')); camel_event('Popup Prices','US - price_new', 'Good Deal', -9623); return(false);">
+            $1.05
+          </a>
+        </td>
+	  <td class="centerAlign">
+          <a href="?price=1.00" onclick="$('dp_new').value = '1.00'; check_desired_price_reality($('dp_new')); camel_event('Popup Prices','US - price_new', 'Best Price', -9641); return(false);">
+            $1.00
+          </a>
+        </td>
+    </tr>
+  </tbody>
+</table>
+
+
+</div>
+
+
+              </td>
+              <td style="white-space:nowrap;">
+                <span class="black">$27.84</span>
+              </td>
+
+                <td>&mdash;</td> 
+                <td><input class="" type="text" name="email" id="email_price_new_1" value="" /></td>
+                <td  style="white-space: nowrap;">
+                  @ <input class="twitter_user " type="text" name="twitter_user" id="twitter_user_price_new_1" value="" />
+                    <input type="hidden" name="twitter_is_public" id="twitter_is_public_true_price_new_1" value="true" />
+                </td>
+              <td colspan="2">
+                <button class="full blue" type="submit" onclick="camel_event('Track Product', 'US - Product Page', 'B00B4BJR58', 2784);">Start Tracking</button>
+              </td>
+            </form>
+            </tr>
+            <tr id="dp_new_err_row" style="display: none;" class="dp_err_row"><td colspan="6"></td></tr>
+
+
+
+            <tr>
+            <form method="post" action="/camels/new/B00B4BJR58?locale=US" >
+              <input type="hidden" name="product_page_form" value="true" />
+              <input type="hidden" name="type[]" value="used" id="typeprice_used" />
+              <td class="text_left price_type_column" >
+                <div class="pricetype pricetype2 on square"><!-- // --></div> 
+                <div class="pricetype_label">
+                  3rd Party Used                </div>
+              </td>
+              <td> &mdash; </td>
+              <td style="white-space:nowrap;">$ <input class="price " type="text" name="price" id="dp_used" onfocus="change_sub_tab('used');" value="" x-camel-cur-price="28.07" x-camel-low-price="8.61" onkeyup="check_desired_price_reality(this);" />
+              
+
+<div id="example_prices_dp_used" style="display: none;">
+  
+<table width="100%" style="margin: 0; padding: 0;">
+  <thead>
+    <tr class="odd">
+      <th class="rightAlign">3rd party used  discount</th>
+        <th>
+          <a href="?price=28.06" onclick="$('dp_used').value = '28.06'; check_desired_price_reality($('dp_used')); camel_event('Popup Prices','US - price_used', '-0.01', -4); return(false);" class="grey">
+            -$0.01
+          </a>
+        </th>
+        <th>
+          <a href="?price=27.23" onclick="$('dp_used').value = '27.23'; check_desired_price_reality($('dp_used')); camel_event('Popup Prices','US - price_used', '-3%', -300); return(false);" class="grey">
+            -3%
+          </a>
+        </th>
+        <th>
+          <a href="?price=26.67" onclick="$('dp_used').value = '26.67'; check_desired_price_reality($('dp_used')); camel_event('Popup Prices','US - price_used', '-5%', -500); return(false);" class="grey">
+            -5%
+          </a>
+        </th>
+        <th>
+          <a href="?price=26.11" onclick="$('dp_used').value = '26.11'; check_desired_price_reality($('dp_used')); camel_event('Popup Prices','US - price_used', '-7%', -700); return(false);" class="grey">
+            -7%
+          </a>
+        </th>
+        <th>
+          <a href="?price=25.26" onclick="$('dp_used').value = '25.26'; check_desired_price_reality($('dp_used')); camel_event('Popup Prices','US - price_used', '-10%', -1000); return(false);" class="grey">
+            -10%
+          </a>
+        </th>
+        <th>
+          <a href="?price=9.04" onclick="$('dp_used').value = '9.04'; check_desired_price_reality($('dp_used')); camel_event('Popup Prices','US - price_used', 'Good Deal', -6779); return(false);" class="grey">
+            Good Deal
+          </a>
+	    - <a style="color: #D0720F; font-size: 12px;" href="/support/gdb" title="A Good Deal price is within 5% of the lowest price ever.">
+              ?
+	    </a>
+        </th>
+        <th>
+          <a href="?price=8.61" onclick="$('dp_used').value = '8.61'; check_desired_price_reality($('dp_used')); camel_event('Popup Prices','US - price_used', 'Best Price', -6933); return(false);" class="grey">
+            Best Price
+          </a>
+	    - <a style="color: #D0720F; font-size: 12px;" href="/support/gdb" title="The Best Price is the lowest price we've ever seen.">
+              ?
+	    </a>
+        </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="odd">
+      <td class="rightAlign">Set Desired Price</td>
+	  <td class="centerAlign">
+          <a href="?price=28.06" onclick="$('dp_used').value = '28.06'; check_desired_price_reality($('dp_used')); camel_event('Popup Prices','US - price_used', '-0.01', -4); return(false);">
+            $28.06
+          </a>
+        </td>
+	  <td class="centerAlign">
+          <a href="?price=27.23" onclick="$('dp_used').value = '27.23'; check_desired_price_reality($('dp_used')); camel_event('Popup Prices','US - price_used', '-3%', -300); return(false);">
+            $27.23
+          </a>
+        </td>
+	  <td class="centerAlign">
+          <a href="?price=26.67" onclick="$('dp_used').value = '26.67'; check_desired_price_reality($('dp_used')); camel_event('Popup Prices','US - price_used', '-5%', -500); return(false);">
+            $26.67
+          </a>
+        </td>
+	  <td class="centerAlign">
+          <a href="?price=26.11" onclick="$('dp_used').value = '26.11'; check_desired_price_reality($('dp_used')); camel_event('Popup Prices','US - price_used', '-7%', -700); return(false);">
+            $26.11
+          </a>
+        </td>
+	  <td class="centerAlign">
+          <a href="?price=25.26" onclick="$('dp_used').value = '25.26'; check_desired_price_reality($('dp_used')); camel_event('Popup Prices','US - price_used', '-10%', -1000); return(false);">
+            $25.26
+          </a>
+        </td>
+	  <td class="centerAlign">
+          <a href="?price=9.04" onclick="$('dp_used').value = '9.04'; check_desired_price_reality($('dp_used')); camel_event('Popup Prices','US - price_used', 'Good Deal', -6779); return(false);">
+            $9.04
+          </a>
+        </td>
+	  <td class="centerAlign">
+          <a href="?price=8.61" onclick="$('dp_used').value = '8.61'; check_desired_price_reality($('dp_used')); camel_event('Popup Prices','US - price_used', 'Best Price', -6933); return(false);">
+            $8.61
+          </a>
+        </td>
+    </tr>
+  </tbody>
+</table>
+
+
+</div>
+
+
+              </td>
+              <td style="white-space:nowrap;">
+                <span class="black">$28.07</span>
+              </td>
+
+                <td>&mdash;</td> 
+                <td><input class="" type="text" name="email" id="email_price_used_2" value="" /></td>
+                <td  style="white-space: nowrap;">
+                  @ <input class="twitter_user " type="text" name="twitter_user" id="twitter_user_price_used_2" value="" />
+                    <input type="hidden" name="twitter_is_public" id="twitter_is_public_true_price_used_2" value="true" />
+                </td>
+              <td colspan="2">
+                <button class="full blue" type="submit" onclick="camel_event('Track Product', 'US - Product Page', 'B00B4BJR58', 2807);">Start Tracking</button>
+              </td>
+            </form>
+            </tr>
+            <tr id="dp_used_err_row" style="display: none;" class="dp_err_row"><td colspan="6"></td></tr>
+
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+<div>
+  <div id="watform_notice">
+    <p>
+        The <a href="/support/buy_box" id="buy_box_tip">Buy Box</a> offer appears to belong to a <em>3rd Party</em>.
+
+    </p>
+  </div>
+</div>
+
+
+
+
+<style>.popup_tooltip_icon { margin-bottom: -3px; } </style>
+
+<script>
+
+</script>
+
+
+<div id="dataparent" style="margin-bottom: 1em;">
+  <div id="maintab" class="tabs">
+    <a href="?active=summary" id="toggle_active_summary" class="on">Price History</a>
+      <a href="?active=sales_rank" id="toggle_active_sales_rank" class="">Sales Rank</a>
+    <a href="?active=details" id="toggle_active_details" class="">Product Details</a>
+    
+  </div>
+  
+  <div id="section_summary" >
+    
+<link rel="stylesheet" type="text/css" href="http://d1i0o2gnhzh6dj.cloudfront.net/javascripts/slider/dhtmlxslider.css">
+<script src="http://d1i0o2gnhzh6dj.cloudfront.net/javascripts/slider/dhtmlxcommon.js"></script>
+<script src="http://d1i0o2gnhzh6dj.cloudfront.net/javascripts/slider/dhtmlxslider.js"></script>
+
+<div class="yui3-g" id="chartarea">
+  <div class="yui3-u-4-5">
+    <img id="summary_chart" src="//1-ps.googleusercontent.com/h/www.gstatic.com/psa/static/1.gif" height="440" width="725" alt="Amazon price history chart for Honeywell Turbo Force Oscillating Table Fan, HT-906 (B00B4BJR58)" />
+  </div>
+  <div class="yui3-u-1-5">
+
+  <form action="" id="summary_chart_form">
+     <div class="controlbox radioboxen">
+  <h4>
+    Date Range
+    <img src="http://d1i0o2gnhzh6dj.cloudfront.net/images/loading.gif" style="visibility: hidden; width: 16px;" width="16" class="throbber">
+  </h4>
+  <input name="tp" id="summary_tp" value="all" type="hidden"/>
+  <div id="summary_dateslider"></div>
+  <div class="togglelink">
+    <div class="date_range_button centerAlign">
+      <a rel="0" title="1 month - view data going back to Mar 27, 2016" id="toggle_tp_summary_1m" href="?active=summary&tp=1m" class="off" style="font-size: 1em !important;">
+        1m
+      </a>
+    </div>
+    <div class="date_range_button centerAlign">
+      <a rel="1" title="3 months - view data going back to Jan 27, 2016" id="toggle_tp_summary_3m" href="?active=summary&tp=3m" class="off" style="font-size: 1em !important;">
+        3m
+      </a>
+    </div>
+    <div class="date_range_button centerAlign">
+      <a rel="2" title="6 months - view data going back to Oct 27, 2015" id="toggle_tp_summary_6m" href="?active=summary&tp=6m" class="off" style="font-size: 1em !important;">
+        6m
+      </a>
+    </div>
+    <div class="date_range_button centerAlign">
+      <a rel="3" title="1 year - view data going back to Apr 27, 2015" id="toggle_tp_summary_1y" href="?active=summary&tp=1y" class="off" style="font-size: 1em !important;">
+        1y
+      </a>
+    </div>
+    <div class="date_range_button centerAlign">
+      <a rel="4" title="All - view data going back to Jul 12, 2013" id="toggle_tp_summary_all" href="?active=summary&tp=all" class="on" style="font-size: 1em !important;">
+        All
+      </a>
+    </div>
+  </div>
+</div>
+
+    
+
+      <div class="controlbox clearfix">
+        <h4>
+          Price Type
+          <img src="http://d1i0o2gnhzh6dj.cloudfront.net/images/loading.gif" id="loadthrob_lt" style="visibility: hidden; width: 16px;" width="16" class="throbber">
+        </h4>
+              
+          <div class="controlbox_row">
+            
+            <input type="checkbox" name="pt[]" value="amazon" id="price_type_0"  class="pt"  />
+            <label for="price_type_0" title="Toggle this price type's display in the chart" >
+              <a href="?active=summary&cpf[]=amazon&amp;cpf[]=new" title="Toggle this price type's display in the chart">
+
+                <div class="pricetype pricetype0 on square"><!-- // --></div>
+                <div class="price_type_label">
+                  Amazon
+                </div>
+              </a>
+            </label>
+          </div>
+  
+              
+          <div class="controlbox_row">
+            
+            <input type="checkbox" name="pt[]" value="new" id="price_type_1" checked="checked" class="pt"  />
+            <label for="price_type_1" title="Toggle this price type's display in the chart" >
+              <a href="?active=summary&cpf[]=new" title="Toggle this price type's display in the chart">
+
+                <div class="pricetype pricetype1 on square"><!-- // --></div>
+                <div class="price_type_label">
+                  3rd Party New
+                </div>
+              </a>
+            </label>
+          </div>
+  
+              
+          <div class="controlbox_row">
+            
+            <input type="checkbox" name="pt[]" value="used" id="price_type_2"  class="pt"  />
+            <label for="price_type_2" title="Toggle this price type's display in the chart" >
+              <a href="?active=summary&cpf[]=new&amp;cpf[]=used" title="Toggle this price type's display in the chart">
+
+                <div class="pricetype pricetype2 on square"><!-- // --></div>
+                <div class="price_type_label">
+                  3rd Party Used
+                </div>
+              </a>
+            </label>
+          </div>
+  
+      </div>
+
+    <div class="controlbox">
+      <h4>
+        Chart Options
+        <img src="http://d1i0o2gnhzh6dj.cloudfront.net/images/loading.gif" id="loadthrob_lt4" style="visibility: hidden;" class="throbber">
+      </h4>
+      
+      <div class="controlbox_row">
+        <input type="checkbox" name="zero" value="0" id="chart_option_details" checked="checked"/>
+        <label for="chart_option_details" title="Turn the chart's close-up view off">
+          <a href="?active=summary&chart=1">
+            Close-up View
+          </a>
+        </label>
+      </div>
+  
+      <div class="controlbox_row">
+        <input type="checkbox" name="fo" value="1" id="chart_option_fo" />
+        <label for="chart_option_fo" title="Turn outlier filtering on" >
+          <a href="?active=summary&fo=1">
+            Remove Extreme Values
+          </a>
+        </label>
+      </div>
+
+    </div>
+
+  </form>
+  </div>
+</div>
+
+  <div class="tabs" id="pricetabs">
+        <a href="?active=amazon" title="Detailed Amazon price history for the Amazon Price" class=" pricetype pricetype0 off" id="toggle_active_sub_amazon">
+          Amazon
+          -
+          Not in Stock
+        </a>
+        <a href="?active=new" title="Detailed Amazon price history for the 3rd Party New Price" class="selected pricetype pricetype1 on selected" id="toggle_active_sub_new">
+          3rd Party New
+          -
+          $27.84
+        </a>
+        <a href="?active=used" title="Detailed Amazon price history for the 3rd Party Used Price" class=" pricetype pricetype2 off" id="toggle_active_sub_used">
+          3rd Party Used
+          -
+          $28.07
+        </a>
+  </div>
+  
+  <div id="section_amazon" class="pricetabbody pricetype0" style="display: none;">
+      
+
+
+
+
+<div class="yui3-g">
+  <div class="yui3-u-1-2">
+    <div class="pad">
+      
+        <h3 class="notopmargin">Amazon Price History</h3>
+      
+      <table class="product_pane" width="100%"> 
+        <thead>
+          <tr>
+            <th width="40%">Type</th>
+            <th width="26%">Price</th>
+            <th class="" width="34%">When</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr >
+            <td >Current</td>
+            <td >Not in Stock</td>
+            <td >-</td>
+          </tr>
+              <tr class="highest_price">
+                <td >Highest <sup>*</sup></td>
+                <td >$34.99</td>
+                <td >Mar 27, 2016</td>
+              </tr>
+              <tr class="lowest_price">
+                <td >Lowest <sup>*</sup></td>
+                <td >$23.70</td>
+                <td >Nov 28, 2014</td>
+              </tr>
+            <tr >
+              <td >Average <sup>+</sup></td>
+              <td >$29.87</td>
+              <td >-</td>
+            </tr>
+        </tbody>
+      </table>
+      
+      
+      <p class="smalltext grey">
+        * since Jul 12, 2013.
+          <br />
+          + of the last 50 price changes
+      </p>
+      
+    </div>
+  </div>
+    <div class="yui3-u-1-2">
+      <div class="pad">
+          <h3 class="notopmargin">Last 5 price changes</h3>
+        <table class="history_list product_pane">
+          <thead>
+            <tr>
+              <th width="160" >Date</th>
+              <th width="60" class="rightAlign">Price</th>
+            </tr>
+          </thead>
+          <tbody>
+              <tr class=" ">
+                <td nowrap="nowrap">
+                  Mar 28, 2016 08:03 PM
+                </td>
+                <td class="rightAlign" nowrap="nowrap">
+                  <span class="">$29.37</span>
+                </td>
+              </tr>
+              <tr class="red ">
+                <td nowrap="nowrap">
+                  Mar 27, 2016 01:58 PM
+                </td>
+                <td class="rightAlign" nowrap="nowrap">
+                  $34.99
+                </td>
+              </tr>
+              <tr class=" ">
+                <td nowrap="nowrap">
+                  Mar 27, 2016 04:51 AM
+                </td>
+                <td class="rightAlign" nowrap="nowrap">
+                  <span class="">$32.99</span>
+                </td>
+              </tr>
+              <tr class=" ">
+                <td nowrap="nowrap">
+                  Mar 01, 2016 09:27 AM
+                </td>
+                <td class="rightAlign" nowrap="nowrap">
+                  <span class="">$27.99</span>
+                </td>
+              </tr>
+              <tr class=" ">
+                <td nowrap="nowrap">
+                  Feb 26, 2016 03:08 PM
+                </td>
+                <td class="rightAlign" nowrap="nowrap">
+                  <span class="">$29.37</span>
+                </td>
+              </tr>
+          </tbody>
+        </table>
+        
+      </div>
+    </div>
+</div>
+
+    <p class="msg_bar"><small>This is the price charged for New products when Amazon itself is the seller.</small></p>
+
+
+  </div>
+  <div id="section_new" class="pricetabbody pricetype1" >
+      
+
+
+
+
+<div class="yui3-g">
+  <div class="yui3-u-1-2">
+    <div class="pad">
+      
+        <h3 class="notopmargin">3rd Party New Price History</h3>
+      
+      <table class="product_pane" width="100%"> 
+        <thead>
+          <tr>
+            <th width="40%">Type</th>
+            <th width="26%">Price</th>
+            <th class="" width="34%">When</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr >
+            <td >Current</td>
+            <td >$27.84</td>
+            <td >Apr 12, 2016</td>
+          </tr>
+              <tr class="highest_price">
+                <td >Highest <sup>*</sup></td>
+                <td >$29.95</td>
+                <td >Feb 09, 2016</td>
+              </tr>
+              <tr class="lowest_price">
+                <td >Lowest <sup>*</sup></td>
+                <td >$1.00</td>
+                <td >Mar 09, 2016</td>
+              </tr>
+            <tr >
+              <td >Average <sup>+</sup></td>
+              <td >$26.19</td>
+              <td >-</td>
+            </tr>
+        </tbody>
+      </table>
+      
+      
+      <p class="smalltext grey">
+        * since Jul 12, 2013.
+          <br />
+          + of the last 50 price changes
+      </p>
+      
+    </div>
+  </div>
+    <div class="yui3-u-1-2">
+      <div class="pad">
+          <h3 class="notopmargin">Last 5 price changes</h3>
+        <table class="history_list product_pane">
+          <thead>
+            <tr>
+              <th width="160" >Date</th>
+              <th width="60" class="rightAlign">Price</th>
+            </tr>
+          </thead>
+          <tbody>
+              <tr class=" ">
+                <td nowrap="nowrap">
+                  Apr 12, 2016 02:45 PM
+                </td>
+                <td class="rightAlign" nowrap="nowrap">
+                  <span class="">$27.84</span>
+                </td>
+              </tr>
+              <tr class=" ">
+                <td nowrap="nowrap">
+                  Apr 12, 2016 06:05 AM
+                </td>
+                <td class="rightAlign" nowrap="nowrap">
+                  <span class="">$27.99</span>
+                </td>
+              </tr>
+              <tr class=" ">
+                <td nowrap="nowrap">
+                  Mar 10, 2016 08:57 AM
+                </td>
+                <td class="rightAlign" nowrap="nowrap">
+                  <span class="">$27.84</span>
+                </td>
+              </tr>
+              <tr class=" green">
+                <td nowrap="nowrap">
+                  Mar 09, 2016 03:34 PM
+                </td>
+                <td class="rightAlign" nowrap="nowrap">
+                  $1.00
+                </td>
+              </tr>
+              <tr class=" ">
+                <td nowrap="nowrap">
+                  Mar 04, 2016 05:55 AM
+                </td>
+                <td class="rightAlign" nowrap="nowrap">
+                  <span class="">$27.84</span>
+                </td>
+              </tr>
+          </tbody>
+        </table>
+        
+      </div>
+    </div>
+</div>
+
+    <p class="msg_bar"><small>This is the price charged by third party merchants for items in New condition.</small></p>
+
+
+  </div>
+  <div id="section_used" class="pricetabbody pricetype2" style="display: none;">
+      
+
+
+
+
+<div class="yui3-g">
+  <div class="yui3-u-1-2">
+    <div class="pad">
+      
+        <h3 class="notopmargin">3rd Party Used Price History</h3>
+      
+      <table class="product_pane" width="100%"> 
+        <thead>
+          <tr>
+            <th width="40%">Type</th>
+            <th width="26%">Price</th>
+            <th class="" width="34%">When</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr >
+            <td >Current</td>
+            <td >$28.07</td>
+            <td >Apr 27, 2016</td>
+          </tr>
+              <tr class="highest_price">
+                <td >Highest <sup>*</sup></td>
+                <td >$29.74</td>
+                <td >Feb 04, 2016</td>
+              </tr>
+              <tr class="lowest_price">
+                <td >Lowest <sup>*</sup></td>
+                <td >$8.61</td>
+                <td >Jan 19, 2015</td>
+              </tr>
+            <tr >
+              <td >Average <sup>+</sup></td>
+              <td >$26.84</td>
+              <td >-</td>
+            </tr>
+        </tbody>
+      </table>
+      
+      
+      <p class="smalltext grey">
+        * since Jul 12, 2013.
+          <br />
+          + of the last 50 price changes
+      </p>
+      
+    </div>
+  </div>
+    <div class="yui3-u-1-2">
+      <div class="pad">
+          <h3 class="notopmargin">Last 5 price changes</h3>
+        <table class="history_list product_pane">
+          <thead>
+            <tr>
+              <th width="160" >Date</th>
+              <th width="60" class="rightAlign">Price</th>
+            </tr>
+          </thead>
+          <tbody>
+              <tr class=" ">
+                <td nowrap="nowrap">
+                  Apr 27, 2016 01:49 AM
+                </td>
+                <td class="rightAlign" nowrap="nowrap">
+                  <span class="">$28.07</span>
+                </td>
+              </tr>
+              <tr class=" ">
+                <td nowrap="nowrap">
+                  Apr 26, 2016 02:44 PM
+                </td>
+                <td class="rightAlign" nowrap="nowrap">
+                  <span class="">$27.28</span>
+                </td>
+              </tr>
+              <tr class=" ">
+                <td nowrap="nowrap">
+                  Apr 26, 2016 04:50 AM
+                </td>
+                <td class="rightAlign" nowrap="nowrap">
+                  <span class="">$26.77</span>
+                </td>
+              </tr>
+              <tr class=" ">
+                <td nowrap="nowrap">
+                  Apr 23, 2016 04:26 AM
+                </td>
+                <td class="rightAlign" nowrap="nowrap">
+                  <span class="">$25.49</span>
+                </td>
+              </tr>
+              <tr class=" ">
+                <td nowrap="nowrap">
+                  Mar 28, 2016 08:03 PM
+                </td>
+                <td class="rightAlign" nowrap="nowrap">
+                  <span class="">$24.96</span>
+                </td>
+              </tr>
+          </tbody>
+        </table>
+        
+      </div>
+    </div>
+</div>
+
+    <p class="msg_bar"><small>This is the price charged by third party merchants for items in Used condition.</small></p>
+
+
+  </div>
+
+
+  </div>
+  
+    <div id="section_sales_rank" style="display: none;">
+        <div id="sales_rank_pane">
+          <p>You must <a href="https://secure.camelcamelcamel.com/signup?return_to=http%3A%2F%2Fcamelcamelcamel%2Ecom%2FHoneywell-Turbo-Force-Oscillating-HT-906%2Fproduct%2FB00B4BJR58&utm_campaign=registration&utm_source=sales_rank&utm_medium=www">create a free account</a> or <a href="https://secure.camelcamelcamel.com/login?return_to=http%3A%2F%2Fcamelcamelcamel%2Ecom%2FHoneywell-Turbo-Force-Oscillating-HT-906%2Fproduct%2FB00B4BJR58">login</a> to view sales rank history.</p>
+        </div>
+    </div>
+  
+  <div id="section_details" style="display: none;">
+    
+<table class="product_fields">
+  <tbody>
+    <tr class="odd">
+    <td valign="middle" nowrap="nowrap" width="30.0%">
+      Product group
+    </td>
+    <td style="text-align: justify;" valign="middle" width="70.0%">
+    <a href="/browse/product_group/home">
+      Home
+    </a>
+    </td>
+  <tr class="even">
+    <td valign="middle" nowrap="nowrap" width="30.0%">
+      Category
+    </td>
+    <td style="text-align: justify;" valign="middle" width="70.0%">
+    <a href="/browse/category/misc">
+      Misc.
+    </a>
+    </td>
+  </tr>
+  <tr class="odd">
+    <td valign="middle" nowrap="nowrap" width="30.0%">
+      Manufacturer
+    </td>
+    <td style="text-align: justify;" valign="middle" width="70.0%">
+    <a href="/browse/manufacturer/honeywell">
+      Honeywell
+    </td>
+  <tr class="even">
+    <td valign="middle" nowrap="nowrap" width="30.0%">
+      Model
+    </td>
+    <td style="text-align: justify;" valign="middle" width="70.0%">
+      HT-906
+    </td>
+  </tr>
+  <tr class="odd">
+    <td valign="middle" nowrap="nowrap" width="30.0%">
+      Locale
+    </td>
+    <td style="text-align: justify;" valign="middle" width="70.0%">
+      US
+    </td>
+  <tr class="even">
+    <td valign="middle" nowrap="nowrap" width="30.0%">
+      List price
+    </td>
+    <td style="text-align: justify;" valign="middle" width="70.0%">
+      $42.24
+    </td>
+  </tr>
+  <tr class="odd">
+    <td valign="middle" nowrap="nowrap" width="30.0%">
+      EAN
+    </td>
+    <td style="text-align: justify;" valign="middle" width="70.0%">
+      0885106153740
+    </td>
+  <tr class="even">
+    <td valign="middle" nowrap="nowrap" width="30.0%">
+      UPC
+    </td>
+    <td style="text-align: justify;" valign="middle" width="70.0%">
+      611105240859
+    </td>
+  </tr>
+  <tr class="odd">
+    <td valign="middle" nowrap="nowrap" width="30.0%">
+      SKU
+    </td>
+    <td style="text-align: justify;" valign="middle" width="70.0%">
+      B00B4BJR58
+    </td>
+  <tr class="even">
+    <td valign="middle" nowrap="nowrap" width="30.0%">
+      Sales rank
+    </td>
+    <td style="text-align: justify;" valign="middle" width="70.0%">
+      74,588
+    </td>
+  </tr>
+  <tr class="odd">
+    <td valign="middle" nowrap="nowrap" width="30.0%">
+      Last update scan
+    </td>
+    <td style="text-align: justify;" valign="middle" width="70.0%">
+      10 minutes ago
+    </td>
+  <tr class="even">
+    <td valign="middle" nowrap="nowrap" width="30.0%">
+      Total people tracking
+    </td>
+    <td style="text-align: justify;" valign="middle" width="70.0%">
+      4
+    </td>
+  </tr>
+  <tr class="odd">
+    <td valign="middle" nowrap="nowrap" width="30.0%">
+      Last tracked
+    </td>
+    <td style="text-align: justify;" valign="middle" width="70.0%">
+      on Apr 23, 2015
+    </td>
+  </tr>
+  </tbody>
+</table>
+
+  </div>
+  
+</div>
+
+
+
+
+  <div id="similar_products" style="display: none;">
+    <h2>Products Similar to <i>Honeywell Turbo Force Oscillating Table Fan, HT-906 (B00B4BJR58)</i></h2>
+    
+<script type="text/javascript" language="javascript">
+
+    function push_carousel_image(arr, url) {
+      arr.push(url);
+    }
+
+    function load_carousel_window(arr, pre, window) {
+      var per_row = per_page[String(pre)];
+      var offset = window * per_row;
+      max_index = (offset+per_row > arr.size()) ? arr.size() : offset+per_row;
+      for (var i=offset; i < max_index; i++) {
+        var img = $('img_' + pre + '_' + i);
+        try {
+          img.setAttribute('src',arr[i])
+        }
+	catch(e) {
+	  //move along
+        }
+      }
+    }
+
+  if (typeof(carousel) == 'undefined') {
+    carousel = {};
+  }
+
+  carousel['550165'] = new Array();
+      push_carousel_image(carousel['550165'],'http://ecx.images-amazon.com/images/I/51GtslQDt8L._SL160_.jpg');
+      push_carousel_image(carousel['550165'],'http://ecx.images-amazon.com/images/I/516WX8EsEoL._SL160_.jpg');
+      push_carousel_image(carousel['550165'],'http://ecx.images-amazon.com/images/I/51gQ8nvvdFL._SL160_.jpg');
+      push_carousel_image(carousel['550165'],'http://ecx.images-amazon.com/images/I/5180cvZ7YEL._SL160_.jpg');
+      push_carousel_image(carousel['550165'],'http://ecx.images-amazon.com/images/I/31acuCL124L._SL160_.jpg');
+      push_carousel_image(carousel['550165'],'http://ecx.images-amazon.com/images/I/51LmOS6YftL._SL160_.jpg');
+      push_carousel_image(carousel['550165'],'http://ecx.images-amazon.com/images/I/515vkhiAbbL._SL160_.jpg');
+      push_carousel_image(carousel['550165'],'http://ecx.images-amazon.com/images/I/51L2R1Jq%2B4L._SL160_.jpg');
+      push_carousel_image(carousel['550165'],'http://ecx.images-amazon.com/images/I/51B3E1bNx%2BL._SL160_.jpg');
+
+  if (typeof(per_page) == 'undefined') {
+    per_page = {};
+  }
+
+  per_page['550165'] = 5;
+
+
+  for_onload(function() {
+    load_carousel_window(carousel['550165'],'550165',0);
+
+      $('product_grid_550165').addClassName('carousel');
+      $('0-2-right-' + '550165').show();
+
+      $$('.right_slide').invoke('observe', 'click', function(event) {
+  var windows = event.element().readAttribute('id').gsub(/-right.*/,'').split('-');
+  var pre = event.element().readAttribute('id').gsub(/.*-right-/,'');
+  var cur_window = windows[0];
+  var num_rows = parseInt(windows[1]);
+  var max_window = num_rows - 1;
+  var next_window = String(parseInt(cur_window) + 1);
+
+  var upper = $(cur_window + '-upper-' + pre);
+  if (upper != null) {
+    upper.hide();
+  }
+
+  var lower = $(cur_window + '-lower-' + pre);
+  if (lower != null) {
+    lower.hide();
+  }
+
+  $(cur_window + '-' + num_rows + '-right-' + pre).hide();
+  $(cur_window + '-' + num_rows + '-left-' + pre).hide();
+  $(next_window + '-upper-' + pre).show();
+  if (lower != null) {
+    $(next_window + '-lower-' + pre).show();
+  }
+  if (next_window < max_window) {
+    $(next_window + '-' + num_rows + '-right-' + pre).show();
+  }
+  $(next_window + '-' + num_rows + '-left-' + pre).show();
+  load_carousel_window(carousel[String(pre)],pre,next_window);
+});
+
+$$('.left_slide').invoke('observe', 'click', function(event) {
+  var windows = event.element().readAttribute('id').gsub(/-left.*/,'').split('-');
+  var pre = event.element().readAttribute('id').gsub(/.*-left-/,'');
+  var cur_window = windows[0];
+  var num_rows = parseInt(windows[1]);
+  var max_window = num_rows - 1;
+  var next_window = String(parseInt(cur_window) - 1);
+
+  var upper = $(cur_window + '-upper-' + pre);
+  if (upper != null) {
+    upper.hide();
+  }
+
+  var lower = $(cur_window + '-lower-' + pre);
+  if (lower != null) {
+    lower.hide();
+  }
+
+  var next_shown = $(cur_window + '-' + num_rows + '-right-' + pre);
+  if (next_shown != null) {
+    next_shown.hide();
+  }
+  $(cur_window + '-' + num_rows + '-left-' + pre).hide();
+  $(next_window + '-upper-' + pre).show();
+  if (lower != null) {
+    $(next_window + '-lower-' + pre).show();
+  }
+  $(next_window + '-' + num_rows + '-right-' + pre).show();
+  if (next_window > 0) {
+    $(next_window + '-' + num_rows + '-left-' + pre).show();
+  }
+});
+  });
+
+</script>
+
+
+<div style="position: relative;">
+    <a id='0-2-left-550165' onclick="camel_event('Left Carousel', 'US - Product Page Similar Items');
+ return(true);" class='left_slide ss-icon ss-navigateleft' style='display: none;' href='javascript:void(0)'></a>
+    <a id='0-2-right-550165' onclick="camel_event('Right Carousel', 'US - Product Page Similar Items'); return(true);" class='right_slide ss-icon ss-navigateright' style='display: none;' href='javascript:void(0)'></a>
+    <a id='1-2-left-550165' onclick="camel_event('Left Carousel', 'US - Product Page Similar Items');
+ return(true);" class='left_slide ss-icon ss-navigateleft' style='display: none;' href='javascript:void(0)'></a>
+    <a id='1-2-right-550165' onclick="camel_event('Right Carousel', 'US - Product Page Similar Items'); return(true);" class='right_slide ss-icon ss-navigateright' style='display: none;' href='javascript:void(0)'></a>
+    <a id='2-2-left-550165' onclick="camel_event('Left Carousel', 'US - Product Page Similar Items');
+ return(true);" class='left_slide ss-icon ss-navigateleft' style='display: none;' href='javascript:void(0)'></a>
+    <a id='2-2-right-550165' onclick="camel_event('Right Carousel', 'US - Product Page Similar Items'); return(true);" class='right_slide ss-icon ss-navigateright' style='display: none;' href='javascript:void(0)'></a>
+</div>
+
+<div class="clearfix"><!-- // --></div>
+<table id="product_grid_550165" class="product_grid">
+
+      <tr  id="0-upper-550165">
+
+    <td class="deal_top_outer first_col">
+      <div class="deal_top_inner no_price">
+
+          <a onclick="return(camel_out(this, 'Camel Product', 'US - Product Page Similar Items', 'B001R1RXUG - Amazon', 1394));" href="http://camelcamelcamel.com/Honeywell-HT-900-TurboForce-Fan/product/B001R1RXUG?active=price_amazon&amp;context=similar"><div class="img_box"><img id="img_550165_0" alt="product image" src="http://d1i0o2gnhzh6dj.cloudfront.net/images/thumbna.png" /></div></a>
+        <h3><a onclick="return(camel_out(this, 'Camel Product', 'US - Product Page Similar Items', 'B001R1RXUG - Amazon', 1394));" title="Price history for Honeywell HT-900 TurboForce Fan" href="http://camelcamelcamel.com/Honeywell-HT-900-TurboForce-Fan/product/B001R1RXUG?active=price_amazon&amp;context=similar">Honeywell HT-900 TurboForce Fan</a>
+
+
+        </h3>
+
+
+      </div>
+    </td>
+
+
+
+
+    <td class="deal_top_outer ">
+      <div class="deal_top_inner no_price">
+
+          <a onclick="return(camel_out(this, 'Camel Product', 'US - Product Page Similar Items', 'B000J07RMU - Amazon', 1908));" href="http://camelcamelcamel.com/Holmes-Blizzard-8-Inch-Oscillating-Table/product/B000J07RMU?active=price_amazon&amp;context=similar"><div class="img_box"><img id="img_550165_1" alt="product image" src="http://d1i0o2gnhzh6dj.cloudfront.net/images/thumbna.png" /></div></a>
+        <h3><a onclick="return(camel_out(this, 'Camel Product', 'US - Product Page Similar Items', 'B000J07RMU - Amazon', 1908));" title="Price history for Holmes Lil&#x27; Blizzard 8-Inch Oscillating Table Fan" href="http://camelcamelcamel.com/Holmes-Blizzard-8-Inch-Oscillating-Table/product/B000J07RMU?active=price_amazon&amp;context=similar">Holmes Lil&#x27; Blizzard 8-Inch Oscillating Table Fan</a>
+
+
+        </h3>
+
+
+      </div>
+    </td>
+
+
+
+
+    <td class="deal_top_outer ">
+      <div class="deal_top_inner no_price">
+
+          <a onclick="return(camel_out(this, 'Camel Product', 'US - Product Page Similar Items', 'B001R1Q0OG - Amazon', 2721));" href="http://camelcamelcamel.com/Honeywell-Turbo-Force-Room-Circulator/product/B001R1Q0OG?active=price_amazon&amp;context=similar"><div class="img_box"><img id="img_550165_2" alt="product image" src="http://d1i0o2gnhzh6dj.cloudfront.net/images/thumbna.png" /></div></a>
+        <h3><a onclick="return(camel_out(this, 'Camel Product', 'US - Product Page Similar Items', 'B001R1Q0OG - Amazon', 2721));" title="Price history for Honeywell Turbo Force Room Air Circulator" href="http://camelcamelcamel.com/Honeywell-Turbo-Force-Room-Circulator/product/B001R1Q0OG?active=price_amazon&amp;context=similar">Honeywell Turbo Force Room Air Circulator</a>
+
+
+        </h3>
+
+
+      </div>
+    </td>
+
+
+
+
+    <td class="deal_top_outer ">
+      <div class="deal_top_inner no_price">
+
+          <a onclick="return(camel_out(this, 'Camel Product', 'US - Product Page Similar Items', 'B00005CDPQ - Amazon', 3748));" href="http://camelcamelcamel.com/Holmes-HAOF90-UC-Blizzard-Oscillating-Table/product/B00005CDPQ?active=price_amazon&amp;context=similar"><div class="img_box"><img id="img_550165_3" alt="product image" src="http://d1i0o2gnhzh6dj.cloudfront.net/images/thumbna.png" /></div></a>
+        <h3><a onclick="return(camel_out(this, 'Camel Product', 'US - Product Page Similar Items', 'B00005CDPQ - Amazon', 3748));" title="Price history for Holmes HAOF90-UC Blizzard Oscillating Table Fan" href="http://camelcamelcamel.com/Holmes-HAOF90-UC-Blizzard-Oscillating-Table/product/B00005CDPQ?active=price_amazon&amp;context=similar">Holmes HAOF90-UC Blizzard Oscillating Table Fan</a>
+
+
+        </h3>
+
+
+      </div>
+    </td>
+
+
+
+
+    <td class="deal_top_outer ">
+      <div class="deal_top_inner no_price">
+
+          <a onclick="return(camel_out(this, 'Camel Product', 'US - Product Page Similar Items', 'B000BOB658 - Amazon', 4199));" href="http://camelcamelcamel.com/Holmes-Oscillating-Tower-Remote-Control/product/B000BOB658?active=price_amazon&amp;context=similar"><div class="img_box"><img id="img_550165_4" alt="product image" src="http://d1i0o2gnhzh6dj.cloudfront.net/images/thumbna.png" /></div></a>
+        <h3><a onclick="return(camel_out(this, 'Camel Product', 'US - Product Page Similar Items', 'B000BOB658 - Amazon', 4199));" title="Price history for Holmes 36 Inch Oscillating Tower Fan with Remote Control" href="http://camelcamelcamel.com/Holmes-Oscillating-Tower-Remote-Control/product/B000BOB658?active=price_amazon&amp;context=similar">Holmes 36 Inch Oscillating Tower Fan with Remote Control</a>
+
+
+        </h3>
+
+
+      </div>
+    </td>
+
+      </tr>
+
+
+      <tr style="display: none;" id="1-upper-550165">
+
+    <td class="deal_top_outer first_col">
+      <div class="deal_top_inner no_price">
+
+          <a onclick="return(camel_out(this, 'Camel Product', 'US - Product Page Similar Items', 'B004Z1CGTI - Amazon', 2200));" href="http://camelcamelcamel.com/Ozeri-Brezza-Oscillating-High-Velocity/product/B004Z1CGTI?active=price_amazon&amp;context=similar"><div class="img_box"><img id="img_550165_5" alt="product image" src="http://d1i0o2gnhzh6dj.cloudfront.net/images/thumbna.png" /></div></a>
+        <h3><a onclick="return(camel_out(this, 'Camel Product', 'US - Product Page Similar Items', 'B004Z1CGTI - Amazon', 2200));" title="Price history for Ozeri Brezza Oscillating 10&quot; High Velocity Desk Fan" href="http://camelcamelcamel.com/Ozeri-Brezza-Oscillating-High-Velocity/product/B004Z1CGTI?active=price_amazon&amp;context=similar">Ozeri Brezza Oscillating 10&quot; High Velocity Desk Fan</a>
+
+
+        </h3>
+
+
+      </div>
+    </td>
+
+
+
+
+    <td class="deal_top_outer ">
+      <div class="deal_top_inner no_price">
+
+          <a onclick="return(camel_out(this, 'Camel Product', 'US - Product Page Similar Items', 'B004XZDCQW - Amazon', 5199));" href="http://camelcamelcamel.com/Honeywell-TurboForce-Floor-Fan-HF-910/product/B004XZDCQW?active=price_amazon&amp;context=similar"><div class="img_box"><img id="img_550165_6" alt="product image" src="http://d1i0o2gnhzh6dj.cloudfront.net/images/thumbna.png" /></div></a>
+        <h3><a onclick="return(camel_out(this, 'Camel Product', 'US - Product Page Similar Items', 'B004XZDCQW - Amazon', 5199));" title="Price history for Honeywell TurboForce Floor Fan, HF-910" href="http://camelcamelcamel.com/Honeywell-TurboForce-Floor-Fan-HF-910/product/B004XZDCQW?active=price_amazon&amp;context=similar">Honeywell TurboForce Floor Fan,  HF-910</a>
+
+
+        </h3>
+
+
+      </div>
+    </td>
+
+
+
+
+    <td class="deal_top_outer ">
+      <div class="deal_top_inner no_price">
+
+          <a onclick="return(camel_out(this, 'Camel Product', 'US - Product Page Similar Items', 'B0084M696A - Amazon', 301));" href="http://camelcamelcamel.com/Command-Medium-Clips-Clear-4-Clip/product/B0084M696A?active=price_amazon&amp;context=similar"><div class="img_box"><img id="img_550165_7" alt="product image" src="http://d1i0o2gnhzh6dj.cloudfront.net/images/thumbna.png" /></div></a>
+        <h3><a onclick="return(camel_out(this, 'Camel Product', 'US - Product Page Similar Items', 'B0084M696A - Amazon', 301));" title="Price history for Command Medium Cord Clips, Clear, 4-Clip" href="http://camelcamelcamel.com/Command-Medium-Clips-Clear-4-Clip/product/B0084M696A?active=price_amazon&amp;context=similar">Command Medium Cord Clips,  Clear,  4-Clip</a>
+
+
+        </h3>
+
+
+      </div>
+    </td>
+
+
+
+
+    <td class="deal_top_outer ">
+      <div class="deal_top_inner no_price">
+
+          <a onclick="return(camel_out(this, 'Camel Product', 'US - Product Page Similar Items', 'B00GWA7Y1U - Amazon', 695));" href="http://camelcamelcamel.com/Hoppes-7-62mm-308-Calibre-Multi-Pack-Chamber/product/B00GWA7Y1U?active=price_amazon&amp;context=similar"><div class="img_box"><img id="img_550165_8" alt="product image" src="http://d1i0o2gnhzh6dj.cloudfront.net/images/thumbna.png" /></div></a>
+        <h3><a onclick="return(camel_out(this, 'Camel Product', 'US - Product Page Similar Items', 'B00GWA7Y1U - Amazon', 695));" title="Price history for Hoppe&#x27;s 7.62mm/.308-Calibre AR Rifle Brush Multi-Pack (Chamber Brush, Chamber Mop, Bore Brush)" href="http://camelcamelcamel.com/Hoppes-7-62mm-308-Calibre-Multi-Pack-Chamber/product/B00GWA7Y1U?active=price_amazon&amp;context=similar">Hoppe&#x27;s 7.62mm/.308-Calibre AR Rifle Brus ...  (Chamber Brush,  Chamber Mop,  Bore Brush)</a>
+
+
+        </h3>
+
+
+      </div>
+    </td>
+
+      </tr>
+
+</table>
+
+  </div>
+
+  <div id="amazon_related" style="display: block;">
+    <script type="text/javascript">
+    amzn_assoc_placement = "adunit0";
+    amzn_assoc_enable_interest_ads = "true";
+    amzn_assoc_tracking_id = "camelnative-20";
+    amzn_assoc_ad_mode = "auto";
+    amzn_assoc_ad_type = "smart";
+    amzn_assoc_marketplace = "amazon";
+    amzn_assoc_region = "US";
+    amzn_assoc_linkid = "c3c0da48a901e781bfb3e163f6bfa917";
+    amzn_assoc_fallback_mode = {"type":"search","value":"B00B4BJR58"};
+    amzn_assoc_default_category = "All";
+    amzn_assoc_rows = "1";
+    
+      amzn_assoc_emphasize_categories = "1055398,10272111";
+    </script>
+    <script src="//z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US"></script>
+  </div>
+  <script>
+  for_onload(function() {
+    window.setTimeout(function() {
+      ad_elm = $("amzn-native-ad-0");
+      
+      if (!ad_elm || ad_elm.style.display == "none")
+      {
+        $("similar_products").style.display = "";
+      }
+    }, 3000);
+  });
+  </script>
+  <style>.amzn-native-search-bar { display: none !important; }</style>
+
+  <p class="centerAlign ad">
+    
+  </p>
+
+
+
+
+        <div class="clearfix"><!-- // --></div>
+      </div>
+      <div class="clearfix"><!-- // --></div>
+    </div>
+    
+    
+<div id="footer_outer">
+  <div id="footer_inner">
+    <footer>
+          <div id="ad_center_bottom" class="ad" style="display: none;">
+              <!-- /33151237/3c_footer_leaderboard -->
+              <div id='div-gpt-ad-1455319174745-0' style='/*height:90px;*/ width:728px; margin: 0 auto;'>
+              </div>
+          </div>
+  
+  
+        <p>
+          Pages:
+            <a href="/about" onclick="return(camel_out(this, 'Footer', 'US', 'About', 0));" title="Learn about our team">About</a>
+              &middot;
+            <a href="http://blog.camelcamelcamel.com/" onclick="return(camel_out(this, 'Footer', 'US', 'Blog', 0));" title="Read Camel news on our blog">Blog</a>
+              &middot;
+            <a href="/features" onclick="return(camel_out(this, 'Footer', 'US', 'Features', 0));" title="Read about our site's features">Features</a>
+              &middot;
+            <a href="/tos" onclick="return(camel_out(this, 'Footer', 'US', 'Terms of Service', 0));" title="Read our terms of service">Terms</a>
+              &middot;
+            <a href="/privacy" onclick="return(camel_out(this, 'Footer', 'US', 'Privacy Policy', 0));" title="Read our privacy policy">Privacy</a>
+              &middot;
+            <a href="/tools" onclick="return(camel_out(this, 'Footer', 'US', 'Tools', 0));" title="Learn about our tools like The Camelizer, our browser extension for Chrome, Firefox, and Safari">Tools</a>
+              &middot;
+            <a href="/support" onclick="return(camel_out(this, 'Footer', 'US', 'Help', 0));" title="Find solutions to common problems and find out how to contact us">Help</a>
+        </p>
+  
+          <p>
+            Countries:
+                <a href="http://ca.camelcamelcamel.com/" title="Track products from Amazon Canada" onclick="return(camel_out(this, 'Footer', 'US', 'Countries - CA', 0));">Canada</a>
+  
+               &middot;
+                <a href="http://cn.camelcamelcamel.com/" title="Track products from Amazon China" onclick="return(camel_out(this, 'Footer', 'US', 'Countries - CN', 0));">China</a>
+  
+               &middot;
+                <a href="http://fr.camelcamelcamel.com/" title="Track products from Amazon France" onclick="return(camel_out(this, 'Footer', 'US', 'Countries - FR', 0));">France</a>
+  
+               &middot;
+                <a href="http://de.camelcamelcamel.com/" title="Track products from Amazon Germany" onclick="return(camel_out(this, 'Footer', 'US', 'Countries - DE', 0));">Germany</a>
+  
+               &middot;
+                <a href="http://it.camelcamelcamel.com/" title="Track products from Amazon Italy" onclick="return(camel_out(this, 'Footer', 'US', 'Countries - IT', 0));">Italy</a>
+  
+               &middot;
+                <a href="http://jp.camelcamelcamel.com/" title="Track products from Amazon Japan" onclick="return(camel_out(this, 'Footer', 'US', 'Countries - JP', 0));">Japan</a>
+  
+               &middot;
+                <a href="http://es.camelcamelcamel.com/" title="Track products from Amazon Spain" onclick="return(camel_out(this, 'Footer', 'US', 'Countries - ES', 0));">Spain</a>
+  
+               &middot;
+                <a href="http://uk.camelcamelcamel.com/" title="Track products from Amazon United Kingdom" onclick="return(camel_out(this, 'Footer', 'US', 'Countries - UK', 0));">United Kingdom</a>
+  
+               &middot;
+                <strong>United States</strong>
+  
+          </p>
+  
+          <p>
+            Languages:
+                                <strong>English</strong>
+&middot;                    <a class="setLanguageLink" href="/set_language?language=es_ES" rel="es_ES" onclick="return(camel_out(this, 'Footer', 'US', 'Languages - es_ES', 0));">Español</a>
+&middot;                    <a class="setLanguageLink" href="/set_language?language=fr_FR" rel="fr_FR" onclick="return(camel_out(this, 'Footer', 'US', 'Languages - fr_FR', 0));">Français</a>
+&middot;                    <a class="setLanguageLink" href="/set_language?language=de_DE" rel="de_DE" onclick="return(camel_out(this, 'Footer', 'US', 'Languages - de_DE', 0));">Deutsch</a>
+&middot;                    <a class="setLanguageLink" href="/set_language?language=it_IT" rel="it_IT" onclick="return(camel_out(this, 'Footer', 'US', 'Languages - it_IT', 0));">Italiano</a>
+
+          </p>
+  
+        <form action="/set_time_zone" method="post" style="margin: 0; padding: 0;">
+          <p class="grey">
+            Time Zone:
+            (-08:00) Pacific Time (US &amp; Canada) &middot; <a href='/time_zone' onclick="javascript: $('time_zone_change_select').style.display = 'inline-block'; return false; ">Change</a>
+            <select name="time_zone" style="display: none; padding: 0; margin: 0 0 0 4px" id="time_zone_change_select" onchange="javascript:this.form.submit();">
+                <option value="Europe/London" >+00:00 London</option>
+                <option value="UTC" >+00:00 UTC</option>
+                <option value="Europe/Berlin" >+01:00 Bern</option>
+                <option value="Africa/Lagos" >+01:00 Lagos</option>
+                <option value="Africa/Windhoek" >+01:00 Windhoek</option>
+                <option value="Asia/Beirut" >+02:00 Beirut</option>
+                <option value="Africa/Cairo" >+02:00 Cairo</option>
+                <option value="Asia/Damascus" >+02:00 Damascus</option>
+                <option value="Asia/Gaza" >+02:00 Gaza</option>
+                <option value="Europe/Helsinki" >+02:00 Helsinki</option>
+                <option value="Asia/Jerusalem" >+02:00 Jerusalem</option>
+                <option value="Africa/Johannesburg" >+02:00 Pretoria</option>
+                <option value="Asia/Amman" >+03:00 Amman</option>
+                <option value="Asia/Baghdad" >+03:00 Baghdad</option>
+                <option value="Europe/Minsk" >+03:00 Minsk</option>
+                <option value="Asia/Tehran" >+03:30 Tehran</option>
+                <option value="Asia/Baku" >+04:00 Baku</option>
+                <option value="Asia/Dubai" >+04:00 Dubai</option>
+                <option value="Europe/Moscow" >+04:00 Moscow</option>
+                <option value="Asia/Yerevan" >+04:00 Yerevan</option>
+                <option value="Asia/Kabul" >+04:30 Kabul</option>
+                <option value="Asia/Karachi" >+05:00 Karachi</option>
+                <option value="Asia/Kolkata" >+05:30 Mumbai</option>
+                <option value="Asia/Kathmandu" >+05:45 Kathmandu</option>
+                <option value="Asia/Dhaka" >+06:00 Dhaka</option>
+                <option value="Asia/Yekaterinburg" >+06:00 Ekaterinburg</option>
+                <option value="Asia/Rangoon" >+06:30 Rangoon</option>
+                <option value="Asia/Jakarta" >+07:00 Jakarta</option>
+                <option value="Asia/Omsk" >+07:00 Omsk</option>
+                <option value="Asia/Shanghai" >+08:00 Beijing</option>
+                <option value="Asia/Krasnoyarsk" >+08:00 Krasnoyarsk</option>
+                <option value="Australia/Perth" >+08:00 Perth</option>
+                <option value="Australia/Eucla" >+08:45 Eucla</option>
+                <option value="Asia/Irkutsk" >+09:00 Irkutsk</option>
+                <option value="Asia/Tokyo" >+09:00 Osaka</option>
+                <option value="Australia/Adelaide" >+09:30 Adelaide</option>
+                <option value="Australia/Darwin" >+09:30 Darwin</option>
+                <option value="Australia/Brisbane" >+10:00 Brisbane</option>
+                <option value="Australia/Sydney" >+10:00 Sydney</option>
+                <option value="Asia/Yakutsk" >+10:00 Yakutsk</option>
+                <option value="Australia/Lord_Howe" >+10:30 Lord Howe</option>
+                <option value="Pacific/Noumea" >+11:00 New Caledonia</option>
+                <option value="Asia/Vladivostok" >+11:00 Vladivostok</option>
+                <option value="Pacific/Norfolk" >+11:30 Norfolk</option>
+                <option value="Pacific/Auckland" >+12:00 Auckland</option>
+                <option value="Pacific/Fiji" >+12:00 Fiji</option>
+                <option value="Asia/Kamchatka" >+12:00 Kamchatka</option>
+                <option value="Pacific/Majuro" >+12:00 Marshall Is.</option>
+                <option value="Pacific/Tarawa" >+12:00 Tarawa</option>
+                <option value="Pacific/Chatham" >+12:45 Chatham Is.</option>
+                <option value="Pacific/Tongatapu" >+13:00 Nuku&#x27;alofa</option>
+                <option value="Pacific/Apia" >+13:00 Samoa</option>
+                <option value="Pacific/Kiritimati" >+14:00 Kiritimati</option>
+                <option value="Atlantic/Azores" >-01:00 Azores</option>
+                <option value="Atlantic/Cape_Verde" >-01:00 Cape Verde Is.</option>
+                <option value="America/Noronha" >-02:00 Noronha</option>
+                <option value="America/Sao_Paulo" >-03:00 Brasilia</option>
+                <option value="America/Argentina/Buenos_Aires" >-03:00 Buenos Aires</option>
+                <option value="America/Godthab" >-03:00 Greenland</option>
+                <option value="America/Miquelon" >-03:00 Miquelon</option>
+                <option value="America/Montevideo" >-03:00 Montevideo</option>
+                <option value="America/St_Johns" >-03:30 Newfoundland</option>
+                <option value="America/Asuncion" >-04:00 Asuncion</option>
+                <option value="America/Halifax" >-04:00 Atlantic Time (Canada)</option>
+                <option value="America/Campo_Grande" >-04:00 Campo Grande</option>
+                <option value="America/Goose_Bay" >-04:00 Goose Bay</option>
+                <option value="America/Santiago" >-04:00 Santiago</option>
+                <option value="America/Santo_Domingo" >-04:00 Santo Domingo</option>
+                <option value="America/Caracas" >-04:30 Caracas</option>
+                <option value="America/Bogota" >-05:00 Bogota</option>
+                <option value="America/New_York" >-05:00 Eastern Time (US &amp; Canada)</option>
+                <option value="America/Havana" >-05:00 Havana</option>
+                <option value="America/Guatemala" >-06:00 Central America</option>
+                <option value="America/Chicago" >-06:00 Central Time (US &amp; Canada)</option>
+                <option value="Pacific/Easter" >-06:00 Easter Is.</option>
+                <option value="America/Mexico_City" >-06:00 Mexico City</option>
+                <option value="America/Phoenix" >-07:00 Arizona</option>
+                <option value="America/Mazatlan" >-07:00 Mazatlan</option>
+                <option value="America/Denver" >-07:00 Mountain Time (US &amp; Canada)</option>
+                <option value="America/Los_Angeles" selected="selected">-08:00 Pacific Time (US &amp; Canada)</option>
+                <option value="Pacific/Pitcairn" >-08:00 Pitcairn</option>
+                <option value="America/Santa_Isabel" >-08:00 Santa Isabel</option>
+                <option value="America/Anchorage" >-09:00 Alaska</option>
+                <option value="Pacific/Gambier" >-09:00 Gambier Is.</option>
+                <option value="Pacific/Marquesas" >-09:30 Marquesas Is.</option>
+                <option value="America/Adak" >-10:00 Aleutian Islands</option>
+                <option value="Pacific/Honolulu" >-10:00 Hawaii</option>
+                <option value="Pacific/Pago_Pago" >-11:00 American Samoa</option>
+            </select>
+          </p>
+        </form>
+  
+
+      <p>
+        Product prices and availability are accurate as of the date/time indicated and are subject to change. Any price and availability information displayed on Amazon at the time of purchase will apply to the purchase of this product.
+      </p>
+
+      <p>&copy; 2008-2016 <a href="http://cosmicshovel.com">Cosmic Shovel, Inc.</a></p>
+    </footer>
+  </div>
+</div>
+
+    <script type='text/javascript'>
+      for_onload(function () {
+        var tz = jstz.determine();
+        var exdate=new Date();
+        exdate.setDate(exdate.getDate() + (1000));
+        var c_value = escape(tz.name()) + "; expires="+exdate.toUTCString() + "; path=/";
+        document.cookie='tz' + "=" + c_value;
+      });
+    </script>
+
+<!-- Start Q tag -->
+<script type="text/javascript">
+  var _qevents = _qevents || [];
+
+  (function() {
+  var elem = document.createElement('script');
+  elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/quant.js";
+  elem.async = true;
+  elem.type = "text/javascript";
+  var scpt = document.getElementsByTagName('script')[0];
+  scpt.parentNode.insertBefore(elem, scpt);
+  })();
+
+  _qevents.push({
+  qacct:"p-81XNls15s8s2g"
+  });
+</script>
+<noscript>
+  <div style="display:none;">
+    <img src="//pixel.quantserve.com/pixel/p-81XNls15s8s2g.gif" border="0" height="1" width="1" alt="Quantcast"/>
+  </div>
+</noscript>
+<!-- End Q tag -->
+  </div>
+  
+    <script src="http://d1i0o2gnhzh6dj.cloudfront.net/javascripts/fresh-merged.v48.js" defer="defer"></script>
+  
+    <div class="ad" id="ad_sky_left" style="display: none;">
+      <div style="display: inline; position: absolute; left: 0px; top: 170px; width: 160px; height: 600px; margin-left: 20px;">
+          <!-- /33151237/3c_skyscraper_left -->
+          <div id='div-gpt-ad-1455687493205-0' style='height:600px; width:160px;'>
+          </div>
+      </div>
+    </div>
+    <div class="ad" id="ad_sky_right" style="display: none;">
+      <div style="display: inline; position: absolute; right: 0px; top: 170px; width: 160px; height: 600px; margin-right: 20px;">
+          <!-- /33151237/3c_skyscraper_right -->
+          <div id='div-gpt-ad-1455687493205-1' style='height:600px; width:160px;'>
+          </div>
+      </div>
+    </div>
+    
+    <script>
+    var g_side_ads_loaded = false;
+    var g_center_ads_loaded = false;
+    
+    function ad_resize_check()
+    {
+      var width = document.viewport.getWidth();
+      var height = document.viewport.getHeight();
+      var dims = document.viewport.getDimensions(); // dims.width and dims.height
+      
+      // content width + 2 ads + 40 spacing
+      if (width >= 960 + 160 + 160 + 80)
+      {
+        $("ad_sky_left").style.display = "";
+        $("ad_sky_right").style.display = "";
+        $("ad_center_top").style.display = "none";
+        $("ad_center_bottom").style.display = "none";
+        
+        if (!g_side_ads_loaded)
+        {
+            googletag.cmd.push(function() { googletag.display('div-gpt-ad-1455687493205-0'); });
+            googletag.cmd.push(function() { googletag.display('div-gpt-ad-1455687493205-1'); });
+          
+          g_side_ads_loaded = true;
+        }
+      }
+      else
+      {
+        $("ad_sky_left").style.display = "none";
+        $("ad_sky_right").style.display = "none";
+        $("ad_center_top").style.display = "";
+        $("ad_center_bottom").style.display = "";
+        
+        if (!g_center_ads_loaded)
+        {
+            googletag.cmd.push(function() { googletag.display('div-gpt-ad-1455319101535-0'); });
+            googletag.cmd.push(function() { googletag.display('div-gpt-ad-1455319174745-0'); });
+          
+          g_center_ads_loaded = true;
+        }
+      }
+    }
+    
+    for_onload(function() {
+      ad_resize_check();
+      Event.observe(window, "resize", function() { ad_resize_check(); });
+    });
+    </script>
+</body>
+</html>
+<!-- via www6.localdomain-->

@@ -1,0 +1,39 @@
+<div class="container">
+    <div class="row">    
+        <div class="col-xs-8 col-xs-offset-2">
+		    <div class="input-group">
+                <div class="input-group-btn search-panel">
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                    	<span id="search_concept">Appliances</span> <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu">
+                      <li><a href="#Appliances">Appliances</a></li>
+                      <li><a href="#MobileApps">Apps & Games</a></li>
+                      <li><a href="#ArtsAndCrafts">Arts, Crafts & Sewing</a></li>
+                      <li><a href="#Books">Books</a></li>
+                      <li><a href="#Fashion">Clothing, Shoes & Jewelry</a></li>
+                      <li><a href="#FashionBaby">&nbsp;&nbsp;&nbsp;Baby</a></li>
+                      <li><a href="#FashionBoys">&nbsp;&nbsp;&nbsp;Boys</a></li>
+                      <li><a href="#FashionGirls">&nbsp;&nbsp;&nbsp;Girls</a></li>
+                      <li><a href="#FashionMen">&nbsp;&nbsp;&nbsp;Men</a></li>
+                      <li><a href="#FashionWomen">&nbsp;&nbsp;&nbsp;Women</a></li>
+                      <li><a href="#GiftCards">Gift Cards</a></li>
+                      <li><a href="#Luggage">Luggage & Travel Gear</a></li>
+                      <li><a href="#Movies">Movies & TV</a></li>
+                      <li><a href="#LawnAndGarden">Patio, Lawn & Garden</a></li>
+                      <li><a href="#PetSupplies">Pet Supplies</a></li>
+                      <li><a href="#Wine">Wine</a></li>
+                    </ul>
+                </div>
+                <form action="/list" id="search_form">
+                </form>
+                	<input type="hidden" name="category" value="Appliances" id="search_param" form="search_form">  
+                	<input type="hidden" name="sort" value="related" form="search_form">       
+                	<input type="text" class="form-control" name="keyword" placeholder="" form="search_form">
+                	<span class="input-group-btn">
+                    	<button class="btn btn-default" type="submit" form="search_form"><span class="glyphicon glyphicon-search"></span></button>
+                	</span>
+            </div>
+        </div>
+	</div>
+</div>
